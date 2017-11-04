@@ -1,0 +1,36 @@
+<!--
+  Generated template for the MobileauthPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>mobileauth</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h1 padding>Enter the 4 digit code sent to at +91 - 9123456789</h1>
+
+<ion-item padding  text-center>
+    <ion-label floating>code</ion-label>
+<ion-input  type="text" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border"></ion-input>
+</ion-item>
+
+
+<ion-footer>
+    
+      <button (click)="validateCode()" ion-button color="dark" icon-right large float-end margin-right>
+         Next
+         <ion-icon name="arrow-forward" ></ion-icon>
+       </button> 
+      
+       
+     
+  </ion-footer>
+
+</ion-content>

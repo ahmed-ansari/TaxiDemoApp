@@ -1,0 +1,38 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>register</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h1 padding>
+  Enter the email address you used to register
+</h1>
+
+<ion-item padding>
+    <ion-label floating>name@example.com</ion-label>
+<ion-input type="text" [(ngModel)]="email" value="" class="black-border"></ion-input>
+</ion-item>
+
+
+
+<ion-footer>
+    
+      <button (click)="validateEmail()" ion-button color="dark" icon-right large float-end margin-right>
+         Next
+         <ion-icon name="arrow-forward" ></ion-icon>
+       </button> 
+      
+       
+     
+  </ion-footer>
+</ion-content>

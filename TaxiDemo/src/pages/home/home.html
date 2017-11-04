@@ -1,14 +1,45 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h3 ion-button clear align-center>Book your Ride</h3>
+  <div padding>
+      <ion-segment [(ngModel)]="Trips">
+        <ion-segment-button value="Past">
+            Past
+        </ion-segment-button>
+        <ion-segment-button value="Upcommings">
+            Upcommings
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div [ngSwitch]="Trips">
+      <ion-list *ngSwitchCase="'Past'">
+        <ion-item>
+          <!-- <ion-thumbnail item-start>
+             <img src="img/thumbnail-puppy-1.jpg">
+          </ion-thumbnail> -->
+          <p>8/24/17 at 04.19</p>
+        </ion-item>
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'Upcommings'">
+        <ion-item>
+          <!-- <ion-thumbnail item-start>
+            <img src="img/thumbnail-kitten-1.jpg"> 
+          </ion-thumbnail> -->
+          <p>9/12/17 at 01.40</p>
+        </ion-item>
+        
+      </ion-list>
+    </div>
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
 </ion-content>
