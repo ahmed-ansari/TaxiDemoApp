@@ -38,6 +38,17 @@
 		C158752332D2406CB7205AD7 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6CD573804F9EBE9171AE /* CDVSplashScreen.m */; };
 		E4F599FDF89346989E2DACC9 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B4695893A5104B04AE3C20D6 /* CDVViewController+SplashScreen.m */; };
 		75DBF547B46B4146AF760F50 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6866CF2234367932B5A1B /* IonicKeyboard.m */; };
+		20C1C7BFE60A4D2A99708D47 /* AppDelegate+FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 42139945B4AA4AA69BF381B3 /* AppDelegate+FirebasePlugin.m */; };
+		E313C4C4C55A41AF805BB4F7 /* FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D07917E8A2EF4D0B842EA93A /* FirebasePlugin.m */; };
+		6C1A553804FE4E51B33D9F9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 850EE14EB81646EA88F4F58F /* GoogleService-Info.plist */; };
+		7F81E1D3BAA143298C7C1865 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF38E489E6FC4FEAA30D77A8 /* FirebaseAnalytics.framework */; };
+		C71B387D978245A9B5C6E715 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE3E394ED7449D97F4B0EA /* FirebaseCore.framework */; };
+		5DB57A6072F74173BB7E3AE6 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEB88E2EC194EC69F04A242 /* FirebaseInstanceID.framework */; };
+		58465119E8BE44C486D79647 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CD9E2419474FE7BA1639E0 /* GoogleToolboxForMac.framework */; };
+		ADB8C582A7AC46F082D2CF5A /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BFF579AC194F76821BA504 /* Protobuf.framework */; };
+		DD01088F4473468794EDD382 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED40B149874AABAD6BCFEC /* FirebaseMessaging.framework */; };
+		CDC767E5EAE3480A9F3A9004 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB8453CE2347B296EB0425 /* FirebaseCrash.framework */; };
+		639F2124C34F4C64B4FBC96A /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AD41CCB85C4E3EB8F967A8 /* FirebaseRemoteConfig.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +133,20 @@
 		1FFA80AA271E4BC5B4B091C6 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		9BF6866CF2234367932B5A1B /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		0A80FA1FEA544EE58A6ED54F /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		42139945B4AA4AA69BF381B3 /* AppDelegate+FirebasePlugin.m */ = {isa = PBXFileReference; name = "AppDelegate+FirebasePlugin.m"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D07917E8A2EF4D0B842EA93A /* FirebasePlugin.m */ = {isa = PBXFileReference; name = "FirebasePlugin.m"; path = "cordova-plugin-firebase/FirebasePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1390383D08FF49CEA9FD947D /* AppDelegate+FirebasePlugin.h */ = {isa = PBXFileReference; name = "AppDelegate+FirebasePlugin.h"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		59C9F850E70142B4A116F280 /* FirebasePlugin.h */ = {isa = PBXFileReference; name = "FirebasePlugin.h"; path = "cordova-plugin-firebase/FirebasePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E63CA88138A5492A9CD2EC25 /* Firebase.h */ = {isa = PBXFileReference; name = "Firebase.h"; path = "cordova-plugin-firebase/Firebase.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		850EE14EB81646EA88F4F58F /* GoogleService-Info.plist */ = {isa = PBXFileReference; name = "GoogleService-Info.plist"; path = "GoogleService-Info.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		EF38E489E6FC4FEAA30D77A8 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; name = "FirebaseAnalytics.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseAnalytics.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		61DE3E394ED7449D97F4B0EA /* FirebaseCore.framework */ = {isa = PBXFileReference; name = "FirebaseCore.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseCore.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8DEB88E2EC194EC69F04A242 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; name = "FirebaseInstanceID.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseInstanceID.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D6CD9E2419474FE7BA1639E0 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; name = "GoogleToolboxForMac.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/GoogleToolboxForMac.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C5BFF579AC194F76821BA504 /* Protobuf.framework */ = {isa = PBXFileReference; name = "Protobuf.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/Protobuf.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		42ED40B149874AABAD6BCFEC /* FirebaseMessaging.framework */ = {isa = PBXFileReference; name = "FirebaseMessaging.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseMessaging.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		BBAB8453CE2347B296EB0425 /* FirebaseCrash.framework */ = {isa = PBXFileReference; name = "FirebaseCrash.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseCrash.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		11AD41CCB85C4E3EB8F967A8 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; name = "FirebaseRemoteConfig.framework"; path = "MyApp/Plugins/cordova-plugin-firebase/FirebaseRemoteConfig.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +157,14 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				F0D2602D025D4C2884B0C9F5 /* WebKit.framework in Frameworks */,
 				87EA0EA3DD0A429C9EE56F31 /* libz.tbd in Frameworks */,
+				7F81E1D3BAA143298C7C1865 /* FirebaseAnalytics.framework in Frameworks */,
+				C71B387D978245A9B5C6E715 /* FirebaseCore.framework in Frameworks */,
+				5DB57A6072F74173BB7E3AE6 /* FirebaseInstanceID.framework in Frameworks */,
+				58465119E8BE44C486D79647 /* GoogleToolboxForMac.framework in Frameworks */,
+				ADB8C582A7AC46F082D2CF5A /* Protobuf.framework in Frameworks */,
+				DD01088F4473468794EDD382 /* FirebaseMessaging.framework in Frameworks */,
+				CDC767E5EAE3480A9F3A9004 /* FirebaseCrash.framework in Frameworks */,
+				639F2124C34F4C64B4FBC96A /* FirebaseRemoteConfig.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +227,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* MyApp-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				850EE14EB81646EA88F4F58F /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			path = "MyApp/Resources";
@@ -204,6 +238,14 @@
 			children = (
 				A17A3DF2B0E94AAAA9E1AAC5 /* WebKit.framework */,
 				0F347FF3F7984E9FAAE92C12 /* libz.tbd */,
+				EF38E489E6FC4FEAA30D77A8 /* FirebaseAnalytics.framework */,
+				61DE3E394ED7449D97F4B0EA /* FirebaseCore.framework */,
+				8DEB88E2EC194EC69F04A242 /* FirebaseInstanceID.framework */,
+				D6CD9E2419474FE7BA1639E0 /* GoogleToolboxForMac.framework */,
+				C5BFF579AC194F76821BA504 /* Protobuf.framework */,
+				42ED40B149874AABAD6BCFEC /* FirebaseMessaging.framework */,
+				BBAB8453CE2347B296EB0425 /* FirebaseCrash.framework */,
+				11AD41CCB85C4E3EB8F967A8 /* FirebaseRemoteConfig.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,6 +313,11 @@
 				1FFA80AA271E4BC5B4B091C6 /* CDVViewController+SplashScreen.h */,
 				9BF6866CF2234367932B5A1B /* IonicKeyboard.m */,
 				0A80FA1FEA544EE58A6ED54F /* IonicKeyboard.h */,
+				42139945B4AA4AA69BF381B3 /* AppDelegate+FirebasePlugin.m */,
+				D07917E8A2EF4D0B842EA93A /* FirebasePlugin.m */,
+				1390383D08FF49CEA9FD947D /* AppDelegate+FirebasePlugin.h */,
+				59C9F850E70142B4A116F280 /* FirebasePlugin.h */,
+				E63CA88138A5492A9CD2EC25 /* Firebase.h */,
 			);
 			name = Plugins;
 			path = "MyApp/Plugins";
@@ -352,6 +399,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				6C1A553804FE4E51B33D9F9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +451,8 @@
 				C158752332D2406CB7205AD7 /* CDVSplashScreen.m in Sources */,
 				E4F599FDF89346989E2DACC9 /* CDVViewController+SplashScreen.m in Sources */,
 				75DBF547B46B4146AF760F50 /* IonicKeyboard.m in Sources */,
+				20C1C7BFE60A4D2A99708D47 /* AppDelegate+FirebasePlugin.m in Sources */,
+				E313C4C4C55A41AF805BB4F7 /* FirebasePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +488,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "MyApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+				);
 			};
 			name = Debug;
 		};
@@ -460,6 +521,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "MyApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+					"\"MyApp/Plugins/cordova-plugin-firebase\"",
+				);
 			};
 			name = Release;
 		};
