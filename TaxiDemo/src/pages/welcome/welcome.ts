@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireModule } from 'angularfire2'
+import { AngularFireDatabase } from 'angularfire2/database';
+import firebase from 'firebase';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
@@ -20,28 +21,32 @@ import { MobileAuthPage } from '../mobileauth/mobileauth';
 })
 export class WelcomePage {
   mobile: any = "";
-  
-  hideMobile:Boolean = false;
-  isHidden:Boolean = true;
+  //database: database.Database;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hideMobile: Boolean = false;
+  isHidden: Boolean = true;
+
+  public myPerson = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: AngularFireDatabase) {
+    //this.database = app.database();    
   }
 
-  validateMobile(value){
-     if (this.mobile.length == 10) {
-       this.isHidden = false;
-     } else {
-       this.isHidden = true;
-     }
+  validateMobile(value) {
+    if (this.mobile.length == 10) {
+      this.isHidden = false;
+    } else {
+      this.isHidden = true;
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
-    this.hideMobile = false;
+    this.hideMobile = false;    
   }
 
   validateUser() {
-    this.navCtrl.setRoot(HomePage);
+    //this.navCtrl.setRoot(HomePage);    
   }
 
   goToRegisterPage() {
@@ -50,7 +55,17 @@ export class WelcomePage {
   }
 
   goToAuthPage() {
-    this.navCtrl.push(MobileAuthPage,{mobile: this.mobile});
+    //this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
+    const personRef: firebase.database.Reference = firebase.database().ref(`/Users/`+this.mobile);
+    personRef.on('value', personSnapshot => {
+      this.myPerson = personSnapshot.val();
+      //console.log(this.myPerson);
+      if(!this.myPerson){
+        this.navCtrl.push(RegisterPage, { mobile: this.mobile });
+      }else{
+        this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
+      }
+    });
   }
 
 }
