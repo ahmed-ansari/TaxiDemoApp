@@ -49,6 +49,8 @@ HomePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+throw new Error("Cannot find module \"@ionic-native/google-maps\"");
+throw new Error("Cannot find module \"@ionic-native/geolocation\"");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,42 +62,89 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-// import {
-//   GoogleMaps,
-//   GoogleMap,
-//   LatLng,
-//   CameraPosition,
-//   GoogleMapsEvent,
-//   Marker,
-//   MarkerOptions,
-//   Geocoder,
-//   GeocoderRequest
-// } from '@ionic-native/google-maps';
-// import {Geolocation} from '@ionic-native/geolocation';
+
+
 var DashboardPage = (function () {
-    // @ViewChild('map')mapElement : ElementRef;
-    // map : GoogleMap;
-    // , private _googleMaps : GoogleMaps,
-    // private _geoLoc : Geolocation, private geocoder : Geocoder in constructor
-    function DashboardPage(navCtrl, navParams) {
+    function DashboardPage(navCtrl, navParams, _googleMaps, _geoLoc, geocoder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this._googleMaps = _googleMaps;
+        this._geoLoc = _geoLoc;
+        this.geocoder = geocoder;
     }
     DashboardPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
         setTimeout(function () {
-            // this.initMap();
+            _this.initMap();
         }, 500);
     };
+    DashboardPage.prototype.initMap = function () {
+        var _this = this;
+        var loc;
+        var element = this.mapElement.nativeElement;
+        this.map = this._googleMaps.create(element, { styles: [] });
+        this.map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["GoogleMapsEvent"].MAP_READY).then(function () {
+            _this._geoLoc.getCurrentPosition().then(function (res) {
+                loc = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["LatLng"](res.coords.latitude, res.coords.longitude);
+                _this.moveCamera(loc);
+                _this.getLocationName(loc, res.coords.latitude, res.coords.longitude);
+            }).catch(function (err) {
+                alert('Failed to get current position: ' + err);
+            });
+        });
+    };
+    DashboardPage.prototype.moveCamera = function (loc) {
+        var options = {
+            target: loc,
+            zoom: 15,
+            tilt: 10
+        };
+        this.map.moveCamera(options);
+    };
+    DashboardPage.prototype.createMarker = function (loc, title) {
+        var markerOptions = {
+            position: loc,
+            title: title,
+            animation: 'DROP'
+        };
+        return this
+            .map
+            .addMarker(markerOptions);
+    };
+    DashboardPage.prototype.getLocationName = function (loc, latitude, longitude) {
+        var _this = this;
+        var latlng = {
+            lat: latitude,
+            lng: longitude
+        };
+        var req = {
+            position: latlng
+        };
+        this.geocoder.geocode(req).then(function (res) {
+            _this.createMarker(loc, res[1].extra.lines[0].split(","[0])).then(function (marker) {
+                marker.showInfoWindow();
+            }).catch(function (err) {
+                alert("Failed to add marker: " + err);
+            });
+        }).catch(function (err) {
+            alert('Failed to get location: ' + err);
+        });
+    };
+    ;
     return DashboardPage;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('map'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]) === "function" && _a || Object)
+], DashboardPage.prototype, "mapElement", void 0);
 DashboardPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-dashboard',template:/*ion-inline-start:"/Users/ansari/Documents/git/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/'<ion-content>\n    <div #map id="map" class="maparea">\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Source"></ion-input>\n            </ion-item>\n        </ion-card>\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Destination"></ion-input>\n            </ion-item>\n        </ion-card>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/ansari/Documents/git/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["GoogleMaps"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["GoogleMaps"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["Geolocation"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["Geolocation"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["Geocoder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["Geocoder"]) === "function" && _f || Object])
 ], DashboardPage);
 
-var _a, _b;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=dashboard.js.map
 
 /***/ }),

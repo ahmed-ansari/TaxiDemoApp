@@ -4,8 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import  firebase from 'firebase';
-// import {GoogleMaps, Geocoder} from '@ionic-native/google-maps';
-// import {Geolocation} from '@ionic-native/geolocation';
+import {GoogleMaps, Geocoder} from '@ionic-native/google-maps';
+import {Geolocation} from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -71,9 +71,9 @@ firebase.initializeApp(firebaseAuth);
   providers: [
     StatusBar,
     SplashScreen,
-    // GoogleMaps,
-    // Geolocation,
-    // Geocoder,
+    GoogleMaps,
+    Geolocation,
+    Geocoder,
     WelcomeService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
