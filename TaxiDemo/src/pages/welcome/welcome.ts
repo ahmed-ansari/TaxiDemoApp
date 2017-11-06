@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import firebase from 'firebase';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { WelcomeService } from './welcome.service';
-import {DashboardPage} from '../dashboard/dashboard';
+import { DashboardPage } from '../dashboard/dashboard';
 
 /**
  * Generated class for the WelcomePage page.
@@ -25,9 +25,10 @@ export class WelcomePage {
   hideMobile: Boolean = false;
   isHidden: Boolean = true;
 
-  public userObj = {};
+  public userObj: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
+        public loadingCtrl: LoadingController) {
   }
 
   validateMobile(value) {
@@ -53,14 +54,32 @@ export class WelcomePage {
   }
 
   goToAuthPage() {
-    this.navCtrl.push(DashboardPage);
-    // this.userObj = this.service.validateUser(this.mobile);
-    //   //console.log(this.myPerson);
-    //   if(!this.userObj){
-    //     this.navCtrl.push(RegisterPage, { mobile: this.mobile });
-    //   }else{
-    //     this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-    //   }
+    //this.navCtrl.push(DashboardPage);
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    var promise = this.service.validateUser(this.mobile);
+    promise.then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        var userPromise = this.service.getUserObject(snapshot.val());
+        userPromise.then((datasnap) => {
+          console.log("User found" + JSON.stringify(datasnap.val()));
+          loading.dismiss();
+          this.navCtrl.push(MobileAuthPage, { mobile: this.mobile, user: datasnap });
+        }).catch((er) => { 
+           console.log(er);
+        });
+      } else {
+        console.log("No User found");
+        loading.dismiss();
+        this.navCtrl.push(RegisterPage, { mobile: this.mobile });
+      }
+    }).catch((er) => {
+      loading.dismiss();
+      console.log(er);
+    });
   }
 
 }

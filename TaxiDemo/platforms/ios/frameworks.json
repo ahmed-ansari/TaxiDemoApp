@@ -1,9 +1,9 @@
 {
     "WebKit.framework": 1,
     "libz.tbd": 2,
+    "CoreLocation.framework": 2,
     "Accelerate.framework": 1,
     "CoreData.framework": 1,
-    "CoreLocation.framework": 2,
     "CoreTelephony.framework": 1,
     "CoreText.framework": 1,
     "GLKit.framework": 1,
