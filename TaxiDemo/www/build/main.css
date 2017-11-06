@@ -25690,6 +25690,11 @@ ion-navbar.toolbar {
   justify-content: flex-start;
 }
 
+page-dashboard .maparea {
+  height: 100%;
+  width: 100%;
+}
+
 page-register .black-border {
   border-bottom: 1px solid black;
 }

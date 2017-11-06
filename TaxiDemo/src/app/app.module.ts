@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import  firebase from 'firebase';
+import {GoogleMaps, Geocoder} from '@ionic-native/google-maps';
+import {Geolocation} from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -15,6 +17,9 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 import { SettingPage } from '../pages/setting/setting';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+
+import {WelcomeService} from '../pages/welcome/welcome.service';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -41,7 +46,8 @@ firebase.initializeApp(firebaseAuth);
     LoginPage,
     RegisterPage,
     MobileAuthPage,
-    SettingPage
+    SettingPage,
+    DashboardPage,
   ],
   imports: [
     BrowserModule,
@@ -54,16 +60,21 @@ firebase.initializeApp(firebaseAuth);
     MyApp,
     HomePage,
     ListPage,
-    
+
     WelcomePage,
     LoginPage,
     RegisterPage,
     MobileAuthPage,
-    SettingPage
+    SettingPage,
+    DashboardPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
+    Geolocation,
+    Geocoder,
+    WelcomeService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
