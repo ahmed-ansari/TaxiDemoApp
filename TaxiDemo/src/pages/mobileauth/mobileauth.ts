@@ -34,6 +34,12 @@ export class MobileAuthPage {
   }
 
   sendVerificationCode() {
+<<<<<<< HEAD
+=======
+    // this.navCtrl.push(HomePage)
+    //this.navCtrl.setRoot(HomePage)
+    //var navController = this.navCtrl;
+>>>>>>> 911e78581f474828af5df147044396a3610fae51
     const appVerifier = this.recaptchaVerifier;
     const phoneNumberString = "+91" + this.mobileNo;
 
@@ -44,6 +50,36 @@ export class MobileAuthPage {
         // SMS sent. Prompt user to type the code from the message, then sign the
         // user in with confirmationResult.confirm(code).
         this.confirmResult = confirmationResult;
+<<<<<<< HEAD
+=======
+        // let prompt = this.alertCtrl.create({
+        //   title: 'Enter the Confirmation code',
+        //   inputs: [{ name: 'confirmationCode', placeholder: 'Confirmation Code' }],
+        //   buttons: [
+        //     {
+        //       text: 'Cancel',
+        //       handler: data => { console.log('Cancel clicked'); }
+        //     },
+        //     {
+        //       text: 'Send',
+        //       handler: data => {
+        //         confirmationResult.confirm(data.confirmationCode)
+        //           .then(function (result) {
+        //             // User signed in successfully.
+        //             console.log(result.user);
+        //             navController.setRoot(HomePage);
+        //             // ...
+        //           }).catch(function (error) {
+        //             // User couldn't sign in (bad verification code?)
+        //             // ...
+        //             console.log(error);
+        //           });
+        //       }
+        //     }
+        //   ]
+        // });
+        // prompt.present();
+>>>>>>> 911e78581f474828af5df147044396a3610fae51
       })
       .catch(function (error) {
         console.error("SMS not sent", error);
@@ -58,7 +94,11 @@ export class MobileAuthPage {
         .then(function (result) {
           // User signed in successfully.
           console.log(result.user);
+<<<<<<< HEAD
 navController.setRoot(DashboardPage);
+=======
+          navController.setRoot(HomePage);
+>>>>>>> 911e78581f474828af5df147044396a3610fae51
           // ...
         }).catch(function (error) {
           // User couldn't sign in (bad verification code?)
@@ -91,6 +131,10 @@ navController.setRoot(DashboardPage);
       console.log('close keyboard');
   }
   return;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 911e78581f474828af5df147044396a3610fae51
   }
 }
