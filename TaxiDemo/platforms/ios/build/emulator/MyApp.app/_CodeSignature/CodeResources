@@ -98,7 +98,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		w7hBU52UXw46RATCyXFaFEeHoUA=
+		neN1YL84pjQ54PGZqeETR6x8Yx4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -111,6 +111,10 @@
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
 		vZVoHdQXLQMxsbrtRCIayItoE3s=
+		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		zmV6UqBSo6r1NOz798vd5O4zTBA=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -182,7 +186,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		O6dn1RW8Xg5jdyq6UGSX/BESv+g=
+		jpGFKXHVKluurWwk5NgwpmlgajI=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -190,7 +194,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		2m1O9vr+5M3TY4x//8RNhA7hE8I=
+		/Ns1e50idw5qhnwYbS1JDNuhoAQ=
 		</data>
 		<key>www/assets/fonts/ionicons.eot</key>
 		<data>
@@ -306,7 +310,7 @@
 		</data>
 		<key>www/build/0.js</key>
 		<data>
-		SHY/O2Gh/+bBs2Qv5Cu7g3gpdh4=
+		SSmFOxtMQMikZaN3rBc0eDKR0vk=
 		</data>
 		<key>www/build/0.js.map</key>
 		<data>
@@ -314,7 +318,7 @@
 		</data>
 		<key>www/build/1.js</key>
 		<data>
-		BXQox//nwVNRJRVH8lgI8lFAzQA=
+		1yXH4kA9Nai9xk384zIW4Ft1+2M=
 		</data>
 		<key>www/build/1.js.map</key>
 		<data>
@@ -322,7 +326,7 @@
 		</data>
 		<key>www/build/2.js</key>
 		<data>
-		Y+TxVEzZRIdxdBT7RlSCYJ/vjVU=
+		5qbPRgq6x00Xso4GL/Z9OpDxDng=
 		</data>
 		<key>www/build/2.js.map</key>
 		<data>
@@ -330,7 +334,7 @@
 		</data>
 		<key>www/build/3.js</key>
 		<data>
-		URqcnGp3LLZGvwgS9KK4FwLl8SU=
+		WTKkUxUqEJ4MAdY9W74j1vLhwvA=
 		</data>
 		<key>www/build/3.js.map</key>
 		<data>
@@ -338,7 +342,7 @@
 		</data>
 		<key>www/build/4.js</key>
 		<data>
-		S0yrGNIg/Lu6vKq7SDT8Ngzd99k=
+		CCaLa68G3axpxAA2zCa3dhZjOp0=
 		</data>
 		<key>www/build/4.js.map</key>
 		<data>
@@ -354,11 +358,11 @@
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		IkIGfWQYlPkHm3rGhLorOgTps1E=
+		RRpnxArVBhR0ExycE5+Z5ZtF3MQ=
 		</data>
 		<key>www/build/main.js.map</key>
 		<data>
-		L2En6thSnt9T8Z9iNMo24vHrci8=
+		140bfD8kO8MOSa/zOOuJAXRsZac=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -370,11 +374,11 @@
 		</data>
 		<key>www/build/vendor.js</key>
 		<data>
-		GxWVVBXekxl+vJtPlaCVBzlgPsw=
+		6PszhRlehlW29hiSBSLw0DzsplE=
 		</data>
 		<key>www/build/vendor.js.map</key>
 		<data>
-		pPJEi5FnqwacuxwcloyjeSNlQ4I=
+		z3dkwD5gsAsycoluacfmg6GboiY=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -398,7 +402,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		jiMWz915Vlax09iTxPhguTKWkW8=
+		7w/bXqzJOD5R72ejEqNJTt0VUoQ=
 		</data>
 		<key>www/index.html</key>
 		<data>
@@ -411,6 +415,10 @@
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<data>
 		DgD9WKGqlbNViEZBSi4Wenbl/uM=
+		</data>
+		<key>www/plugins/cordova-plugin-firebase/www/firebase.js</key>
+		<data>
+		FdR7Yn7/BDIrKQsaYY+WOoRV/tw=
 		</data>
 		<key>www/plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js</key>
 		<data>
@@ -692,11 +700,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w7hBU52UXw46RATCyXFaFEeHoUA=
+			neN1YL84pjQ54PGZqeETR6x8Yx4=
 			</data>
 			<key>hash2</key>
 			<data>
-			qTBe0n0p8/yGyF9GLFmdTttSESyUGBs5sT4AvGQ2C94=
+			PTm+oiOCLMbN12YCOFNSvfWpRgz8lNUcMnxkn65mwp4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -730,6 +738,17 @@
 			<key>hash2</key>
 			<data>
 			aw0/lmLxJF9mpkXlE1Ic/96OWqIF4RnA3OPGsJ3MblA=
+			</data>
+		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zmV6UqBSo6r1NOz798vd5O4zTBA=
+			</data>
+			<key>hash2</key>
+			<data>
+			kmHsztpgjvF0JW5f3HdMHm49z1M0CcG8OT1JDQHHE/E=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -912,22 +931,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O6dn1RW8Xg5jdyq6UGSX/BESv+g=
+			jpGFKXHVKluurWwk5NgwpmlgajI=
 			</data>
 			<key>hash2</key>
 			<data>
-			0xi50v9+fO3/VEWXeOZc6UEu+SaDYoERt+YOL1IfAFk=
+			gtYxaRnYSRp3mAS5z5am6Mv2EC8khivRl8/u9gybAMs=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2m1O9vr+5M3TY4x//8RNhA7hE8I=
+			/Ns1e50idw5qhnwYbS1JDNuhoAQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NowOVEt9jJ+Grj/5tZeapxNk1ppGUKyWclTzPkIjbr4=
+			BS6HCeSQzfPSHzA83P7InYmaC0ZhOpJCeWB/rpdq+yE=
 			</data>
 		</dict>
 		<key>www/assets/fonts/ionicons.eot</key>
@@ -1242,11 +1261,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SHY/O2Gh/+bBs2Qv5Cu7g3gpdh4=
+			SSmFOxtMQMikZaN3rBc0eDKR0vk=
 			</data>
 			<key>hash2</key>
 			<data>
-			DWDbmI7w4HOge5C7sFzEekE/rt7P8EskRo9DldnKybc=
+			J5WR3lXQEGaJ773XjPv1yfXklR4laTqHwFstQZ8RNNo=
 			</data>
 		</dict>
 		<key>www/build/0.js.map</key>
@@ -1264,11 +1283,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BXQox//nwVNRJRVH8lgI8lFAzQA=
+			1yXH4kA9Nai9xk384zIW4Ft1+2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			DwB/GI5hwhLcEvhip6gAYmcT57iN3VOVPEHRckxv73w=
+			9M5hhDYjSLLBWSfkzqgtrSX7JYJHXFFfCdsH2wGZKPo=
 			</data>
 		</dict>
 		<key>www/build/1.js.map</key>
@@ -1286,11 +1305,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y+TxVEzZRIdxdBT7RlSCYJ/vjVU=
+			5qbPRgq6x00Xso4GL/Z9OpDxDng=
 			</data>
 			<key>hash2</key>
 			<data>
-			QtFzpbvzf49BCyvP0gm6H5rbdetS8X7RWerAdMn7yU4=
+			lHdkVSWn5sFpJ01ehStrFgrTzSQZ3YNi6RSxlR4vYPg=
 			</data>
 		</dict>
 		<key>www/build/2.js.map</key>
@@ -1308,11 +1327,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			URqcnGp3LLZGvwgS9KK4FwLl8SU=
+			WTKkUxUqEJ4MAdY9W74j1vLhwvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			5C4nQw4sBZxMmFXenehuuAfXN7Js9LtBWTdvWs+cerQ=
+			32Nwcdhog//a7ZTuHJaH6aOT/xq5ibnVshzGD1Bdi+A=
 			</data>
 		</dict>
 		<key>www/build/3.js.map</key>
@@ -1330,11 +1349,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S0yrGNIg/Lu6vKq7SDT8Ngzd99k=
+			CCaLa68G3axpxAA2zCa3dhZjOp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7jO7OUNfGq1Rg+vzDpeKtiekLXJ1N7NRaRp5/+qo45Y=
+			E6dqOkjeU3wzX82XfCLDabc/3hbBo4UkO4ylPRhPiJ8=
 			</data>
 		</dict>
 		<key>www/build/4.js.map</key>
@@ -1374,22 +1393,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IkIGfWQYlPkHm3rGhLorOgTps1E=
+			RRpnxArVBhR0ExycE5+Z5ZtF3MQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			wYvzL1P7EAMR3xMigU+lEuay8sP8Llvrt0W8p+EjzFU=
+			p8FiNGmTYFUGJRc9jPM4Hc0uUZ+hWlwctvyZc4Zxluk=
 			</data>
 		</dict>
 		<key>www/build/main.js.map</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L2En6thSnt9T8Z9iNMo24vHrci8=
+			140bfD8kO8MOSa/zOOuJAXRsZac=
 			</data>
 			<key>hash2</key>
 			<data>
-			L+z2lVS1w1wNqSW41WxUWTVTrhUfxvq4G0b68ZJvNww=
+			qi5g7YgVz/tFbNnsKAcn3nvlY2YReHdMeuGoCYQy3Bw=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>
@@ -1418,22 +1437,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GxWVVBXekxl+vJtPlaCVBzlgPsw=
+			6PszhRlehlW29hiSBSLw0DzsplE=
 			</data>
 			<key>hash2</key>
 			<data>
-			XSPoDprWdjI3U5cS3jnzCGLYFfJFng3zwHPNSwjX4z0=
+			A6xOa6s54iQtURTbLSX6HZfp4IVQmK6W/nTgYBYn7So=
 			</data>
 		</dict>
 		<key>www/build/vendor.js.map</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pPJEi5FnqwacuxwcloyjeSNlQ4I=
+			z3dkwD5gsAsycoluacfmg6GboiY=
 			</data>
 			<key>hash2</key>
 			<data>
-			a0P1Q1GjnrQdUKlZGSNkoSup7jCOq0tdIV4Q0eYKlvI=
+			iqoT+SYZKWlV2cJQAhY3+l6GHTy0TBwpgdqW7757wVo=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -1495,11 +1514,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jiMWz915Vlax09iTxPhguTKWkW8=
+			7w/bXqzJOD5R72ejEqNJTt0VUoQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8c/NEv3dF0lbNJ0qvOA8fPmly+H5KKTzkLyjLRdf4ik=
+			fW2VPnuqk1I0U6VbjV+Ri8aQIoGX3aIpU0qjWYBje8g=
 			</data>
 		</dict>
 		<key>www/index.html</key>
@@ -1533,6 +1552,17 @@
 			<key>hash2</key>
 			<data>
 			75fkIus2+MF7kZSUTo0HFvPQWqyneMrHDoQXHcvK/fk=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-firebase/www/firebase.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FdR7Yn7/BDIrKQsaYY+WOoRV/tw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ej1b/Ar+wjg22itkzuraJc6Ukhe12nEU2O2YxdhjdTM=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js</key>
