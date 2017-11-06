@@ -103,5 +103,24 @@ export class MobileAuthPage {
         });
       //this.navCtrl.setRoot(HomePage);
     }
+
+    
+  }
+
+  change(e:any)
+  {
+    console.log(e)
+
+    // e.preventDefault();
+    let control:any;
+    control = e.srcElement.nextElementSibling;
+    if (e.srcElement.nextElementSibling) {
+      e.srcElement.nextElementSibling.focus();
+  }
+  else{
+      console.log('close keyboard');
+  }
+  return;
+      
   }
 }

@@ -42,6 +42,209 @@ HomePage = __decorate([
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ 148:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(208);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DashboardPage = (function () {
+    function DashboardPage(navCtrl, navParams, _googleMaps, _geoLoc, geocoder) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this._googleMaps = _googleMaps;
+        this._geoLoc = _geoLoc;
+        this.geocoder = geocoder;
+    }
+    DashboardPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.initMap();
+        }, 500);
+    };
+    DashboardPage.prototype.initMap = function () {
+        var _this = this;
+        var loc;
+        var element = this.mapElement.nativeElement;
+        this.map = this._googleMaps.create(element, { styles: [] });
+        this.map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["c" /* GoogleMapsEvent */].MAP_READY).then(function () {
+            _this._geoLoc.getCurrentPosition().then(function (res) {
+                loc = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["d" /* LatLng */](res.coords.latitude, res.coords.longitude);
+                _this.moveCamera(loc);
+                _this.getLocationName(loc, res.coords.latitude, res.coords.longitude);
+            }).catch(function (err) {
+                alert('Failed to get current position: ' + err);
+            });
+        });
+    };
+    DashboardPage.prototype.moveCamera = function (loc) {
+        var options = {
+            target: loc,
+            zoom: 15,
+            tilt: 10
+        };
+        this.map.moveCamera(options);
+    };
+    DashboardPage.prototype.createMarker = function (loc, title) {
+        var markerOptions = {
+            position: loc,
+            title: title,
+            animation: 'DROP'
+        };
+        return this
+            .map
+            .addMarker(markerOptions);
+    };
+    DashboardPage.prototype.getLocationName = function (loc, latitude, longitude) {
+        var _this = this;
+        var latlng = {
+            lat: latitude,
+            lng: longitude
+        };
+        var req = {
+            position: latlng
+        };
+        this.geocoder.geocode(req).then(function (res) {
+            _this.createMarker(loc, res[1].extra.lines[0].split(","[0])).then(function (marker) {
+                marker.showInfoWindow();
+            }).catch(function (err) {
+                alert("Failed to add marker: " + err);
+            });
+        }).catch(function (err) {
+            alert('Failed to get location: ' + err);
+        });
+    };
+    ;
+    return DashboardPage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('map'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+], DashboardPage.prototype, "mapElement", void 0);
+DashboardPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-dashboard',template:/*ion-inline-start:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div #map id="map" class="maparea">\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Source"></ion-input>\n            </ion-item>\n        </ion-card>\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Destination"></ion-input>\n            </ion-item>\n        </ion-card>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMaps */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["a" /* Geocoder */]])
+], DashboardPage);
+
+//# sourceMappingURL=dashboard.js.map
+
+/***/ }),
+
+/***/ 149:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MobileAuthPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(112);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the MobileauthPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MobileAuthPage = (function () {
+    function MobileAuthPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.mobileNo = "";
+        this.authcode = "";
+        this.mobileNo = navParams.get("mobile");
+    }
+    MobileAuthPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MobileauthPage');
+        //this.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    };
+    MobileAuthPage.prototype.validateCode = function () {
+        // this.navCtrl.push(HomePage)
+        //this.navCtrl.setRoot(HomePage)
+        // const appVerifier = this.recaptchaVerifier;
+        // const phoneNumberString = "+" + "9966990732";
+        // firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
+        //   .then( confirmationResult => {
+        //     // SMS sent. Prompt user to type the code from the message, then sign the
+        //     // user in with confirmationResult.confirm(code).
+        //     let prompt = this.alertCtrl.create({
+        //     title: 'Enter the Confirmation code',
+        //     inputs: [{ name: 'confirmationCode', placeholder: 'Confirmation Code' }],
+        //     buttons: [
+        //       { text: 'Cancel',
+        //         handler: data => { console.log('Cancel clicked'); }
+        //       },
+        //       { text: 'Send',
+        //         handler: data => {
+        //           confirmationResult.confirm(data.confirmationCode)
+        //           .then(function (result) {
+        //             // User signed in successfully.
+        //             console.log(result.user);
+        //             // ...
+        //           }).catch(function (error) {
+        //             // User couldn't sign in (bad verification code?)
+        //             // ...
+        //           });
+        //         }
+        //       }
+        //     ]
+        //   });
+        //   prompt.present();
+        // })
+        // .catch(function (error) {
+        //   console.error("SMS not sent", error);
+        // });
+    };
+    MobileAuthPage.prototype.validateOTP = function (value) {
+        if (this.authcode.length == 4) {
+            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+        }
+    };
+    return MobileAuthPage;
+}());
+MobileAuthPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-mobileauth',template:/*ion-inline-start:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/mobileauth/mobileauth.html"*/'<!--\n  Generated template for the MobileauthPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>mobileauth</ion-title> -->\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<h1 padding>Enter the 4 digit code sent to +91 <label [innerHTML]="mobileNo"></label></h1>\n\n<ion-item padding  text-center>\n    <ion-label floating>code</ion-label>\n    <div id="recaptcha-container"></div>\n    <ion-input  type="tel" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border" (ngModelChange)="validateOTP($event)"></ion-input>\n</ion-item>\n<!-- \n<ion-grid>\n    <ion-row>\n      <ion-col col-6>\n        \n              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">\n              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">\n          \n      </ion-col>\n      <ion-col col-2>\n          <ion-item>\n              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>\n            </ion-item>\n          \n      </ion-col>\n      <ion-col col-2>\n          <ion-item>\n              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>\n            </ion-item>\n          \n      </ion-col>\n      <ion-col col-2>\n          <ion-item>\n              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>\n            </ion-item>\n          \n      </ion-col>\n            </ion-row>\n\n</ion-grid> -->\n\n\n  <ion-footer>  \n <!--       <ion-fab right bottom margin-right>\n        <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>\n      </ion-fab> -->\n     \n  </ion-footer>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/mobileauth/mobileauth.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], MobileAuthPage);
+
+//# sourceMappingURL=mobileauth.js.map
+
+/***/ }),
+
+>>>>>>> 52bbcb341c20d606304583e83e56cf52b841673e
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -84,7 +287,11 @@ var RegisterPage = (function () {
 }());
 RegisterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-register',template:/*ion-inline-start:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>register</ion-title> -->\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<h1 padding>\n  Enter your registered email address\n</h1>\n\n<ion-item padding>\n    <ion-label floating>something@example.com</ion-label>\n<ion-input type="email" [(ngModel)]="email" value="" class="black-border" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required email></ion-input>\n</ion-item>\n<div class="errorMsg" [hidden]="isHidden">Email is invalid, please enter a valid email address</div>\n  <ion-footer>\n    <ion-fab right bottom margin-right>\n        <button ion-fab color="dark" (click)="validateEmail()"><ion-icon name="arrow-forward"></ion-icon></button>\n      </ion-fab>   \n  </ion-footer>\n</ion-content>\n'/*ion-inline-end:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/register/register.html"*/,
+=======
+        selector: 'page-register',template:/*ion-inline-start:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/register/register.html"*/'<ion-header>\n    <ion-navbar>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <form [formGroup]="register" (ngSubmit)="logForm()">\n        <ion-grid>\n            <ion-row>\n                <ion-col col-6>\n                    <ion-item>\n                        <ion-label floating>First Name</ion-label>\n                        <ion-input type="text" formControlName="firstName"></ion-input>\n                    </ion-item>\n                    <div *ngIf="register?.controls[\'firstName\']?.errors?.required && register?.controls[\'firstName\'].touched">\n                        <p float-right class="error">* This Field is required</p>\n                    </div>\n                </ion-col>\n\n                <ion-col col-6>\n                    <ion-item>\n                        <ion-label floating>Last Name</ion-label>\n                        <ion-input type="text" formControlName="LastName"></ion-input>\n                    </ion-item>\n                    <div *ngIf="register?.controls[\'LastName\']?.errors?.required && register?.controls[\'LastName\'].touched">\n                        <p class="error" float-right>* This Field is required</p>\n                    </div>\n                </ion-col>\n            </ion-row>\n            <ion-row>\n                <ion-item>\n                    <ion-label floating>Mobile</ion-label>\n                    <ion-input type="tel" formControlName="mobile" disabled=true style="color:black;"></ion-input>\n                </ion-item>\n                <div *ngIf="register?.controls[\'mobile\']?.errors?.required && register?.controls[\'mobile\'].touched">\n                    <p class="error" float-right>* This Field is required</p>\n                </div>\n            </ion-row>\n            <ion-row>\n\n                <ion-item>\n                    <ion-label floating>Email</ion-label>\n                    <ion-input type="text" formControlName="email"></ion-input>\n                </ion-item>\n                <div *ngIf="register?.controls[\'email\']?.errors?.required && register?.controls[\'email\'].touched">\n                    <p class="error" float-right>* This Field is required</p>\n                </div>\n            </ion-row>\n\n            <ion-row>\n                <ion-item>\n                    <ion-label floating>Password</ion-label>\n                    <ion-input type="password" formControlName="password"></ion-input>\n                </ion-item>\n                <div *ngIf="register?.controls[\'password\']?.errors?.required && register?.controls[\'password\'].touched">\n                    <p class="error" float-right>* This Field is required</p>\n                </div>\n            </ion-row>\n\n        </ion-grid>\n\n        <ion-footer>\n            <!-- [disabled]="!register.valid" -->\n\n            <ion-fab right bottom margin-right>\n                <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>\n            </ion-fab>\n        </ion-footer>\n\n        <!--  -->\n    </form>\n\n\n</ion-content>'/*ion-inline-end:"/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/src/pages/register/register.html"*/,
+>>>>>>> 52bbcb341c20d606304583e83e56cf52b841673e
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], RegisterPage);

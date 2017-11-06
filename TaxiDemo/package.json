@@ -28,6 +28,7 @@
     "@ionic-native/status-bar": "4.3.2",
     "@ionic/storage": "2.0.1",
     "angularfire2": "^5.0.0-rc.3",
+    "cordova-android": "6.3.0",
     "cordova-ios": "4.5.3",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
@@ -70,7 +71,8 @@
       }
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

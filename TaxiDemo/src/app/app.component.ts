@@ -22,7 +22,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, 
+  constructor(public platform: Platform, public statusBar: StatusBar,
     public splashScreen: SplashScreen) {
     this.initializeApp();
 
@@ -31,7 +31,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Settings', component: SettingPage }
       // { title: 'Lists', component: ListPage}
-      
+
     ];
 
   }
