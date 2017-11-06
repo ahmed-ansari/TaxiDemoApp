@@ -53,14 +53,13 @@ export class WelcomePage {
   }
 
   goToAuthPage() {
-    this.navCtrl.push(DashboardPage);
-    // this.userObj = this.service.validateUser(this.mobile);
-    //   //console.log(this.myPerson);
-    //   if(!this.userObj){
-    //     this.navCtrl.push(RegisterPage, { mobile: this.mobile });
-    //   }else{
-    //     this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-    //   }
+    //this.navCtrl.push(DashboardPage);
+    this.userObj = this.service.validateUser(this.mobile);
+      if(!this.userObj){
+        this.navCtrl.push(RegisterPage, { mobile: this.mobile });
+      }else{
+        this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
+      }
   }
 
 }

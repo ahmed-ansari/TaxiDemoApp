@@ -10,19 +10,18 @@ import { MobileAuthPage } from '../mobileauth/mobileauth'
 })
 export class RegisterPage {
   private register : FormGroup;
+  mobileNo: any = "";
   constructor( private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams) {
-    
-   
-
+    this.mobileNo = navParams.get("mobile");
   }
   ngOnInit () {
     this.register = this.formBuilder.group({
-      
+
       firstName: ['', Validators.required],
       LastName: ['', Validators.required],
       email : ['',this.validatorsEmail()],
       password: ['',Validators.required],
-      mobile: ['',this.validatorsMobile()]
+      mobile: [this.mobileNo]
     });
   }
 
@@ -44,6 +43,6 @@ export class RegisterPage {
     this.navCtrl.push(MobileAuthPage)
   }
 
-  
+
 
 }
