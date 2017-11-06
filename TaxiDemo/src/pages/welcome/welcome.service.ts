@@ -1,9 +1,13 @@
 import firebase from 'firebase';
-import { NavController } from 'ionic-angular';
+import {NgModule} from '@angular/core';
+
+@NgModule({
+
+})
 
 export class WelcomeService {
 
-    constructor(public navCtrl: NavController) {
+    constructor() {
     }
 
     validateUser(mobile) : any {

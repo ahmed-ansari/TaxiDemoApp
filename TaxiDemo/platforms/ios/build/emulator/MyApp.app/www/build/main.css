@@ -25690,8 +25690,18 @@ ion-navbar.toolbar {
   justify-content: flex-start;
 }
 
+page-dashboard .maparea {
+  height: 100%;
+  width: 100%;
+}
+
 page-register .black-border {
   border-bottom: 1px solid black;
+}
+
+page-register .errorMsg {
+  padding-left: 1em;
+  color: red;
 }
 
 page-welcome .big-field {
@@ -25703,6 +25713,7 @@ page-welcome .big-field {
 page-welcome #code91 {
   font-size: 14pt;
   padding-top: 25px;
+  padding-left: 0.4em;
 }
 
 page-welcome .btn-text-left {

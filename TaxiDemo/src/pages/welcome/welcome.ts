@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { WelcomeService } from './welcome.service';
+import {DashboardPage} from '../dashboard/dashboard';
 
 /**
  * Generated class for the WelcomePage page.
@@ -39,11 +40,11 @@ export class WelcomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
-    this.hideMobile = false;    
+    this.hideMobile = false;
   }
 
   validateUser() {
-    //this.navCtrl.setRoot(HomePage);    
+    //this.navCtrl.setRoot(HomePage);
   }
 
   goToRegisterPage() {
@@ -52,14 +53,14 @@ export class WelcomePage {
   }
 
   goToAuthPage() {
-    //this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-    this.userObj = this.service.validateUser(this.mobile);
-      //console.log(this.myPerson);
-      if(!this.userObj){
-        this.navCtrl.push(RegisterPage, { mobile: this.mobile });
-      }else{
-        this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-      }    
+    this.navCtrl.push(DashboardPage);
+    // this.userObj = this.service.validateUser(this.mobile);
+    //   //console.log(this.myPerson);
+    //   if(!this.userObj){
+    //     this.navCtrl.push(RegisterPage, { mobile: this.mobile });
+    //   }else{
+    //     this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
+    //   }
   }
 
 }
