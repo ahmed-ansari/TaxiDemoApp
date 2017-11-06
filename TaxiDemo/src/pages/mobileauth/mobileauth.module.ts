@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { MobileauthPage } from './mobileauth';
+import { MobileAuthPage } from './mobileauth';
 
 @NgModule({
   declarations: [
-    MobileauthPage,
+    MobileAuthPage
   ],
   imports: [
-    IonicPageModule.forChild(MobileauthPage),
+    IonicPageModule.forChild(MobileAuthPage),
   ],
 })
 export class MobileauthPageModule {}

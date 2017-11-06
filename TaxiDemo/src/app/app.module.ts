@@ -13,7 +13,7 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
-import { MobileauthPage } from '../pages/mobileauth/mobileauth';
+import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 import { SettingPage } from '../pages/setting/setting';
 
 
@@ -40,7 +40,7 @@ firebase.initializeApp(firebaseAuth);
     WelcomePage,
     LoginPage,
     RegisterPage,
-    MobileauthPage,
+    MobileAuthPage,
     SettingPage
   ],
   imports: [
@@ -58,7 +58,7 @@ firebase.initializeApp(firebaseAuth);
     WelcomePage,
     LoginPage,
     RegisterPage,
-    MobileauthPage,
+    MobileAuthPage,
     SettingPage
   ],
   providers: [

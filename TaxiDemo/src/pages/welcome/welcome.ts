@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireModule } from 'angularfire2'
 
-import { HomePage } from '../home/home'
-import { RegisterPage } from '../register/register'
+import { HomePage } from '../home/home';
+import { RegisterPage } from '../register/register';
+import { MobileAuthPage } from '../mobileauth/mobileauth';
+
 /**
  * Generated class for the WelcomePage page.
  *
@@ -17,48 +19,29 @@ import { RegisterPage } from '../register/register'
   templateUrl: 'welcome.html',
 })
 export class WelcomePage {
-  password: any;
   mobile: any = "";
   
-  hideMobile:Boolean = false
-  hidePassword:Boolean = true
+  hideMobile:Boolean = false;
+  isHidden:Boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  validateMobile(value){
+     if (this.mobile.length == 10) {
+       this.isHidden = false;
+     } else {
+       this.isHidden = true;
+     }
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
-    this.password = ""
-    this.hideMobile = false
+    this.hideMobile = false;
   }
 
   validateUser() {
-    this.navCtrl.setRoot(HomePage)
-    // return
-    //  if (this.mobile !== undefined && this.mobile !== "") {
-
-    //   if (this.password !== undefined && this.password !== "") {
-
-    //     this.navCtrl.push(HomePage)
-    //   }
-     
-    // }
-
-    
-
-
-    // if (this.mobile !== undefined && this.mobile !== "") {
-
-    //   if (this.password !== undefined && this.password !== "") {
-    //     this.navCtrl.push(RegisterPage)
-    //   }
-    //   this.hideMobile = true
-    //   this.hidePassword =  !this.hidePassword
-    // }
-
-    
-
-    // if (this.mobile !== undefined && this.mobile !== "" && this)
+    this.navCtrl.setRoot(HomePage);
   }
 
   goToRegisterPage() {
@@ -66,5 +49,8 @@ export class WelcomePage {
     this.navCtrl.push(RegisterPage)
   }
 
+  goToAuthPage() {
+    this.navCtrl.push(MobileAuthPage,{mobile: this.mobile});
+  }
 
 }

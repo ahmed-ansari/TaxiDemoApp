@@ -1,27 +1,25 @@
 page-welcome {
- .big-field {
-    //  background: tomato;
-     height: 80px;
-     font-size: 18pt;
-     padding-top: 14px;
- }
+    .big-field {
+        //  background: tomato;
+         height: 80px;
+         font-size: 18pt;
+         padding-top: 14px;
+    }
 
- #code91 {
-    //  color: tomato;
-     font-size: 14pt;
-     padding-top: 25px
-     
- }
+    #code91 {
+        //  color: tomato;
+        font-size: 14pt;
+        padding-top: 25px;
+        padding-left: 0.4em;     
+    }
 
- .btn-text-left {
-     justify-content: flex-start !important;
- }
- .full-img {
-     width: 100vw
- }
-
- 
-
+    .btn-text-left {
+        justify-content: flex-start !important;
+    }
+    
+    .full-img {
+        width: 100vw
+    }
 }
 
 .big-field {

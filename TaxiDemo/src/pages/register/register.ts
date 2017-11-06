@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MobileauthPage } from '../mobileauth/mobileauth'
+import { MobileAuthPage } from '../mobileauth/mobileauth';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -15,6 +15,7 @@ import { MobileauthPage } from '../mobileauth/mobileauth'
 })
 export class RegisterPage {
 
+  isHidden: Boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,7 +24,7 @@ export class RegisterPage {
   }
 
   validateEmail() {
-    this.navCtrl.push(MobileauthPage)
+    this.navCtrl.push(MobileAuthPage);
   }
 
 }

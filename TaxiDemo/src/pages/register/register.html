@@ -15,24 +15,17 @@
 
 <ion-content padding>
 <h1 padding>
-  Enter the email address you used to register
+  Enter your registered email address
 </h1>
 
 <ion-item padding>
-    <ion-label floating>name@example.com</ion-label>
-<ion-input type="text" [(ngModel)]="email" value="" class="black-border"></ion-input>
+    <ion-label floating>something@example.com</ion-label>
+<ion-input type="email" [(ngModel)]="email" value="" class="black-border" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required email></ion-input>
 </ion-item>
-
-
-
-<ion-footer>
-    
-      <button (click)="validateEmail()" ion-button color="dark" icon-right large float-end margin-right>
-         Next
-         <ion-icon name="arrow-forward" ></ion-icon>
-       </button> 
-      
-       
-     
+<div class="errorMsg" [hidden]="isHidden">Email is invalid, please enter a valid email address</div>
+  <ion-footer>
+    <ion-fab right bottom margin-right>
+        <button ion-fab color="dark" (click)="validateEmail()"><ion-icon name="arrow-forward"></ion-icon></button>
+      </ion-fab>   
   </ion-footer>
 </ion-content>

@@ -2,4 +2,9 @@ page-register {
     .black-border {
         border-bottom: 1px solid black;
     }
+
+    .errorMsg {
+    	padding-left: 1em;
+    	color: red;
+    }
 }

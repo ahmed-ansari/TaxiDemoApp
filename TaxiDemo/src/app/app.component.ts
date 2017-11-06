@@ -10,7 +10,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { SettingPage } from '../pages/setting/setting';
 import { RegisterPage } from '../pages/register/register';
 
-import { MobileauthPage } from '../pages/mobileauth/mobileauth';
+import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +30,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Settings', component: SettingPage }
-      // ,{ title: 'Lists', component: ListPage}
+      // { title: 'Lists', component: ListPage}
       
     ];
 
@@ -52,7 +52,6 @@ export class MyApp {
   }
 
   logout() {
-    
-    this.nav.setRoot(WelcomePage)
+    this.nav.setRoot(WelcomePage);
   }
 }
