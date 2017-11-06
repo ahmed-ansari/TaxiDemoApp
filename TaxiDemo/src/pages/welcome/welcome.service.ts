@@ -8,10 +8,11 @@ export class WelcomeService {
 
     validateUser(mobile) : any {
         var userObj = {};
-        const personRef: firebase.database.Reference = firebase.database().ref(`/Users/` + mobile);
+        const personKeyRef: firebase.database.Reference = firebase.database().ref(`/UserRef/`);
+        var keyValue = personKeyRef.child(mobile);
+        const personRef: firebase.database.Reference = firebase.database().ref(`/Users/` + keyValue);
         personRef.on('value', personSnapshot => {
             userObj = personSnapshot.val();
-            //console.log(this.myPerson);
             return userObj;
         });
     }
