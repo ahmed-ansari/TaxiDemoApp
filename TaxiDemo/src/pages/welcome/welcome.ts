@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase } from 'angularfire2/database';
 import firebase from 'firebase';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
+import { WelcomeService } from './welcome.service';
 
 /**
  * Generated class for the WelcomePage page.
@@ -21,15 +21,12 @@ import { MobileAuthPage } from '../mobileauth/mobileauth';
 })
 export class WelcomePage {
   mobile: any = "";
-  //database: database.Database;
-
   hideMobile: Boolean = false;
   isHidden: Boolean = true;
 
-  public myPerson = {};
+  public userObj = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app: AngularFireDatabase) {
-    //this.database = app.database();    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService) {
   }
 
   validateMobile(value) {
@@ -56,16 +53,13 @@ export class WelcomePage {
 
   goToAuthPage() {
     //this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-    const personRef: firebase.database.Reference = firebase.database().ref(`/Users/`+this.mobile);
-    personRef.on('value', personSnapshot => {
-      this.myPerson = personSnapshot.val();
+    this.userObj = this.service.validateUser(this.mobile);
       //console.log(this.myPerson);
-      if(!this.myPerson){
+      if(!this.userObj){
         this.navCtrl.push(RegisterPage, { mobile: this.mobile });
       }else{
         this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
-      }
-    });
+      }    
   }
 
 }
