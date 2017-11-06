@@ -1,31 +1,77 @@
-<!--
-  Generated template for the RegisterPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<!-- <ion-header>
   <ion-navbar>
-    <!-- <ion-title>register</ion-title> -->
+    <ion-title>register</ion-title>
   </ion-navbar>
-
-</ion-header>
+</ion-header> -->
 
 
 <ion-content padding>
-<h1 padding>
-  Enter your registered email address
-</h1>
+  <form [formGroup]="register" (ngSubmit)="logForm()">
+      <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+                <ion-item>
+                    <ion-label floating>First Name</ion-label>
+                    <ion-input type="text" formControlName="firstName"></ion-input>
+                  </ion-item>
+                  <div  *ngIf="register?.controls['firstName']?.errors?.required && register?.controls['firstName'].touched">
+                    <p float-right class="error">* This Field is required</p>
+                  </div>
+            </ion-col>
 
-<ion-item padding>
-    <ion-label floating>something@example.com</ion-label>
-<ion-input type="email" [(ngModel)]="email" value="" class="black-border" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required email></ion-input>
-</ion-item>
-<div class="errorMsg" [hidden]="isHidden">Email is invalid, please enter a valid email address</div>
-  <ion-footer>
-    <ion-fab right bottom margin-right>
-        <button ion-fab color="dark" (click)="validateEmail()"><ion-icon name="arrow-forward"></ion-icon></button>
-      </ion-fab>   
-  </ion-footer>
+            <ion-col col-6>
+                <ion-item>
+                    <ion-label floating>Last Name</ion-label>
+                    <ion-input type="text" formControlName="LastName"></ion-input>
+                  </ion-item>
+                  <div *ngIf="register?.controls['LastName']?.errors?.required && register?.controls['LastName'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                  </div>
+            </ion-col>
+          </ion-row>
+          <ion-row> 
+              <ion-item>
+                  <ion-label floating>Mobile</ion-label>
+                  <ion-input type="tel" formControlName="mobile"></ion-input>
+                </ion-item>
+                <div *ngIf="register?.controls['mobile']?.errors?.required && register?.controls['mobile'].touched">
+                  <p class="error" float-right>* This Field is required</p>
+                </div>
+          </ion-row>
+          <ion-row> 
+            
+        <ion-item>
+            <ion-label floating >Email</ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+          <div  *ngIf="register?.controls['email']?.errors?.required && register?.controls['email'].touched">
+            <p class="error" float-right>* This Field is required</p>
+          </div>
+          </ion-row>
+
+          <ion-row> 
+              <ion-item>
+                  <ion-label floating>Password</ion-label>
+                  <ion-input type="password" formControlName="password"></ion-input>
+                </ion-item>
+                <div  *ngIf="register?.controls['password']?.errors?.required && register?.controls['password'].touched">
+                  <p class="error" float-right>* This Field is required</p>
+                </div>
+          </ion-row>
+
+        </ion-grid>
+
+        <ion-footer>
+            <!-- [disabled]="!register.valid" -->
+    
+            <ion-fab right bottom margin-right>
+                <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
+            </ion-fab>
+        </ion-footer>
+   
+    <!--  -->
+  </form>
+
+  
 </ion-content>

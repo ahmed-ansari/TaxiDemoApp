@@ -70,8 +70,27 @@ export class MobileAuthPage {
   validateOTP(value) {
     if(this.authcode.length == 4) {
       
-      this.navCtrl.setRoot(HomePage);
+      // this.navCtrl.setRoot(HomePage);
     }
+
+    
+  }
+
+  change(e:any)
+  {
+    console.log(e)
+
+    // e.preventDefault();
+    let control:any;
+    control = e.srcElement.nextElementSibling;
+    if (e.srcElement.nextElementSibling) {
+      e.srcElement.nextElementSibling.focus();
+  }
+  else{
+      console.log('close keyboard');
+  }
+  return;
+      
   }
 
 }

@@ -18,13 +18,40 @@
 
 <ion-item padding  text-center>
     <ion-label floating>code</ion-label>
-<<<<<<< HEAD
-<ion-input  type="text" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border"></ion-input>
-<div id="recaptcha-container"></div>
-=======
-<ion-input  type="tel" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border" (ngModelChange)="validateOTP($event)"></ion-input>
->>>>>>> b2bfdb094f80dc2aa2ab90bf2c919d4ac7d0f6a1
+    <div id="recaptcha-container"></div>
+    <ion-input  type="tel" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border" (ngModelChange)="validateOTP($event)"></ion-input>
 </ion-item>
+<!-- 
+<ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        
+              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">
+              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">
+          
+      </ion-col>
+      <ion-col col-2>
+          <ion-item>
+              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
+            </ion-item>
+          
+      </ion-col>
+      <ion-col col-2>
+          <ion-item>
+              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
+            </ion-item>
+          
+      </ion-col>
+      <ion-col col-2>
+          <ion-item>
+              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
+            </ion-item>
+          
+      </ion-col>
+            </ion-row>
+
+</ion-grid> -->
+
 
   <ion-footer>  
  <!--       <ion-fab right bottom margin-right>
