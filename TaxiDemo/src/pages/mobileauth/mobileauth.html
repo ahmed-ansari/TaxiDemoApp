@@ -6,58 +6,27 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <!-- <ion-title>mobileauth</ion-title> -->
-  </ion-navbar>
+    <ion-navbar>
+        <!-- <ion-title>mobileauth</ion-title> -->
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<h1 padding>Enter the 4 digit code sent to +91 <label [innerHTML]="mobileNo"></label></h1>
-
-<ion-item padding  text-center>
-    <ion-label floating>code</ion-label>
     <div id="recaptcha-container"></div>
-    <ion-input  type="tel" text-center maxlength="4" [(ngModel)]="authcode" value="" class="black-border" (ngModelChange)="validateOTP($event)"></ion-input>
-</ion-item>
-<!-- 
-<ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        
-              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">
-              <input (keypress)="change($event)"  style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0">
-          
-      </ion-col>
-      <ion-col col-2>
-          <ion-item>
-              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
-            </ion-item>
-          
-      </ion-col>
-      <ion-col col-2>
-          <ion-item>
-              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
-            </ion-item>
-          
-      </ion-col>
-      <ion-col col-2>
-          <ion-item>
-              <ion-input style="padding-left: 12px;" type="tel" value="" maxlength="1" placeholder="0"></ion-input>
-            </ion-item>
-          
-      </ion-col>
-            </ion-row>
+    <h1 padding>Enter the 4 digit code sent to +91 <label [innerHTML]="mobileNo"></label></h1>
 
-</ion-grid> -->
+    <ion-item padding text-center>
+        <ion-label floating>code</ion-label>
+        <ion-input type="tel" text-center maxlength="6" [(ngModel)]="authcode" value="" class="black-border" (ngModelChange)="validateOTP($event)"></ion-input>
+    </ion-item>
 
+    <ion-footer>
+        <ion-fab right bottom margin-right>
+            <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-fab>
 
-  <ion-footer>  
- <!--       <ion-fab right bottom margin-right>
-        <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>
-      </ion-fab> -->
-     
-  </ion-footer>
+    </ion-footer>
 
 </ion-content>

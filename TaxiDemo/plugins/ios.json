@@ -25,23 +25,23 @@
     "cordova-plugin-firebase": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-googlemaps": {
       "API_KEY_FOR_IOS": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
       "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
       "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map",
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-geolocation": {
-      "GEOLOCATION_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
   "dependent_plugins": {
-    "com.googlemaps.ios": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "cordova-plugin-compat": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   }
 }

@@ -60,14 +60,14 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-firebase": {},
-      "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_IOS": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
-        "API_KEY_FOR_ANDROID": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
-        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
-        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
-      },
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": " "
+      },
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
+        "API_KEY_FOR_IOS": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
       }
     },
     "platforms": [
