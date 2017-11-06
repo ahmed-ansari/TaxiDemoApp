@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MobileAuthPage } from '../mobileauth/mobileauth'
+import { RegisterService } from '../register/register.service'
 
 @IonicPage()
 @Component({
@@ -11,7 +12,8 @@ import { MobileAuthPage } from '../mobileauth/mobileauth'
 export class RegisterPage {
   private register : FormGroup;
   mobileNo: any = "";
-  constructor( private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams) {
+  constructor( private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams,
+        private regService: RegisterService) {
     this.mobileNo = navParams.get("mobile");
   }
   ngOnInit () {
@@ -40,7 +42,8 @@ export class RegisterPage {
 
   logForm(){
     console.log(this.register.value)
-    this.navCtrl.push(MobileAuthPage)
+    this.regService.registerUser(this.register.value);
+    this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
   }
 
 

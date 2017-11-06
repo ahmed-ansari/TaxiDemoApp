@@ -20,6 +20,7 @@ import {DashboardPage} from '../pages/dashboard/dashboard';
 import {PasswordPage} from '../pages/password/password';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
+import {RegisterService} from '../pages/register/register.service';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -74,10 +75,12 @@ firebase.initializeApp(firebaseAuth);
     GoogleMaps,
     Geolocation,
     Geocoder,
-    WelcomeService, {
+    WelcomeService, 
+    RegisterService,
+    {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
-    }
+    },
   ]
 })
 export class AppModule {}

@@ -7,10 +7,7 @@ import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { WelcomeService } from './welcome.service';
 import { DashboardPage } from '../dashboard/dashboard';
-<<<<<<< HEAD
 import {PasswordPage} from '../password/password';
-=======
->>>>>>> 911e78581f474828af5df147044396a3610fae51
 
 /**
  * Generated class for the WelcomePage page.
@@ -59,6 +56,7 @@ export class WelcomePage {
 
   goToAuthPage() {
     //this.navCtrl.push(DashboardPage);
+    var navController = this.navCtrl;
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
@@ -71,19 +69,14 @@ export class WelcomePage {
         userPromise.then((datasnap) => {
           console.log("User found" + JSON.stringify(datasnap.val()));
           loading.dismiss();
-<<<<<<< HEAD
-          this.navCtrl.push(PasswordPage, { mobile: this.mobile, user: datasnap });
-        }).catch((er) => {
-=======
-          this.navCtrl.push(MobileAuthPage, { mobile: this.mobile, user: datasnap });
+          navController.push(PasswordPage, { mobile: this.mobile, user: datasnap });
         }).catch((er) => { 
->>>>>>> 911e78581f474828af5df147044396a3610fae51
            console.log(er);
         });
       } else {
         console.log("No User found");
         loading.dismiss();
-        this.navCtrl.push(RegisterPage, { mobile: this.mobile });
+        navController.push(RegisterPage, { mobile: this.mobile });
       }
     }).catch((er) => {
       loading.dismiss();

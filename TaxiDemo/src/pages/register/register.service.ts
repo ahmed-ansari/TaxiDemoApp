@@ -1,20 +1,26 @@
 import firebase from 'firebase';
-import { NavController } from 'ionic-angular';
+import { NgModule } from '@angular/core';
+
+@NgModule({
+
+})
 
 export class RegisterService {
 
-    constructor(public navCtrl: NavController) {
+    constructor() {
     }
 
     registerUser(user): any {
-        var userObj = {};
-        const personRef: firebase.database.Reference = firebase.database().ref(`/Users/`);// + user.mobile);
-        var keyValueRef = personRef.push();
+        const personObj: firebase.database.Reference = firebase.database().ref(`/Users/`);
+        var keyValueRef = personObj.push();
+        //console.log(keyValueRef.key);
         keyValueRef.set({
-            "firstname": user.firstname,
-            "lastname": user.lastname,
-            "email": user.email,
-            "password": user.password
+            'firstname': user.firstName,
+            'lastname': user.LastName,
+            'email': user.email,
+            'password': user.password
         });
+        const userRef: firebase.database.Reference = firebase.database().ref(`/UserRef`);
+        userRef.child(user.mobile).set(keyValueRef.key);
     }
 }
