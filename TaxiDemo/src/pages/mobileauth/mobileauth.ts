@@ -14,18 +14,24 @@ import { HomePage } from '../home/home';
   selector: 'page-mobileauth',
   templateUrl: 'mobileauth.html',
 })
-export class MobileauthPage {
 
+export class MobileAuthPage {
+
+  mobileNo:any ="";
+  authcode:any = "";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.mobileNo = navParams.get("mobile");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MobileauthPage');
   }
 
-  validateCode() {
-    // this.navCtrl.push(HomePage)
-    this.navCtrl.setRoot(HomePage)
+  validateOTP(value) {
+    if(this.authcode.length == 4) {
+      
+      this.navCtrl.setRoot(HomePage);
+    }
   }
 
 }
