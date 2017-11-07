@@ -47,7 +47,7 @@
 
 </attr><attr format="reference|string" name="scopeUris"/></declare-styleable>
     <item name="crash_reporting_present" type="id"/>
-    <integer name="google_play_services_version">11400000</integer>
+    <integer name="google_play_services_version">11717000</integer>
     <string name="activity_name">@string/launcher_name</string>
     <string name="app_name">MyApp</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -71,4 +71,7 @@
     <string name="google_api_key">@string/google_api_key</string>
     <string name="google_app_id">@string/google_app_id</string>
     <string name="launcher_name">@string/app_name</string>
+    <string name="tagmanager_preview_dialog_button">Continue</string>
+    <string name="tagmanager_preview_dialog_message">Preview mode updated.</string>
+    <string name="tagmanager_preview_dialog_title">Preview</string>
 </resources>

@@ -120,6 +120,9 @@ public final class R {
 		public static final int common_signin_button_text = 0x7f06000f;
 		public static final int common_signin_button_text_long = 0x7f060010;
 		public static final int fcm_fallback_notification_channel_label = 0x7f060011;
+		public static final int tagmanager_preview_dialog_button = 0x7f060017;
+		public static final int tagmanager_preview_dialog_message = 0x7f060018;
+		public static final int tagmanager_preview_dialog_title = 0x7f060019;
 	}
 	public static final class style {
 	}

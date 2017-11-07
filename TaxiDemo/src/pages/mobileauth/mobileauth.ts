@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import firebase from 'firebase';
 
 import { DashboardPage } from '../dashboard/dashboard';
@@ -23,8 +23,11 @@ export class MobileAuthPage {
   public recaptchaVerifier: firebase.auth.RecaptchaVerifier;
   confirmResult: any;
   userObj: any;
+  public sms_code = "";
+  public verification_code = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,
+          private loadingCtrl: LoadingController) {
     this.mobileNo = navParams.get("mobile");
     this.userObj = navParams.get("user");
   }
@@ -44,30 +47,48 @@ export class MobileAuthPage {
 
     console.log("Phone:" + phoneNumberString + "appVerifier:" + appVerifier);
 
-    firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
-      .then(confirmationResult => {
-        // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        this.confirmResult = confirmationResult;        
-      })
-      .catch(function (error) {
-        console.error("SMS not sent", error);
-      });
+    //firebase.auth().p
+    (<any>window).FirebasePlugin.getVerificationID(phoneNumberString, id =>{
+      this.verification_code = id;
+      console.log("Verification;"+id);
+    },error => {
+      console.error("SMS not sent", error);
+    });
+
+    var credentials = firebase.auth.PhoneAuthProvider.credential(this.verification_code, this.sms_code);
+    firebase.auth().signInWithCredential(credentials).then((snap) => {
+      console.log(snap);
+    });
+    // firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
+    //   .then(confirmationResult => {
+    //     // SMS sent. Prompt user to type the code from the message, then sign the
+    //     // user in with confirmationResult.confirm(code).
+    //     this.confirmResult = confirmationResult;        
+    //   })
+    //   .catch(function (error) {
+    //     console.error("SMS not sent", error);
+    //   });
   }
 
   validateOTP(value) {
     var navController = this.navCtrl;
     var alertController = this.alertCtrl;
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
     if (this.authcode.length === 6) {
       this.confirmResult.confirm(this.authcode)
         .then(function (result) {
           // User signed in successfully.
           console.log(result.user);
           navController.setRoot(DashboardPage);
+          loading.dismiss();
          
         }).catch(function (error) {
           // User couldn't sign in (bad verification code?)
           // ...
+          loading.dismiss();
           console.log(error);
           let alert = alertController.create({
             title: 'OTP Authentication',

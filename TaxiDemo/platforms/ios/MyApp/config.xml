@@ -33,10 +33,6 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
-    <feature name="FirebasePlugin">
-        <param name="ios-package" value="FirebasePlugin" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
@@ -143,5 +139,9 @@
     </feature>
     <feature name="MarkerCluster">
         <param name="ios-package" value="PluginMarkerCluster" />
+    </feature>
+    <feature name="FirebasePlugin">
+        <param name="ios-package" value="FirebasePlugin" />
+        <param name="onload" value="true" />
     </feature>
 </widget>

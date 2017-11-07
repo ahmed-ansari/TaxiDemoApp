@@ -69,7 +69,7 @@ export class WelcomePage {
         userPromise.then((datasnap) => {
           console.log("User found" + JSON.stringify(datasnap.val()));
           loading.dismiss();
-          navController.push(PasswordPage, { mobile: this.mobile, user: datasnap });
+          navController.push(PasswordPage, { mobile: this.mobile, user: datasnap.val() });
         }).catch((er) => { 
            console.log(er);
         });

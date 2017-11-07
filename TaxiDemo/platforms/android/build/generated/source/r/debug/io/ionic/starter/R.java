@@ -350,6 +350,9 @@ containing a value of this type.
         public static final int google_api_key=0x7f060014;
         public static final int google_app_id=0x7f060015;
         public static final int launcher_name=0x7f060016;
+        public static final int tagmanager_preview_dialog_button=0x7f060017;
+        public static final int tagmanager_preview_dialog_message=0x7f060018;
+        public static final int tagmanager_preview_dialog_title=0x7f060019;
     }
     public static final class xml {
         public static final int config=0x7f050000;

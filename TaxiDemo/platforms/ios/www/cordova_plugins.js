@@ -34,14 +34,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-firebase.FirebasePlugin",
-    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
-    "pluginId": "cordova-plugin-firebase",
-    "clobbers": [
-      "FirebasePlugin"
-    ]
-  },
-  {
     "id": "cordova-plugin-geolocation.Coordinates",
     "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
     "pluginId": "cordova-plugin-geolocation",
@@ -242,6 +234,14 @@ module.exports = [
     "clobbers": [
       "plugin.google.maps"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase.FirebasePlugin",
+    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+    "pluginId": "cordova-plugin-firebase",
+    "clobbers": [
+      "FirebasePlugin"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -252,11 +252,11 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-firebase": "0.1.24",
   "cordova-plugin-compat": "1.2.0",
   "cordova-plugin-geolocation": "2.4.3",
   "com.googlemaps.ios": "2.4.0",
-  "cordova-plugin-googlemaps": "2.1.1"
+  "cordova-plugin-googlemaps": "2.1.1",
+  "cordova-plugin-firebase": "0.1.24"
 };
 // BOTTOM OF METADATA
 });

@@ -42,6 +42,7 @@ export class RegisterPage {
 
   logForm(){
     console.log(this.register.value)
+    
     this.regService.registerUser(this.register.value);
     this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
   }

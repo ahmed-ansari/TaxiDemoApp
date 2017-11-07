@@ -21,6 +21,7 @@ export class PasswordPage {
   }
 
   goToDashboard() {
+    //console.log(this.password+" === "+this.userObject.password);
     if (this.password === this.userObject.password) {
       this.navCtrl.push(DashboardPage, {user: this.userObject});
     } else {

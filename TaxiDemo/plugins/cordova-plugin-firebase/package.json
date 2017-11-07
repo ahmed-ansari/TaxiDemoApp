@@ -1,27 +1,24 @@
 {
-  "_from": "cordova-plugin-firebase",
+  "_from": "git+https://github.com/jestcastro/cordova-plugin-firebase.git",
   "_id": "cordova-plugin-firebase@0.1.24",
   "_inBundle": false,
-  "_integrity": "sha1-qZk6XHZxFQJM2IIJDuiBT6TvuYQ=",
+  "_integrity": "sha1-Ag80JUquOc14As71IvdAkn1J6G4=",
   "_location": "/cordova-plugin-firebase",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "cordova-plugin-firebase",
-    "name": "cordova-plugin-firebase",
-    "escapedName": "cordova-plugin-firebase",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "type": "git",
+    "raw": "https://github.com/jestcastro/cordova-plugin-firebase",
+    "rawSpec": "https://github.com/jestcastro/cordova-plugin-firebase",
+    "saveSpec": "git+https://github.com/jestcastro/cordova-plugin-firebase.git",
+    "fetchSpec": "https://github.com/jestcastro/cordova-plugin-firebase.git",
+    "gitCommittish": "master"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-firebase/-/cordova-plugin-firebase-0.1.24.tgz",
-  "_shasum": "a9993a5c767115024cd882090ee8814fa4efb984",
-  "_spec": "cordova-plugin-firebase",
+  "_resolved": "git+https://github.com/jestcastro/cordova-plugin-firebase.git#79dbf4974ba736e12f46502a56ff1bda1bb9c5d3",
+  "_spec": "https://github.com/jestcastro/cordova-plugin-firebase",
   "_where": "/Users/tarunkumar/Desktop/Nagaraju/Projects/TaxiDemoApp/TaxiDemo",
   "author": {
     "name": "Robert Arnesson"
@@ -48,7 +45,8 @@
     "cordova-browser",
     "firebase",
     "push",
-    "notifications"
+    "notifications",
+    "phone auth"
   ],
   "license": "MIT",
   "name": "cordova-plugin-firebase",

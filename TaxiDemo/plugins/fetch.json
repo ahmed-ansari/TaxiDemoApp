@@ -39,14 +39,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-firebase"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "com.googlemaps.ios": {
     "source": {
       "type": "registry",
@@ -83,5 +75,13 @@
       "API_KEY_FOR_ANDROID": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
       "API_KEY_FOR_IOS": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA"
     }
+  },
+  "cordova-plugin-firebase": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/jestcastro/cordova-plugin-firebase"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
