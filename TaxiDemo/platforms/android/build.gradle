@@ -257,7 +257,6 @@ dependencies {
     compile "com.google.android.gms:play-services-maps:+"
     compile "com.google.android.gms:play-services-location:+"
     compile "com.google.gms:google-services:+"
-    compile "com.google.android.gms:play-services-tagmanager:+"
     compile "com.google.firebase:firebase-core:+"
     compile "com.google.firebase:firebase-messaging:+"
     compile "com.google.firebase:firebase-crash:+"

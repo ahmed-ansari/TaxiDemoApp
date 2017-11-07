@@ -23,11 +23,10 @@ export class MobileAuthPage {
   public recaptchaVerifier: firebase.auth.RecaptchaVerifier;
   confirmResult: any;
   userObj: any;
-  public sms_code = "";
   public verification_code = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,
-          private loadingCtrl: LoadingController) {
+    private loadingCtrl: LoadingController) {
     this.mobileNo = navParams.get("mobile");
     this.userObj = navParams.get("user");
   }
@@ -48,43 +47,46 @@ export class MobileAuthPage {
     console.log("Phone:" + phoneNumberString + "appVerifier:" + appVerifier);
 
     //firebase.auth().p
-    (<any>window).FirebasePlugin.getVerificationID(phoneNumberString, id =>{
-      this.verification_code = id;
-      console.log("Verification;"+id);
-    },error => {
-      console.error("SMS not sent", error);
-    });
-
-    var credentials = firebase.auth.PhoneAuthProvider.credential(this.verification_code, this.sms_code);
-    firebase.auth().signInWithCredential(credentials).then((snap) => {
-      console.log(snap);
-    });
-    // firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
-    //   .then(confirmationResult => {
-    //     // SMS sent. Prompt user to type the code from the message, then sign the
-    //     // user in with confirmationResult.confirm(code).
-    //     this.confirmResult = confirmationResult;        
-    //   })
-    //   .catch(function (error) {
+    // (<any>window).FirebasePlugin.verifyPhoneNumber(phoneNumberString, 60, cred => {
+    //   var credentials = firebase.auth.PhoneAuthProvider.credential(this.verification_code, this.authcode);
+    //   firebase.auth().signInWithCredential(credentials).then((snap) => {
+    //     console.log(snap);
+    //   }, error => {
     //     console.error("SMS not sent", error);
     //   });
+    // });
+
+    // (<any>window).FirebasePlugin.getVerificationID(phoneNumberString, id => {
+    //   this.verification_code = id;
+    //   console.log("Verification;" + id);
+    // }, error => {
+    //   console.error("SMS not sent", error);
+    // });
+
+    firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
+      .then(confirmationResult => {
+        this.confirmResult = confirmationResult;
+      })
+      .catch(function (error) {
+        console.error("SMS not sent", error);
+      });
   }
 
   validateOTP(value) {
     var navController = this.navCtrl;
     var alertController = this.alertCtrl;
-    let loading = this.loadingCtrl.create({
-      content: 'Please wait...'
-    });
-    loading.present();
     if (this.authcode.length === 6) {
+      let loading = this.loadingCtrl.create({
+        content: 'Please wait...'
+      });
+      loading.present();
       this.confirmResult.confirm(this.authcode)
         .then(function (result) {
           // User signed in successfully.
           console.log(result.user);
           navController.setRoot(DashboardPage);
           loading.dismiss();
-         
+
         }).catch(function (error) {
           // User couldn't sign in (bad verification code?)
           // ...
@@ -100,23 +102,21 @@ export class MobileAuthPage {
       //this.navCtrl.setRoot(HomePage);
     }
 
-
   }
 
-  change(e:any)
-  {
+  change(e: any) {
     console.log(e)
 
     // e.preventDefault();
-    let control:any;
+    let control: any;
     control = e.srcElement.nextElementSibling;
     if (e.srcElement.nextElementSibling) {
       e.srcElement.nextElementSibling.focus();
-  }
-  else{
+    }
+    else {
       console.log('close keyboard');
-  }
-  return;
-      
+    }
+    return;
+
   }
 }

@@ -41,7 +41,7 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- for apex -->
     <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
-    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <permission
@@ -92,26 +92,6 @@
         </service>
 
         <receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver" />
-
-        <service
-            android:name="com.google.android.gms.tagmanager.TagManagerService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <activity
-            android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
-            android:exported="true"
-            android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
-            <intent-filter>
-                <data android:scheme="tagmanager.c.io.ionic.starter" />
-
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-        </activity>
-
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -159,6 +139,13 @@
                 <category android:name="io.ionic.starter" />
             </intent-filter>
         </receiver>
+        <!--
+ Internal (not exported) receiver used by the app to start its own exported services
+             without risk of being spoofed.
+        -->
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+            android:exported="false" />
         <!--
  FirebaseInstanceIdService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
