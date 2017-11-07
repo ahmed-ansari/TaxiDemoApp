@@ -10,6 +10,21 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+<<<<<<< HEAD
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
+      "PACKAGE_NAME": "io.ionic.starter"
+=======
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA",
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -21,10 +36,12 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-firebase": {
-      "PACKAGE_NAME": "io.ionic.starter"
+>>>>>>> 52bbcb341c20d606304583e83e56cf52b841673e
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    }
+  }
 }

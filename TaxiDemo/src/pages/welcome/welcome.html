@@ -1,34 +1,34 @@
 <ion-content>
-  <div>
-      <img src="assets/imgs/bg.jpg" alt="bg" class="full-img">
-  </div>
-  <h1 text-left padding  >Get Moving with Taxi</h1>
+    <div>
+        <img src="assets/imgs/bg.jpg" alt="bg" class="full-img">
+    </div>
+    <h1 text-left padding>Get Moving with Taxi</h1>
 
-  <ion-grid>
-  <ion-row>
-      <ion-col col-2>
-            <ion-label id="code91" padding-left>+91</ion-label>
-      </ion-col>
-      <ion-col col-10>
-          <ion-item>
-            <ion-label floating>Enter your mobile number</ion-label>
-            <ion-input [(ngModel)]=" mobile" name="mobile" type="tel" maxlength="10" (ngModelChange)="validateMobile($event)"></ion-input>
-          </ion-item>
-      </ion-col>
-  </ion-row>
-</ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-2>
+                <ion-label id="code91" padding-left>+91</ion-label>
+            </ion-col>
+            <ion-col col-10>
+                <ion-item>
+                    <ion-label floating>Enter your mobile number</ion-label>
+                    <ion-input [(ngModel)]=" mobile" name="mobile" type="tel" maxlength="10" (ngModelChange)="validateMobile($event)"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
- <ion-footer>   
-      <div float-start>
+    <ion-footer>
+        <!-- <div float-start>
         <button  (click)="goToRegisterPage()" ion-button clear block class="btn-text-left" no-margin>I forgot my Password</button>
        
         <button (click)="goToAuthPage()" ion-button clear block no-margin [hidden]="isHidden"> I don't have an account</button>
-      </div>
+      </div> -->
 
-      <ion-fab right bottom margin-right>
-        <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>
-      </ion-fab>  
-</ion-footer>
+        <ion-fab right bottom margin-right>
+            <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-fab>
+    </ion-footer>
 
 
 </ion-content>

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireModule } from 'angularfire2'
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import firebase from 'firebase';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
+import { WelcomeService } from './welcome.service';
+import { DashboardPage } from '../dashboard/dashboard';
+import {PasswordPage} from '../password/password';
 
 /**
  * Generated class for the WelcomePage page.
@@ -20,19 +23,21 @@ import { MobileAuthPage } from '../mobileauth/mobileauth';
 })
 export class WelcomePage {
   mobile: any = "";
-  
-  hideMobile:Boolean = false;
-  isHidden:Boolean = true;
+  hideMobile: Boolean = false;
+  isHidden: Boolean = true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public userObj: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
+        public loadingCtrl: LoadingController) {
   }
 
-  validateMobile(value){
-     if (this.mobile.length == 10) {
-       this.isHidden = false;
-     } else {
-       this.isHidden = true;
-     }
+  validateMobile(value) {
+    if (this.mobile.length == 10) {
+      this.isHidden = false;
+    } else {
+      this.isHidden = true;
+    }
   }
 
   ionViewDidLoad() {
@@ -41,7 +46,7 @@ export class WelcomePage {
   }
 
   validateUser() {
-    this.navCtrl.setRoot(HomePage);
+    //this.navCtrl.setRoot(HomePage);
   }
 
   goToRegisterPage() {
@@ -50,7 +55,33 @@ export class WelcomePage {
   }
 
   goToAuthPage() {
-    this.navCtrl.push(MobileAuthPage,{mobile: this.mobile});
+    //this.navCtrl.push(DashboardPage);
+    var navController = this.navCtrl;
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    var promise = this.service.validateUser(this.mobile);
+    promise.then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        var userPromise = this.service.getUserObject(snapshot.val());
+        userPromise.then((datasnap) => {
+          console.log("User found" + JSON.stringify(datasnap.val()));
+          loading.dismiss();
+          navController.push(PasswordPage, { mobile: this.mobile, user: datasnap });
+        }).catch((er) => { 
+           console.log(er);
+        });
+      } else {
+        console.log("No User found");
+        loading.dismiss();
+        navController.push(RegisterPage, { mobile: this.mobile });
+      }
+    }).catch((er) => {
+      loading.dismiss();
+      console.log(er);
+    });
   }
 
 }

@@ -1,10 +1,8 @@
 page-register {
-    .black-border {
-        border-bottom: 1px solid black;
-    }
+.error {
+    font-size: 12px;
+    color: tomato;
+    margin-bottom: 0;
 
-    .errorMsg {
-    	padding-left: 1em;
-    	color: red;
-    }
+}
 }

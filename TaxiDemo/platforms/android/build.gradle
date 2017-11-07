@@ -259,6 +259,8 @@ dependencies {
     compile "com.google.firebase:firebase-messaging:+"
     compile "com.google.firebase:firebase-crash:+"
     compile "com.google.firebase:firebase-config:+"
+    compile "com.google.android.gms:play-services-maps:+"
+    compile "com.google.android.gms:play-services-location:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

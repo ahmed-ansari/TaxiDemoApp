@@ -1,24 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {BrowserModule} from '@angular/platform-browser';
+import {ErrorHandler, NgModule} from '@angular/core';
+import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-import  firebase from 'firebase';
+import firebase from 'firebase';
+import {GoogleMaps, Geocoder} from '@ionic-native/google-maps';
+import {Geolocation} from '@ionic-native/geolocation';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import {MyApp} from './app.component';
+import {HomePage} from '../pages/home/home';
+import {ListPage} from '../pages/list/list';
 
+import {WelcomePage} from '../pages/welcome/welcome';
+import {LoginPage} from '../pages/login/login';
+import {RegisterPage} from '../pages/register/register';
+import {MobileAuthPage} from '../pages/mobileauth/mobileauth';
+import {SettingPage} from '../pages/setting/setting';
+import {DashboardPage} from '../pages/dashboard/dashboard';
+import {PasswordPage} from '../pages/password/password';
 
-import { WelcomePage } from '../pages/welcome/welcome';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
-import { SettingPage } from '../pages/setting/setting';
+import {WelcomeService} from '../pages/welcome/welcome.service';
+import {RegisterService} from '../pages/register/register.service';
 
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -41,11 +46,12 @@ firebase.initializeApp(firebaseAuth);
     LoginPage,
     RegisterPage,
     MobileAuthPage,
-    SettingPage
+    SettingPage,
+    DashboardPage,
+    PasswordPage
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
+    BrowserModule, IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireDatabaseModule
   ],
@@ -54,17 +60,27 @@ firebase.initializeApp(firebaseAuth);
     MyApp,
     HomePage,
     ListPage,
-    
+
     WelcomePage,
     LoginPage,
     RegisterPage,
     MobileAuthPage,
-    SettingPage
+    SettingPage,
+    DashboardPage,
+    PasswordPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GoogleMaps,
+    Geolocation,
+    Geocoder,
+    WelcomeService, 
+    RegisterService,
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    },
   ]
 })
 export class AppModule {}
