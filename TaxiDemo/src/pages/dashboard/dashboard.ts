@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NativeStorage } from '@ionic-native/native-storage';
 import {
   GoogleMaps,
   GoogleMap,
@@ -24,13 +25,18 @@ export class DashboardPage {
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
-    private _geoLoc: Geolocation, private geocoder: Geocoder) {
+    private _geoLoc: Geolocation, private geocoder: Geocoder, private nativeStorage: NativeStorage) {
   }
 
   ionViewDidLoad() {
     setTimeout(() => {
       this.initMap();
     }, 500);
+    this.nativeStorage.getItem('userData')
+      .then(
+      data => console.log(data),
+      error => console.error(error)
+      );
   }
 
   initMap() {

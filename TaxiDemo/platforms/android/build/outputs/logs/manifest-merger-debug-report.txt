@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:98-124
 		INJECTED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml
@@ -32,37 +32,56 @@ ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/pl
 	android:anyDensity
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:3:23-48
 application
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:4:5-25:19
-MERGED from [com.google.firebase:firebase-crash:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.4.2/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-maps:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.4.2/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-maps-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-location:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.4.2/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-location-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-core:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:24:5-34:19
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-messaging:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.4.2/AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.firebase:firebase-messaging-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-config:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.4.2/AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-base-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:28:5-49:19
-MERGED from [com.google.firebase:firebase-iid-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.firebase:firebase-common-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.4.2/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.4.2/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.4.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-config-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.4.2/AndroidManifest.xml:5:5-20
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:4:5-28:19
+MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.0/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-config:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.0/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:29:5-46:19
+MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-config-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:28:5-34:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:customtabs:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.facebook.android:facebook-places:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:28:5-43:19
+MERGED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.0/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.0/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.0/AndroidManifest.xml:5:5-20
 	android:label
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:4:81-113
 	android:supportsRtl
@@ -105,15 +124,15 @@ ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/pl
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:11:20-65
 meta-data#com.google.android.gms.version
 ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:12:9-122
-MERGED from [com.google.android.gms:play-services-basement:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.4.2/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:20:9-121
 	android:value
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:12:66-119
 	android:name
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:12:20-65
 service#com.google.android.gms.measurement.AppMeasurementService
 ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:13:9-140
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:27:7-137
 	android:enabled
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:13:18-40
 	android:exported
@@ -144,93 +163,145 @@ receiver#org.apache.cordova.firebase.OnNotificationOpenReceiver
 ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:24:9-91
 	android:name
 		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:24:19-88
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:25:9-102
+	android:value
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:25:66-99
+	android:name
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:25:20-65
+meta-data#com.facebook.sdk.ApplicationName
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:9-106
+	android:value
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:68-103
+	android:name
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:20-67
+activity#com.facebook.FacebookActivity
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:9-186
+MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:29:9-32:66
+	android:label
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:103-138
+	android:configChanges
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:19-102
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:139-183
 uses-sdk
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:5-74
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:5-74
 MERGED from [me.leolin:ShortcutBadger:1.1.4] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-crash:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.4.2/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.4.2/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-maps-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-location:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.4.2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-location-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-core:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-messaging:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-messaging-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-config:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.4.2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.4.2/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.4.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-config-license:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.4.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-crash-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.0/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-config:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-config-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:customtabs:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-places:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/11.6.0/AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.0/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity-license:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.0/AndroidManifest.xml:4:5-43
 MERGED from [org.apache.cordova:CordovaLib:6.3.0:debug] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.3.0/debug/AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.2.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:42-71
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:42-71
 	android:minSdkVersion
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:26:15-41
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:15-41
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:5-81
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:5-81
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:22-78
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:28:5-79
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:5-79
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:28:22-76
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:22-76
 uses-feature#android.hardware.location.gps
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:5-66
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:5-66
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:19-63
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:19-63
 uses-feature#0x00020000
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:5-78
-MERGED from [com.google.android.gms:play-services-maps:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.4.2/AndroidManifest.xml:21:5-77
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:19-51
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:19-51
 	android:required
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:52-75
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:52-75
 uses-feature#android.hardware.location
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:5-62
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:5-62
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:19-59
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:19-59
 uses-permission#android.permission.INTERNET
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:5-67
-MERGED from [com.google.firebase:firebase-crash:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.4.2/AndroidManifest.xml:18:5-66
-MERGED from [com.google.android.gms:play-services-maps:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.4.2/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:20:5-66
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:5-67
+MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:22-64
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:5-79
-MERGED from [com.google.android.gms:play-services-maps:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.4.2/AndroidManifest.xml:19:5-78
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:19:5-78
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:5-79
+MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:22-76
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:5-68
-MERGED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:21:5-67
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:5-68
+MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:22-65
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:22-65
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:38:5-71
+	android:name
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:38:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:5-74
+	android:name
+		ADDED from /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:22-71
 uses-permission#com.sec.android.provider.badge.permission.READ
 ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:19:5-86
 	android:name
@@ -260,105 +331,145 @@ ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/NagarajuBhusani/Desktop/Nagar
 	android:name
 		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:33:22-80
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.4.2/AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:162-184
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:27:185-208
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:185-208
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:33:7-197
+ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:7-197
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:33:148-170
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:148-170
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:33:171-195
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:171-195
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:33:91-147
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:91-147
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.4.2/AndroidManifest.xml:33:16-90
+		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:16-90
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.4.2/AndroidManifest.xml:23:9-27:19
+ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:9-27:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.4.2/AndroidManifest.xml:23:88-111
+		ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:88-111
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.4.2/AndroidManifest.xml:23:18-87
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:19:9-172
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:19:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:19:86-145
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.2/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:18-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:22:5-81
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:22:22-79
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:23:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:27:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:27:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:30:9-35:20
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:9-36:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:31:13-34:29
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:32:13-35:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:32:17-80
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:33:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:32:25-78
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:33:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:33:17-60
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:34:17-60
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:33:27-58
-receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:39:9-119
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:39:93-117
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:39:19-92
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:34:27-58
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:43:9-47:19
+ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:9-44:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:43:83-106
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.4.2/AndroidManifest.xml:43:18-82
+		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:18-82
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:9-194
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:144-168
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:169-192
 	android:name
-		ADDED from [com.google.firebase:firebase-common:11.4.2] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.4.2/AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:79-143
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:33:19-68
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:customtabs:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:26:9-47
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:40:13-70
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:18-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:19-85

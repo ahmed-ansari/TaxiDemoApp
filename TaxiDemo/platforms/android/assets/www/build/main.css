@@ -25724,8 +25724,24 @@ page-welcome .full-img {
   width: 100vw;
 }
 
-.big-field {
+page-welcome .big-field {
   height: 80px;
   font-size: 18pt;
   padding-top: 14px;
+}
+
+page-welcome .facebook-sign-in {
+  border-radius: 4px;
+  font-weight: 500;
+  color: #FFF;
+  background-color: #294886;
+  border-color: #27447e;
+}
+
+page-welcome .google-sign-in {
+  border-radius: 4px;
+  font-weight: 500;
+  color: #FFF;
+  background-color: #dd4c39;
+  border-color: #dc4430;
 }

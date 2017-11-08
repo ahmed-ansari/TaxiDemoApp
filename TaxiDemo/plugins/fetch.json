@@ -83,5 +83,34 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-facebook4": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-facebook4"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID": "149107149051636",
+      "APP_NAME": "TaxiApp"
+    }
+  },
+  "cordova-plugin-googleplus": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-googleplus"
+    },
+    "is_top_level": true,
+    "variables": {
+      "REVERSED_CLIENT_ID": "com.googleusercontent.apps.108631532738-f8h73eiidpu0tvh2ukfj0ivb5u4nigod"
+    }
+  },
+  "cordova-plugin-nativestorage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativestorage"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

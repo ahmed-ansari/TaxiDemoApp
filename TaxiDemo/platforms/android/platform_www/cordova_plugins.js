@@ -216,6 +216,40 @@ module.exports = [
     "clobbers": [
       "FirebasePlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+    "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+    "pluginId": "cordova-plugin-facebook4",
+    "clobbers": [
+      "facebookConnectPlugin"
+    ]
+  },
+  {
+    "id": "cordova-plugin-googleplus.GooglePlus",
+    "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+    "pluginId": "cordova-plugin-googleplus",
+    "clobbers": [
+      "window.plugins.googleplus"
+    ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.mainHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+    "pluginId": "cordova-plugin-nativestorage",
+    "clobbers": [
+      "NativeStorage"
+    ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+    "pluginId": "cordova-plugin-nativestorage"
+  },
+  {
+    "id": "cordova-plugin-nativestorage.NativeStorageError",
+    "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+    "pluginId": "cordova-plugin-nativestorage"
   }
 ];
 module.exports.metadata = 
@@ -229,7 +263,10 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-firebase": "0.1.24"
+  "cordova-plugin-firebase": "0.1.24",
+  "cordova-plugin-facebook4": "1.9.1",
+  "cordova-plugin-googleplus": "5.1.1",
+  "cordova-plugin-nativestorage": "2.2.2"
 };
 // BOTTOM OF METADATA
 });

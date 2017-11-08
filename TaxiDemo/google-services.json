@@ -1,62 +1,56 @@
 {
-  "project_info": {
-    "project_number": "108631532738",
-    "firebase_url": "https://taxiapp-8e144.firebaseio.com",
-    "project_id": "taxiapp-8e144",
-    "storage_bucket": "taxiapp-8e144.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:108631532738:android:764d2cb7da3280eb",
-        "android_client_info": {
-          "package_name": "io.ionic.starter"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "108631532738-4fs770u3qo402q3aqlikpk1vi3i6lmjr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "io.ionic.starter",
-            "certificate_hash": "1a11ee81371137a2bf0bf94ad1d95b7d7de5488f"
-          }
+    "project_info": {
+        "project_number": "108631532738",
+        "firebase_url": "https://taxiapp-8e144.firebaseio.com",
+        "project_id": "taxiapp-8e144",
+        "storage_bucket": "taxiapp-8e144.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:108631532738:android:764d2cb7da3280eb",
+            "android_client_info": {
+                "package_name": "io.ionic.starter"
+            }
         },
-        {
-          "client_id": "108631532738-l7u4ngb3eqveg59q1f9oe9curei863j0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD4HVnZBwnYAzDwrK-uFysz9HuSZQ2Ibf4"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "108631532738-l7u4ngb3eqveg59q1f9oe9curei863j0.apps.googleusercontent.com",
-              "client_type": 3
+        "oauth_client": [{
+                "client_id": "108631532738-4fs770u3qo402q3aqlikpk1vi3i6lmjr.apps.googleusercontent.com",
+                "client_type": 1,
+                "android_info": {
+                    "package_name": "io.ionic.starter",
+                    "certificate_hash": "1a11ee81371137a2bf0bf94ad1d95b7d7de5488f"
+                }
             },
             {
-              "client_id": "108631532738-f8h73eiidpu0tvh2ukfj0ivb5u4nigod.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "io.ionic.starter"
-              }
+                "client_id": "108631532738-l7u4ngb3eqveg59q1f9oe9curei863j0.apps.googleusercontent.com",
+                "client_type": 3
             }
-          ]
-        },
-        "ads_service": {
-          "status": 2
+        ],
+        "api_key": [{
+            "current_key": "AIzaSyD4HVnZBwnYAzDwrK-uFysz9HuSZQ2Ibf4"
+        }],
+        "services": {
+            "analytics_service": {
+                "status": 1
+            },
+            "appinvite_service": {
+                "status": 2,
+                "other_platform_oauth_client": [{
+                        "client_id": "108631532738-l7u4ngb3eqveg59q1f9oe9curei863j0.apps.googleusercontent.com",
+                        "client_type": 3
+                    },
+                    {
+                        "client_id": "108631532738-f8h73eiidpu0tvh2ukfj0ivb5u4nigod.apps.googleusercontent.com",
+                        "client_type": 2,
+                        "ios_info": {
+                            "bundle_id": "io.ionic.starter"
+                        }
+                    }
+                ]
+            },
+            "ads_service": {
+                "status": 2
+            }
         }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    }],
+    "configuration_version": "1"
 }

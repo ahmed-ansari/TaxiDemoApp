@@ -6,6 +6,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import firebase from 'firebase';
 import {GoogleMaps, Geocoder} from '@ionic-native/google-maps';
 import {Geolocation} from '@ionic-native/geolocation';
+import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
@@ -21,6 +24,7 @@ import {PasswordPage} from '../pages/password/password';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
+import {UserModel} from '../pages/welcome/user.model';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -81,6 +85,10 @@ firebase.initializeApp(firebaseAuth);
       provide: ErrorHandler,
       useClass: IonicErrorHandler
     },
+    Facebook,
+    GooglePlus,
+    UserModel,
+    NativeStorage
   ]
 })
 export class AppModule {}

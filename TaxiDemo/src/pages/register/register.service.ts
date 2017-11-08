@@ -15,7 +15,7 @@ export class RegisterService {
         var keyValueRef = personObj.push();
         //console.log(keyValueRef.key);
         keyValueRef.set({
-            'firstname': user.firstName,
+            'firstname': user.firstname,
             'lastname': user.LastName,
             'email': user.email,
             'password': user.password

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -21,15 +22,23 @@ export class MyApp {
 
   rootPage: any = WelcomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar,
-    public splashScreen: SplashScreen) {
+    public splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
     this.initializeApp();
+    let isLoggedIn = this.nativeStorage.getItem("isLoggedIn").then(() => {
+      if (isLoggedIn) {
+        this.rootPage = DashboardPage;
+      } else {
+        this.rootPage = WelcomePage;
+      }
+    },
+      error => { });
 
     // used for an example of ngFor and navigation
     this.pages = [
-      {title: 'Ride', component: DashboardPage},
+      { title: 'Ride', component: DashboardPage },
       { title: 'My Trips', component: HomePage },
       { title: 'Settings', component: SettingPage }
       // { title: 'Lists', component: ListPage}

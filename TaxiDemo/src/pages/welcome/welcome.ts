@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import firebase from 'firebase';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { WelcomeService } from './welcome.service';
 import { DashboardPage } from '../dashboard/dashboard';
-import {PasswordPage} from '../password/password';
+import { PasswordPage } from '../password/password';
+import { UserModel } from './user.model';
 
 /**
  * Generated class for the WelcomePage page.
@@ -28,8 +32,12 @@ export class WelcomePage {
 
   public userObj: any;
 
+  provider = new firebase.auth.FacebookAuthProvider();
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
-        public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, private fb: Facebook, private googlePlus: GooglePlus, private model: UserModel,
+    private nativeStorage: NativeStorage) {
+    this.model = new UserModel();
   }
 
   validateMobile(value) {
@@ -43,6 +51,12 @@ export class WelcomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
     this.hideMobile = false;
+    this.provider.addScope('public_profile');
+    this.provider.addScope('user_friends');
+    this.provider.addScope('email');
+    this.provider.setCustomParameters({
+      'display': 'popup'
+    });
   }
 
   validateUser() {
@@ -70,8 +84,8 @@ export class WelcomePage {
           console.log("User found" + JSON.stringify(datasnap.val()));
           loading.dismiss();
           navController.push(PasswordPage, { mobile: this.mobile, user: datasnap.val() });
-        }).catch((er) => { 
-           console.log(er);
+        }).catch((er) => {
+          console.log(er);
         });
       } else {
         console.log("No User found");
@@ -81,6 +95,67 @@ export class WelcomePage {
     }).catch((er) => {
       loading.dismiss();
       console.log(er);
+    });
+  }
+
+  facebookSignIn() {
+    console.log("Facebook SingIn");
+    this.fb.login(['public_profile', 'email'])
+      .then((res: FacebookLoginResponse) => {
+        console.log('Logged into Facebook!', res);
+        this.fb.api('/me?fields=email,name&access_token=' + res.authResponse.accessToken, null).then(
+          (response) => {
+            console.log(response);
+            this.model.userId = res.authResponse.userID;
+            this.model.email = response.email;
+            this.model.givenName = response.name;
+            // this.model.userId = response.id;
+            this.model.photoUrl = "http://graph.facebook.com/" + res.authResponse.userID + "/picture?type=large"
+            this.model.givenName = response.name;
+            this.validateUserExistance(this.model);
+          }).catch(error => console.log(error));
+      })
+      .catch(e => console.log('Error logging into Facebook', e));
+  }
+
+  googleSignIn() {
+    this.googlePlus.login({})
+      .then(res => {
+        console.log(res);
+        this.model.email = res.email;
+        this.model.displayName = res.displayName;
+        this.model.familyName = res.familyName;
+        this.model.userId = res.userId;
+        this.model.givenName = res.givenName;
+        this.model.photoUrl = res.photoUrl;
+        this.validateUserExistance(this.model);
+      })
+      .catch(err => console.error(err));
+  }
+
+  validateUserExistance(userModel) {
+    var navController = this.navCtrl;
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    var promise = this.service.validateUserWithuserId(userModel.userId);
+    promise.then((snapshot) => {
+      if (!snapshot.exists()) {
+        console.log('No User found');
+        this.service.registerUser(userModel);
+      }
+      let userData = JSON.stringify(userModel);
+      this.nativeStorage.setItem('userData', userData)
+        .then(() => console.log('Stored item!'),
+        error => console.error('Error storing item', error));
+        this.nativeStorage.setItem('isLoggedIn', true).then(() => {},
+        error => {});
+        loading.dismiss();
+      navController.setRoot(DashboardPage);
+    }).catch((er) => {
+      console.log("Error" + er);
+       loading.dismiss();
     });
   }
 

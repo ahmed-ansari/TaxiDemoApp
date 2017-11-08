@@ -19,4 +19,25 @@ export class WelcomeService {
         const personObjectRef: firebase.database.Reference = firebase.database().ref(`/Users/` + uniqueKey);
         return personObjectRef.once('value');
     }
+
+    validateUserWithuserId(userId): any {
+        const personKeyRef: firebase.database.Reference = firebase.database().ref(`/UserRef/` + userId);
+        return personKeyRef.once('value');
+    }
+
+    registerUser(user): any {
+        const personObj: firebase.database.Reference = firebase.database().ref(`/Users/`);
+        var keyValueRef = personObj.push();
+        //console.log(keyValueRef.key);
+        keyValueRef.set({
+            'firstname': user.givenName,
+            'lastname': user.familyName,
+            'email': user.email,
+            //'photoUrl': user.photoUrl,
+            'userId': user.userId,
+            'displayName': user.displayName            
+        });
+        const userRef: firebase.database.Reference = firebase.database().ref(`/UserRef`);
+        userRef.child(user.userId).set(keyValueRef.key);
+    }
 }
