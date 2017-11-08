@@ -907,7 +907,7 @@ __decorate([
 ], DashboardPage.prototype, "mapElement", void 0);
 DashboardPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-dashboard',template:/*ion-inline-start:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ride</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div #map id="map" class="maparea">\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Source"></ion-input>\n            </ion-item>\n        </ion-card>\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Enter Destination"></ion-input>\n            </ion-item>\n        </ion-card>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/,
+        selector: 'page-dashboard',template:/*ion-inline-start:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/'<ion-header no-border transparent>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div #map id="map" class="maparea">\n        <ion-card>\n            <!-- <ion-item>\n                <ion-input type="text" placeholder="Enter Source"></ion-input>\n            </ion-item> -->\n        </ion-card>\n        <ion-card>\n            <ion-item>\n                <ion-input type="text" placeholder="Where to Drop?"></ion-input>\n            </ion-item>\n        </ion-card>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/src/pages/dashboard/dashboard.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__["b" /* GoogleMaps */],
         __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__["a" /* Geocoder */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]])
@@ -956,7 +956,7 @@ var MyApp = (function () {
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.nativeStorage = nativeStorage;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_8__pages_dashboard_dashboard__["a" /* DashboardPage */];
         this.initializeApp();
         var isLoggedIn = this.nativeStorage.getItem("isLoggedIn").then(function () {
             if (isLoggedIn) {

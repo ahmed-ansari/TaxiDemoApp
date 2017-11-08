@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Nov 08 17:17:55 IST 2017
+#Wed Nov 08 18:17:00 IST 2017
 20.base=/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/resources-debug.ap_
 143.base=/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/resources-debug.ap_
 493.base=/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/resources-debug.ap_
