@@ -21,6 +21,7 @@ import {MobileAuthPage} from '../pages/mobileauth/mobileauth';
 import {SettingPage} from '../pages/setting/setting';
 import {DashboardPage} from '../pages/dashboard/dashboard';
 import {PasswordPage} from '../pages/password/password';
+import { EditAccountPage } from '../pages/edit-account/edit-account';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
@@ -52,7 +53,8 @@ firebase.initializeApp(firebaseAuth);
     MobileAuthPage,
     SettingPage,
     DashboardPage,
-    PasswordPage
+    PasswordPage,
+    EditAccountPage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -71,7 +73,8 @@ firebase.initializeApp(firebaseAuth);
     MobileAuthPage,
     SettingPage,
     DashboardPage,
-    PasswordPage
+    PasswordPage,
+    EditAccountPage
   ],
   providers: [
     StatusBar,

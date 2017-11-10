@@ -1,0 +1,110 @@
+<!--
+  Generated template for the EditAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="black-bg">
+    <ion-title>Edit Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid class="bottom-shadow" >
+    <ion-row >
+      <ion-col col-4>
+        <ion-avatar>
+          <img src="assets/imgs/user-img.png" class="round-img">
+        </ion-avatar>
+      </ion-col>
+      <ion-col col-8>
+     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="editAccount" (ngSubmit)="logForm()">
+      <ion-grid>
+          <ion-row>
+             
+                  <ion-item>
+                      <ion-label stacked>First Name</ion-label>
+                      <ion-input class="text-input1" type="text" formControlName="firstName"></ion-input>
+                  </ion-item>
+                  <div *ngIf="editAccount?.controls['firstName']?.errors?.required && editAccount?.controls['firstName'].touched">
+                      <p float-right class="error">* This Field is required</p>
+                  </div>
+             </ion-row>
+             <ion-row>
+                  <ion-item>
+                      <ion-label stacked>Last Name</ion-label>
+                      <ion-input class="text-input" type="text" formControlName="LastName"></ion-input>
+                  </ion-item>
+                  <div *ngIf="editAccount?.controls['LastName']?.errors?.required && editAccount?.controls['LastName'].touched">
+                      <p class="error" float-right>* This Field is required</p>
+                  </div>
+             
+          </ion-row>
+          <ion-row>
+              <ion-item>
+                  <ion-label stacked>Mobile</ion-label>
+                  <ion-input class="text-input" type="number" formControlName="mobile" maxlength="10"></ion-input>
+              </ion-item>
+              <div *ngIf="editAccount?.controls['mobile']?.errors?.required && editAccount?.controls['mobile'].touched">
+                  <p class="error" float-right>* This Field is required</p>
+              </div>
+              <div *ngIf="editAccount?.controls['mobile']?.errors?.maxlength && editAccount?.controls['mobile'].touched">
+                  <p class="error" float-right>* Number should not be more than 10 digit</p>
+              </div>
+              
+          </ion-row>
+          <ion-row>
+
+              <ion-item>
+                  <ion-label stacked>Email</ion-label>
+                  <ion-input class="text-input" type="text" formControlName="email"></ion-input>
+              </ion-item>
+              <div *ngIf="editAccount?.controls['email']?.errors?.required && editAccount?.controls['email'].touched">
+                  <p class="error" float-right>* This Field is required</p>
+              </div>
+              <div *ngIf="editAccount?.controls['email']?.errors?.email && editAccount?.controls['email'].touched">
+                  <p class="error" float-right>* This Email is Invalid</p>
+              </div>
+          </ion-row>
+
+          <ion-row>
+              <ion-item>
+                  <ion-label stacked>Password</ion-label>
+                  <ion-input class="text-input" type="password" formControlName="password"></ion-input>
+              </ion-item>
+              <div *ngIf="editAccount?.controls['password']?.errors?.required && editAccount?.controls['password'].touched">
+                  <p class="error" float-right> * This Field is required</p>
+              </div>
+          </ion-row>
+
+          <ion-row>
+<!-- right bottom margin-right -->
+          <!-- <ion-item > -->
+            <div right text-right float-end style="width: 100vw;">
+              <br>
+                <button ion-button icon-only [disabled]="!editAccount.valid" color="dark"> 
+                  <ion-icon name="md-arrow-round-forward"></ion-icon> 
+                </button>
+            </div>
+             
+          <!-- </ion-item> -->
+          </ion-row>
+      </ion-grid>
+
+      
+          <!-- [disabled]="!editAccount.valid" -->
+
+     
+
+      <!--  -->
+  </form>
+</ion-content>
