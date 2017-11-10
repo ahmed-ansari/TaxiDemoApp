@@ -21,6 +21,7 @@ import {MobileAuthPage} from '../pages/mobileauth/mobileauth';
 import {SettingPage} from '../pages/setting/setting';
 import {DashboardPage} from '../pages/dashboard/dashboard';
 import {PasswordPage} from '../pages/password/password';
+import {AutocompletePage} from '../pages/autocomplete/autocomplete';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
@@ -52,7 +53,8 @@ firebase.initializeApp(firebaseAuth);
     MobileAuthPage,
     SettingPage,
     DashboardPage,
-    PasswordPage
+    PasswordPage,
+    AutocompletePage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -71,7 +73,8 @@ firebase.initializeApp(firebaseAuth);
     MobileAuthPage,
     SettingPage,
     DashboardPage,
-    PasswordPage
+    PasswordPage,
+    AutocompletePage
   ],
   providers: [
     StatusBar,
@@ -79,7 +82,7 @@ firebase.initializeApp(firebaseAuth);
     GoogleMaps,
     Geolocation,
     Geocoder,
-    WelcomeService, 
+    WelcomeService,
     RegisterService,
     {
       provide: ErrorHandler,

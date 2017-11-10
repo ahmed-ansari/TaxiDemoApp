@@ -17,6 +17,9 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -26,9 +29,6 @@
         android:required="true" />
     <uses-feature android:name="android.hardware.location" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <!-- for android -->
@@ -43,7 +43,11 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- for apex -->
     <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
-    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <permission
@@ -51,10 +55,6 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="io.ionic.starter.permission.C2D_MESSAGE" />
-
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="25.3.1" />
 
     <application
         android:hardwareAccelerated="true"
@@ -76,11 +76,17 @@
         </activity>
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA" />
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/fb_app_name" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/fb_app_name"
+            android:theme="@style/com_facebook_activity_theme" />
 
         <service
             android:name="com.google.android.gms.measurement.AppMeasurementService"
@@ -100,17 +106,26 @@
         <receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver" />
 
         <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/fb_app_id" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA" />
         <meta-data
-            android:name="com.facebook.sdk.ApplicationName"
-            android:value="@string/fb_app_name" />
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/fb_app_name"
-            android:theme="@style/com_facebook_activity_theme" />
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <!--
+         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+         with the application context. This config is merged in with the host app's manifest,
+         but there can only be one provider with the same authority activated at any given
+         point; so if the end user has two or more different apps that use Facebook SDK, only the
+         first one will be able to use the provider. To work around this problem, we use the
+         following placeholder in the authority to identify each host application as if it was
+         a completely different provider.
+        -->
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="io.ionic.starter.FacebookInitProvider"
+            android:exported="false" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -171,21 +186,6 @@
             android:authorities="io.ionic.starter.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <activity android:name="com.facebook.CustomTabMainActivity" />
-        <!--
-         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
-         with the application context. This config is merged in with the host app's manifest,
-         but there can only be one provider with the same authority activated at any given
-         point; so if the end user has two or more different apps that use Facebook SDK, only the
-         first one will be able to use the provider. To work around this problem, we use the
-         following placeholder in the authority to identify each host application as if it was
-         a completely different provider.
-        -->
-        <provider
-            android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="io.ionic.starter.FacebookInitProvider"
-            android:exported="false" />
 
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"

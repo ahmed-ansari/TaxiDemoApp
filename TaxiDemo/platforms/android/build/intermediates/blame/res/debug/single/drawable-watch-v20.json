@@ -1,14 +1,14 @@
 [
     {
-        "merged": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
-        "source": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+        "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
     },
     {
-        "merged": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
-        "source": "/Users/NagarajuBhusani/Desktop/Nagaraju/Ionic/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+        "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
     }
 ]
