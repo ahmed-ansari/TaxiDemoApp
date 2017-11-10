@@ -31,9 +31,9 @@ export class WelcomeService {
         //console.log(keyValueRef.key);
         keyValueRef.set({
             'firstname': user.givenName,
-            'lastname': user.familyName,
+            'lastname': (typeof (user.familyName) !== undefined) ? user.familyName:"",
             'email': user.email,
-            //'photoUrl': user.photoUrl,
+            'photoUrl': (typeof (user.photoUrl) !== undefined) ? user.photoUrl:"",
             'userId': user.userId,
             'displayName': user.displayName            
         });

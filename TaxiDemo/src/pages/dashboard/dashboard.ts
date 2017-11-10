@@ -93,7 +93,6 @@ export class DashboardPage {
       title: title,
       animation: 'DROP'
     }
-
     return this.map.addMarker(markerOptions);
   }
 

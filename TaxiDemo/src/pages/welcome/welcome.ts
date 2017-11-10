@@ -108,8 +108,8 @@ export class WelcomePage {
             console.log(response);
             this.model.userId = res.authResponse.userID;
             this.model.email = response.email;
-            this.model.givenName = response.name;
-            // this.model.userId = response.id;
+            this.model.displayName = response.name;
+            this.model.familyName = response.name;
             this.model.photoUrl = "http://graph.facebook.com/" + res.authResponse.userID + "/picture?type=large"
             this.model.givenName = response.name;
             this.validateUserExistance(this.model);
@@ -119,15 +119,16 @@ export class WelcomePage {
   }
 
   googleSignIn() {
-    this.googlePlus.login({})
+    this.googlePlus.login()
       .then(res => {
         console.log(res);
+        //http://picasaweb.google.com/data/entry/api/user/103521401204989084478?alt=json        
         this.model.email = res.email;
         this.model.displayName = res.displayName;
         this.model.familyName = res.familyName;
         this.model.userId = res.userId;
         this.model.givenName = res.givenName;
-        this.model.photoUrl = res.photoUrl;
+        this.model.photoUrl = res.imageUrl;
         this.validateUserExistance(this.model);
       })
       .catch(err => console.error(err));

@@ -5,7 +5,7 @@
     <h1 text-left padding>Get Moving with Taxi</h1>
 
     <ion-grid>
-        <ion-row>
+        <ion-row center>
             <!-- <ion-col col-2>
                 <ion-label id="code91" padding-left>+91</ion-label>
             </ion-col> -->
@@ -14,14 +14,14 @@
                     <ion-label floating>Enter your mobile number</ion-label>
                     <ion-input [(ngModel)]=" mobile" name="mobile" type="tel" maxlength="10" (ngModelChange)="validateMobile($event)"></ion-input>
                 </ion-item> -->
-                <a class="facebook-sign-in" ion-button clear block no-margin (click)="facebookSignIn()">
-                    Log in with Facebook
-                </a>
+                <button class="facebook-sign-in" ion-button icon-only clear full (click)="facebookSignIn()">
+                   <ion-icon name="logo-facebook"></ion-icon> Log in with Facebook
+                </button>
             </ion-col>
             <ion-col col-10>
-                <a class="google-sign-in" ion-button clear block no-margin (click)="googleSignIn()">
-                    <span class="btn-copy">Sign in with Google</span>
-                </a>
+                <button class="google-sign-in" ion-button icon-only clear full (click)="googleSignIn()">
+                  <ion-icon name="logo-googleplus"></ion-icon>Sign in with Google
+                </button>
             </ion-col>
         </ion-row>
     </ion-grid>
@@ -29,9 +29,9 @@
     <ion-footer>
         <!-- <div float-start>
         <button  (click)="goToRegisterPage()" ion-button clear block class="btn-text-left" no-margin>I forgot my Password</button>
-       
-        <button (click)="goToAuthPage()" ion-button clear block no-margin [hidden]="isHidden"> I don't have an account</button>
-      </div> -->
+
+                <button (click)="goToAuthPage()" ion-button clear block no-margin [hidden]="isHidden"> I don't have an account</button>
+                </div> -->
 
         <ion-fab right bottom margin-right>
             <button ion-fab color="dark" [hidden]="isHidden" (click)="goToAuthPage()"><ion-icon name="arrow-forward"></ion-icon></button>

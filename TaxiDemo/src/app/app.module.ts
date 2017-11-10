@@ -22,10 +22,12 @@ import {SettingPage} from '../pages/setting/setting';
 import {DashboardPage} from '../pages/dashboard/dashboard';
 import {PasswordPage} from '../pages/password/password';
 import {AutocompletePage} from '../pages/autocomplete/autocomplete';
+import { EditAccountPage } from '../pages/edit-account/edit-account';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
 import {UserModel} from '../pages/welcome/user.model';
+import {SettingService} from '../pages/setting/setting.service';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -54,7 +56,8 @@ firebase.initializeApp(firebaseAuth);
     SettingPage,
     DashboardPage,
     PasswordPage,
-    AutocompletePage
+    AutocompletePage,
+    EditAccountPage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -74,7 +77,8 @@ firebase.initializeApp(firebaseAuth);
     SettingPage,
     DashboardPage,
     PasswordPage,
-    AutocompletePage
+    AutocompletePage,
+    EditAccountPage
   ],
   providers: [
     StatusBar,
@@ -91,7 +95,8 @@ firebase.initializeApp(firebaseAuth);
     Facebook,
     GooglePlus,
     UserModel,
-    NativeStorage
+    NativeStorage,
+    SettingService
   ]
 })
 export class AppModule {}

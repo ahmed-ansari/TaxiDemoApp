@@ -11,6 +11,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { SettingPage } from '../pages/setting/setting';
 import { RegisterPage } from '../pages/register/register';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { EditAccountPage } from '../pages/edit-account/edit-account';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 
@@ -20,7 +21,7 @@ import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = DashboardPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{ title: string, component: any }>;
 
