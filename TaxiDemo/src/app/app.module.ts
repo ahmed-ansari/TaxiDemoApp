@@ -26,6 +26,7 @@ import { EditAccountPage } from '../pages/edit-account/edit-account';
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
 import {UserModel} from '../pages/welcome/user.model';
+import {SettingService} from '../pages/setting/setting.service';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -91,7 +92,8 @@ firebase.initializeApp(firebaseAuth);
     Facebook,
     GooglePlus,
     UserModel,
-    NativeStorage
+    NativeStorage,
+    SettingService
   ]
 })
 export class AppModule {}

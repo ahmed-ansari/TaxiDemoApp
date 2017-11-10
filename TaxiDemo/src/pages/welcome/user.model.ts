@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {LatLng} from '@ionic-native/google-maps';
 
 @NgModule({
 
@@ -34,6 +35,7 @@ export class UserModel{
 export class LocationModel {
     name: string;
     address: string;
+    location: LatLng;
 
     constructor(locationInfo?: any) {
         if (locationInfo !== "") {
