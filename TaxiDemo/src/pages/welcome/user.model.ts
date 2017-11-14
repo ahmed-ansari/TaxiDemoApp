@@ -37,10 +37,11 @@ export class LocationModel {
     address: string;
     location: LatLng;
 
-    constructor(locationInfo?: any) {
+    constructor(locationInfo?: any, savedName?: string) {
         if (locationInfo !== "") {
-            this.name = locationInfo.name
-            this.address = locationInfo.address
+            this.name = savedName
+            this.address = locationInfo.name
+            this.location = new LatLng(locationInfo.lat, locationInfo.lng);
         }
       
     }

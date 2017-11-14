@@ -36,13 +36,13 @@ export class SettingPage {
         this.user.givenName = jsonObj.name;
         this.user.displayName = jsonObj.displayName;
 
-        this.getSavedPlaces(jsonObj.userId);
+        this.locations = this.getSavedPlaces(jsonObj.userId);
       },
       error => console.error(error)
       );
 
-    this.location = new LocationModel({})
-    this.locations = this.location.createDummyLocations()
+    // this.location = new LocationModel({})
+    // this.locations = this.location.createDummyLocations()
 
     // console.log(this.locations)
 
@@ -56,20 +56,23 @@ export class SettingPage {
     this.navCtrl.push(EditAccountPage, { user: this.user })
   }
 
-  getSavedPlaces(userId) {
+  getSavedPlaces(userId): LocationModel[] {
     var promise = this.service.getUserSavedPlaces(userId);
     promise.then((snapshot) => {
       let savedPlaces = snapshot.val();
       var keys = Object.keys(savedPlaces);
       console.log("User Favorites" + JSON.stringify(snapshot.val()));
-       console.log(keys);
-      for(var key in keys){
-         console.log("Key:::"+key);
-         console.log("Value:::"+savedPlaces.keys[key].name);
+      console.log(keys);
+      for (var key in keys) {
+        console.log("Value:::" + savedPlaces[keys[key]]);
+        var location = new LocationModel(savedPlaces[keys[key]], keys[key]);
+        this.locations.push(location);
       }
     }).catch((er) => {
       console.log(er);
     });
+
+    return this.locations;
   }
 
 }
