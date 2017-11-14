@@ -64,6 +64,8 @@ export class DashboardPage {
             alert('Failed to get current position: ' + err);
           });
       });
+      //this.directionsDisplay.setMap(this.map);
+      //this.calculateAndDisplayRoute();
   }
 
   moveCamera(loc : LatLng) {
@@ -159,7 +161,28 @@ calculateAndDisplayRoute(){
     }, (response, status) => {
       if (status === 'OK') {
        // alert(response);
-        this.directionsDisplay.setDirections(response);
+        //this.directionsDisplay.setDirections(response);
+        var polyline = new google.maps.Polyline({
+          path: [],
+          strokeColor: '#0000FF',
+          strokeWeight: 3
+        });
+        var bounds = new google.maps.LatLngBounds();
+  
+  
+        var legs = response.routes[0].legs;
+        for (var i = 0; i < legs.length; i++) {
+          var steps = legs[i].steps;
+          for (var j = 0; j < steps.length; j++) {
+            var nextSegment = steps[j].path;
+            for (var k = 0; k < nextSegment.length; k++) {
+              polyline.getPath().push(nextSegment[k]);
+              bounds.extend(nextSegment[k]);
+            }
+          }
+        }
+  
+        polyline.setMap(this.map);
       } else {
         window.alert('Directions request failed due to ' + status);
       }
