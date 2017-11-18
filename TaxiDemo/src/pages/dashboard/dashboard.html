@@ -1,15 +1,17 @@
-<ion-header no-border transparent>
-    <ion-navbar transparent>
+<ion-header>
+    <ion-navbar>
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title>DashBoard</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <div #map id="map" class="maparea">
         <ion-item>
-            <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
-        </ion-item>
+                <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
+            </ion-item>
+    <div #map id="map" class="maparea">
+        
     </div>
 </ion-content>
