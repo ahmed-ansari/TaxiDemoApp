@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import {
   GoogleMaps,
@@ -31,10 +31,12 @@ export class DashboardPage {
   directionsDisplay = new google.maps.DirectionsRenderer;
   sourceMarker: any;
   destMarker: any;
+  timeTillArrival: number;
+  fareValue: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
-    private nativeStorage: NativeStorage, private modalCtrl: ModalController) {
+    private nativeStorage: NativeStorage, private modalCtrl: ModalController, private loadingCtrl: LoadingController) {
     this.address = {
       place: ''
     };
@@ -104,11 +106,11 @@ export class DashboardPage {
       title: title,
       animation: 'DROP'
     }
-   // this.moveCamera(source);
+    // this.moveCamera(source);
     return this.map.addMarker(markerOptions);
   }
 
-  addMarker(source: LatLng, dest: LatLng ) {
+  addMarker(source: LatLng, dest: LatLng) {
 
     let marker = new google.maps.Marker({
       map: this.map,
@@ -118,9 +120,9 @@ export class DashboardPage {
 
     let content = "<h4>Information!</h4>";
 
-    if(source != null){
+    if (source != null) {
       this.addInfoWindow(marker, null);
-    }else{
+    } else {
       this.addInfoWindow(null, marker);
     }
   }
@@ -131,10 +133,10 @@ export class DashboardPage {
       content: "Welcome"
     });
     var marker: any;
-    if(sourceMarker != null){
+    if (sourceMarker != null) {
       this.sourceMarker = sourceMarker;
       marker = sourceMarker;
-    }else{
+    } else {
       this.destMarker = destMarker;
       marker = destMarker;
     }
@@ -210,51 +212,74 @@ export class DashboardPage {
       travelMode: 'DRIVING'
     };
 
-    var directionsDisplay = this.directionsDisplay;
+    var scope = this;
 
     this.sourceMarker.setMap(null);
     this.destMarker.setMap(null);
 
+    //var dist = this.getDistanceBetweenPoints(this.source, this.destination, 'miles').toFixed(2);
+
+    // alert(dist);
+    let loading = this.loadingCtrl.create({
+      content: 'Updating route and fare...'
+    });
+    loading.present();
     this.directionsService.route(_request, function (_response, _status) {
       if (_status == google.maps.DirectionsStatus.OK) {
-        directionsDisplay.setDirections(_response);
+        scope.directionsDisplay.setDirections(_response);
+        var point = _response.routes[0].legs[0];
+        
+        //alert(point.duration + "----" + point.distance.text);
+        let miles = point.distance.value * 0.000621371;
+        setTimeout(() => {    //<<<---    using ()=> syntax
+          scope.timeTillArrival = scope.getTimeInMins(point.duration.value);
+          scope.calculateFareValue(miles);
+          loading.dismiss();
+        }, 2000);
       }
-      // });
-
-      // this.directionsService.route({
-      //     origin: this.source,
-      //     destination : this.destination,
-      //     travelMode: 'DRIVING'
-      //   }, (response, status) => {
-      //     if (status === 'OK') {
-      //      // alert(response);
-      //       //this.directionsDisplay.setDirections(response);
-      //       var polyline = new google.maps.Polyline({
-      //         path: [],
-      //         strokeColor: '#0000FF',
-      //         strokeWeight: 3
-      //       });
-      //       var bounds = new google.maps.LatLngBounds();
-
-
-      //       var legs = response.routes[0].legs;
-      //       for (var i = 0; i < legs.length; i++) {
-      //         var steps = legs[i].steps;
-      //         for (var j = 0; j < steps.length; j++) {
-      //           var nextSegment = steps[j].path;
-      //           for (var k = 0; k < nextSegment.length; k++) {
-      //             polyline.getPath().push(nextSegment[k]);
-      //             bounds.extend(nextSegment[k]);
-      //           }
-      //         }
-      //       }
-
-      //       polyline.setMap(this.map);
-      //     } else {
-      //       window.alert('Directions request failed due to ' + status);
-      //     }
-      //   });
     });
+  }
+
+  getDistanceBetweenPoints(start, end, units) {
+
+    let earthRadius = {
+      miles: 3958.8,
+      km: 6371
+    };
+
+    let R = earthRadius[units || 'miles'];
+    let lat1 = start.lat();
+    let lon1 = start.lng();
+    let lat2 = end.lat();
+    let lon2 = end.lng();
+
+    let dLat = this.toRad((lat2 - lat1));
+    let dLon = this.toRad((lon2 - lon1));
+    let a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(this.toRad(lat1)) * Math.cos(this.toRad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    let d = R * c;
+
+    return d;
+
+  }
+
+  toRad(x) {
+    return x * Math.PI / 180;
+  }
+
+  calculateFareValue(distance) {
+    let baseFare = 3;
+    let add_mile = 1.95;
+    this.fareValue = "$ " + (((distance * add_mile) + baseFare).toFixed(2));
+    return this.fareValue;
+  }
+
+  getTimeInMins(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    return minutes;
   }
 
 }

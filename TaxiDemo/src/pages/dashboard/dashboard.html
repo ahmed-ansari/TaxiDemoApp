@@ -1,17 +1,45 @@
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>DashBoard</ion-title>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>DashBoard</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-        <ion-item>
-                <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
-            </ion-item>
+    <ion-item>
+        <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
+    </ion-item>
     <div #map id="map" class="maparea">
-        
+
+    </div>
+
+    <div class="bottom request-controls">
+        <ion-row>
+            <ion-col width-50 text-center>
+                <button block ion-button>
+                    <ion-icon name="card"></ion-icon>
+                    Visa **34 {{fareValue}}
+                </button>
+            </ion-col>
+            <ion-col width-50>
+                <button block ion-button>
+                    <ion-icon name="cash"></ion-icon>
+                    Cash {{fareValue}}
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button [hidden]="isPickupRequested" block primary (click)="confirmPickup()">Request Pickup</button>
+                <button ion-buyyon [hidden]="!isPickupRequested" block secondary (click)="cancelPickup()">Cancel Pickup</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                PICKUP TIME IS APPROXIMATELY {{timeTillArrival}} MIN
+            </ion-col>
+        </ion-row>
     </div>
 </ion-content>
