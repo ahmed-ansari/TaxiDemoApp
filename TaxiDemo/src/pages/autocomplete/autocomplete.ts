@@ -1,26 +1,23 @@
-import {Component, NgZone} from '@angular/core';
-import {IonicPage, ViewController} from 'ionic-angular';
-import {GoogleMaps, GoogleMap, LatLng,} from '@ionic-native/google-maps';
-import {DashboardPage} from '../dashboard/dashboard';
+import { Component, NgZone } from '@angular/core';
+import { IonicPage, ViewController } from 'ionic-angular';
+import { GoogleMaps, GoogleMap, LatLng } from '@ionic-native/google-maps';
+import { DashboardPage } from '../dashboard/dashboard';
 
-declare var google : any;
+declare var google: any;
 @IonicPage()
-@Component({selector: 'page-autocomplete', templateUrl: 'autocomplete.html'})
+@Component({ selector: 'page-autocomplete', templateUrl: 'autocomplete.html' })
 
 export class AutocompletePage {
   autocompleteItems;
   autocomplete;
 
-  latitude : number = 0;
-  longitude : number = 0;
-  geo : any
+  latitude: number = 0;
+  longitude: number = 0;
+  geo: any
 
-  service = new google
-    .maps
-    .places
-    .AutocompleteService();
+  service = new google.maps.places.AutocompleteService();
 
-  constructor(public viewCtrl : ViewController, private zone : NgZone) {
+  constructor(public viewCtrl: ViewController, private zone: NgZone) {
     this.autocompleteItems = [];
     this.autocomplete = {
       query: ''
@@ -33,7 +30,7 @@ export class AutocompletePage {
       .dismiss();
   }
 
-  chooseItem(item : any) {
+  chooseItem(item: any) {
     this
       .viewCtrl
       .dismiss(item);

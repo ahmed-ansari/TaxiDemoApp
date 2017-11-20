@@ -3,4 +3,18 @@ page-dashboard {
         height: 100%;
         width: 100%;
     }
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .request-controls {
+        text-align: center;
+        background: #fff//linear-gradient(transparent, map-get($colors , light ));
+      }
+
+      .text-center{
+        text-align: center;
+      }
 }
