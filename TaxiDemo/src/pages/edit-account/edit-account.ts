@@ -36,7 +36,8 @@ export class EditAccountPage {
       LastName: [this.user.displayName, Validators.required],
       email : [this.user.email,this.validatorsEmail()],
       password: ['',Validators.required],
-      mobile: ['',this.validatorsMobile()]
+      mobile: ['',this.validatorsMobile()],
+      photoUrl: [this.user.photoUrl]
     });
   }
 

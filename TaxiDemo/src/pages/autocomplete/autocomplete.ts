@@ -1,6 +1,6 @@
 import {Component, NgZone} from '@angular/core';
 import {IonicPage, ViewController} from 'ionic-angular';
-import {GoogleMaps, GoogleMap, LatLng} from '@ionic-native/google-maps';
+import {GoogleMaps, GoogleMap, LatLng,} from '@ionic-native/google-maps';
 import {DashboardPage} from '../dashboard/dashboard';
 
 declare var google : any;

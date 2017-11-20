@@ -167,8 +167,7 @@ calculateAndDisplayRoute(){
           strokeColor: '#0000FF',
           strokeWeight: 3
         });
-        var bounds = new google.maps.LatLngBounds();
-  
+        var bounds = new google.maps.LatLngBounds();  
   
         var legs = response.routes[0].legs;
         for (var i = 0; i < legs.length; i++) {

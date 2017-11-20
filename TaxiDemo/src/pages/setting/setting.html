@@ -18,9 +18,7 @@
     <ion-grid class="bottom-shadow">
         <ion-row>
             <ion-col col-4>
-                <ion-avatar>
-                    <ion-img class="round-img" src="{{this.user.photoUrl}}"></ion-img>
-                </ion-avatar>
+                <img class="round-img" src="{{this.user.photoUrl}}">
             </ion-col>
             <ion-col col-8 (click)="goToEdit()">
                 <h3>{{this.user.displayName}}</h3>
