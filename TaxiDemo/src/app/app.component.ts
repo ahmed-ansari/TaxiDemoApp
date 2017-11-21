@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -12,6 +12,7 @@ import { SettingPage } from '../pages/setting/setting';
 import { RegisterPage } from '../pages/register/register';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EditAccountPage } from '../pages/edit-account/edit-account';
+import {PaymentPage} from '../pages/payment/payment';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 
@@ -21,19 +22,31 @@ import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = DashboardPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{ title: string, component: any }>;
 
+  userName: string;
+  profileUrl: string;
+
   constructor(public platform: Platform, public statusBar: StatusBar,
-    public splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
+    public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events) {
     this.initializeApp();
+    this.userName = "User";
     let isLoggedIn = this.nativeStorage.getItem("isLoggedIn").then(() => {
       if (isLoggedIn) {
         this.rootPage = DashboardPage;
       } else {
         this.rootPage = WelcomePage;
       }
+      
+      events.subscribe('user:logged', user => {
+        console.log(user);
+        if(user !== undefined && user !== ""){
+          this.userName = user;
+          this.profileUrl = user.photoUrl;
+        }
+     }) 
     },
       error => { });
 

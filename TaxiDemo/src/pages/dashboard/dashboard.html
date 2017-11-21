@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar class="black-bg">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -18,7 +18,7 @@
     <div class="bottom request-controls">
         <ion-row>
             <ion-col width-50 text-center>
-                <button block ion-button>
+                <button block ion-button (click)="makePayment()">
                     <ion-icon name="card"></ion-icon>
                     Visa **34 {{fareValue}}
                 </button>
@@ -38,7 +38,7 @@
         </ion-row>
         <ion-row>
             <ion-col>
-                PICKUP TIME IS APPROXIMATELY {{timeTillArrival}} MIN
+                Travel TIME IS APPROXIMATELY {{timeTillArrival}} MIN
             </ion-col>
         </ion-row>
     </div>

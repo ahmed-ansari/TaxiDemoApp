@@ -7,14 +7,44 @@ page-dashboard {
         position: absolute;
         bottom: 0;
         width: 100%;
-      }
-      
-      .request-controls {
+    }
+    .request-controls {
         text-align: center;
-        background: #fff//linear-gradient(transparent, map-get($colors , light ));
-      }
-
-      .text-center{
+        background: #fff //linear-gradient(transparent, map-get($colors , light ));
+    }
+    .text-center {
         text-align: center;
-      }
+    }
+    .black-bg {
+        background: #000000;
+    }
+    .round-img {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .bottom-shadow {
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .gray {
+        color: gray;
+        font-size: 1.3rem;
+    }
+    .gray-extra-font {
+        color: gray;
+        font-size: 1.4rem;
+    }
+    .no-margin {
+        margin: 0 !important;
+        padding-right: 0 !important
+    }
+    .black {
+        color: #000000;
+        font-size: 1.5rem;
+    }
+    .border-top {
+        border-top: 1px solid #e2e2e2 !important;
+        color: gray;
+        // font-size: 1.3rem;
+    }
 }

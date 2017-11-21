@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, EventEmitter } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Events } from 'ionic-angular';
 import firebase from 'firebase';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -34,9 +34,11 @@ export class WelcomePage {
 
   provider = new firebase.auth.FacebookAuthProvider();
 
+  public userChanged = new EventEmitter();
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
     public loadingCtrl: LoadingController, private fb: Facebook, private googlePlus: GooglePlus, private model: UserModel,
-    private nativeStorage: NativeStorage) {
+    private nativeStorage: NativeStorage, private events: Events) {
     this.model = new UserModel();
   }
 
@@ -119,8 +121,7 @@ export class WelcomePage {
   }
 
   googleSignIn() {
-    this.googlePlus.login()
-      .then(res => {
+    this.googlePlus.login({}).then(res => {
         console.log(res);
         //http://picasaweb.google.com/data/entry/api/user/103521401204989084478?alt=json        
         this.model.email = res.email;
@@ -135,7 +136,7 @@ export class WelcomePage {
   }
 
   validateUserExistance(userModel) {
-    var navController = this.navCtrl;
+    var scope = this;
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
@@ -146,6 +147,8 @@ export class WelcomePage {
         console.log('No User found');
         this.service.registerUser(userModel);
       }
+      //this.userChanged.emit(userModel.givenName);
+      //scope.events.publish('user:logged', userModel);
       let userData = JSON.stringify(userModel);
       this.nativeStorage.setItem('userData', userData)
         .then(() => console.log('Stored item!'),
@@ -153,7 +156,7 @@ export class WelcomePage {
         this.nativeStorage.setItem('isLoggedIn', true).then(() => {},
         error => {});
         loading.dismiss();
-      navController.setRoot(DashboardPage);
+        scope.navCtrl.setRoot(DashboardPage);
     }).catch((er) => {
       console.log("Error" + er);
        loading.dismiss();

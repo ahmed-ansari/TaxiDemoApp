@@ -23,11 +23,13 @@ import {DashboardPage} from '../pages/dashboard/dashboard';
 import {PasswordPage} from '../pages/password/password';
 import {AutocompletePage} from '../pages/autocomplete/autocomplete';
 import { EditAccountPage } from '../pages/edit-account/edit-account';
+import { PaymentPage } from '../pages/payment/payment';
 
 import {WelcomeService} from '../pages/welcome/welcome.service';
 import {RegisterService} from '../pages/register/register.service';
 import {UserModel} from '../pages/welcome/user.model';
 import {SettingService} from '../pages/setting/setting.service';
+import { PaymentService } from '../pages/payment/payment.service';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -48,7 +50,6 @@ firebase.initializeApp(firebaseAuth);
     MyApp,
     HomePage,
     ListPage,
-
     WelcomePage,
     LoginPage,
     RegisterPage,
@@ -57,7 +58,8 @@ firebase.initializeApp(firebaseAuth);
     DashboardPage,
     PasswordPage,
     AutocompletePage,
-    EditAccountPage
+    EditAccountPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -78,7 +80,8 @@ firebase.initializeApp(firebaseAuth);
     DashboardPage,
     PasswordPage,
     AutocompletePage,
-    EditAccountPage
+    EditAccountPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,
@@ -96,7 +99,8 @@ firebase.initializeApp(firebaseAuth);
     GooglePlus,
     UserModel,
     NativeStorage,
-    SettingService
+    SettingService,
+    PaymentService
   ]
 })
 export class AppModule {}

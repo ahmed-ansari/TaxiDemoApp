@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Environment } from './environment';
+import { PaymentService } from './payment.service';
 
-
-@IonicPage()
+//@IonicPage()
 @Component({
     selector: 'page-payment',
     templateUrl: 'payment.html',
@@ -10,22 +11,15 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 
 export class PaymentPage {
 
-    constructor(public navCtrl: NavController, public navParams: NavParams){
+    constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService){
 
     }
 
-    ionViewDidLoad() {
-        var str = Stripe('pk_test_EqWpqEvmBm7YRhyNzEuHLqfE');
-        var paymentRequest = str.paymentRequest({
-            country: 'US',
-            currency: 'usd',
-            total: {
-                label: 'Demo total',
-                amount: 1000,
-            },
-        });
+    ionViewDidLoad() {  
     }
 
+    payment(){
+    }
 }
 
 
