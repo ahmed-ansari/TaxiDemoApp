@@ -9,37 +9,45 @@
 
 <ion-content>
     <ion-item>
+        <ion-input (click)="showAddressModal()" [(ngModel)]="currentAddress" type="text" placeholder="Pickup" disabled></ion-input>
+    </ion-item>
+    <ion-item>
         <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
     </ion-item>
     <div #map id="map" class="maparea">
 
     </div>
 
-    <div class="bottom request-controls">
-        <ion-row>
-            <ion-col width-50 text-center>
-                <button block ion-button (click)="makePayment()">
+    <div class="bottom request-controls" ng-if="bottomSheet">
+        <ion-row align-items-center>
+            <ion-col width-50>
+                <!-- <button block ion-button (click)="makePayment()">
                     <ion-icon name="card"></ion-icon>
                     Visa **34 {{fareValue}}
-                </button>
+                </button> -->
+                <ion-label class="map-label">$ {{fareValue}}</ion-label>
             </ion-col>
             <ion-col width-50>
-                <button block ion-button>
+                <!-- <button block ion-button>
                     <ion-icon name="cash"></ion-icon>
                     Cash {{fareValue}}
-                </button>
+                </button> -->
+                <ion-label class="map-label">{{distance}} Miles</ion-label>
+                <ion-label class="map-label">{{timeTillArrival}} Mins</ion-label>
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col>
-                <button ion-button [hidden]="isPickupRequested" block primary (click)="confirmPickup()">Request Pickup</button>
-                <button ion-buyyon [hidden]="!isPickupRequested" block secondary (click)="cancelPickup()">Cancel Pickup</button>
+            <ion-col width-50>
+                <button ion-button block primary (click)="confirmPickup()">Ride Now</button>
+            </ion-col>
+            <ion-col width-50>
+                <button ion-button block secondary (click)="cancelPickup()">Ride Later</button>
             </ion-col>
         </ion-row>
-        <ion-row>
+        <!-- <ion-row>
             <ion-col>
                 Travel TIME IS APPROXIMATELY {{timeTillArrival}} MIN
             </ion-col>
-        </ion-row>
+        </ion-row> -->
     </div>
 </ion-content>

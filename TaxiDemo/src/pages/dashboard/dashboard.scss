@@ -6,7 +6,12 @@ page-dashboard {
     .bottom {
         position: absolute;
         bottom: 0;
+        padding: 0;
         width: 100%;
+    }
+    .map-label {
+        font-weight: bold;
+        font-size: 1.3em;
     }
     .request-controls {
         text-align: center;

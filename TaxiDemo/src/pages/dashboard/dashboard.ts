@@ -34,16 +34,18 @@ export class DashboardPage implements OnInit {
   address;
   source: LatLng;
   destination: LatLng;
+  bottomSheet = false;
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
   sourceMarker: any;
   destMarker: any;
-  timeTillArrival: number;
+  timeTillArrival = 0;
   fareValue: any;
   fareValueWithoutSymbol: any;
   handler: any;
   public user: UserModel;
   public isMapIdle: boolean;
+  distance: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
@@ -52,6 +54,8 @@ export class DashboardPage implements OnInit {
     this.address = {
       place: ''
     };
+    this.distance = 0;
+    this.fareValue = 0;
     this.user = new UserModel()
     let context = this;
     this.nativeStorage.getItem('userData')
@@ -205,6 +209,7 @@ export class DashboardPage implements OnInit {
       pos = destination;
       this.destination = destination;
       this.calculateAndDisplayRoute();
+      this.bottomSheet = true;
     } else {
       pos = source;
       this.source = source;
@@ -213,6 +218,7 @@ export class DashboardPage implements OnInit {
     let markerOptions: MarkerOptions = {
       position: pos,
       title: title,
+      draggable: true,
       animation: 'DROP'
     }
     // this.moveCamera(source);
@@ -350,6 +356,7 @@ export class DashboardPage implements OnInit {
 
         //alert(point.duration + "----" + point.distance.text);
         let miles = point.distance.value * 0.000621371;
+        scope.distance = miles.toFixed(2);
         setTimeout(() => {    //<<<---    using ()=> syntax
           scope.timeTillArrival = scope.getTimeInMins(point.duration.value);
           scope.calculateFareValue(miles);
@@ -393,7 +400,7 @@ export class DashboardPage implements OnInit {
     let baseFare = 3;
     let add_mile = 1.95;
     this.fareValueWithoutSymbol = (((distance * add_mile) + baseFare).toFixed(2));
-    this.fareValue = "$ " + this.fareValueWithoutSymbol;
+    this.fareValue = this.fareValueWithoutSymbol;
     return this.fareValue;
   }
 
