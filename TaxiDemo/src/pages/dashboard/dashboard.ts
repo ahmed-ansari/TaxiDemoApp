@@ -21,6 +21,7 @@ import { PaymentService } from '../payment/payment.service';
 import { Environment } from '../payment/environment';
 import { UserModel } from '../welcome/user.model';
 import { PaymentPage } from '../payment/payment';
+import { RideModel } from '../payment/ride.model';
 
 declare var google: any;
 declare var StripeCheckout: any;
@@ -31,6 +32,7 @@ export class DashboardPage implements OnInit {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   currentAddress;
+  //destinationAddress;
   address;
   source: LatLng;
   destination: LatLng;
@@ -46,6 +48,7 @@ export class DashboardPage implements OnInit {
   public user: UserModel;
   public isMapIdle: boolean;
   distance: any;
+  public rideModel: RideModel;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
@@ -67,6 +70,7 @@ export class DashboardPage implements OnInit {
         context.user.displayName = jsonObj.displayName;
         context.user.photoUrl = jsonObj.photoUrl;
         context.events.publish('user:logged', context.user.displayName);
+        context.events.publish('user:logged:url', context.user.photoUrl);
       },
       error => console.error(error)
       );
@@ -174,55 +178,6 @@ export class DashboardPage implements OnInit {
     this.map = new google.maps.Map(element, mapOptions);
     this.directionsDisplay.setMap(this.map);
     return this.map;
-
-    // this._geoLoc.getCurrentPosition().then((res) => {
-    //   loc = new google.maps.LatLng(res.coords.latitude, res.coords.longitude);
-    //   let mapOptions = {
-    //     center: loc,
-    //     zoom: 14,
-    //     mapTypeId: google.maps.MapTypeId.ROADMAP
-    //   }
-    //   this.map = new google.maps.Map(element, mapOptions);
-    //   this.directionsDisplay.setMap(this.map);
-    //   this.source = loc;
-    //   this.addMarker(loc, null);
-    // })
-    //   .catch(err => {
-    //     alert('Failed to get current position: ' + err);
-    //   });
-  }
-
-  moveCamera(loc: LatLng) {
-    let options: CameraPosition<any> = {
-      target: loc,
-      zoom: 15,
-      tilt: 10
-    }
-    this
-      .map
-      .moveCamera(options);
-  }
-
-  createMarker(source: LatLng, title: string, destination: LatLng) {
-    var pos: LatLng;
-    if (destination != null) {
-      pos = destination;
-      this.destination = destination;
-      this.calculateAndDisplayRoute();
-      this.bottomSheet = true;
-    } else {
-      pos = source;
-      this.source = source;
-    }
-
-    let markerOptions: MarkerOptions = {
-      position: pos,
-      title: title,
-      draggable: true,
-      animation: 'DROP'
-    }
-    // this.moveCamera(source);
-    return this.map.addMarker(markerOptions);
   }
 
   addMarker(source: LatLng, dest: LatLng, address: string) {
@@ -276,23 +231,7 @@ export class DashboardPage implements OnInit {
       console.log("Result::::"+res);
       this.addMarker(loc, null, res[0].formatted_address)
        this.currentAddress = res[0].formatted_address;
-       //marker.showInfoWindow();
-     });
-     //.catch((err) => {
-    //   alert('Failed to get location: ' + err);
-    // });
-
-    // this.geocoder.geocode(req).then((res) => {
-    //   console.log(res);
-    //   this.createMarker(loc, res[0].extra.featureName, null).then((marker) => {
-    //     this.currentAddress = res[0].extra.featureName;
-    //     marker.showInfoWindow();
-    //   }).catch((err) => {
-    //     alert("Failed to add marker: " + err);
-    //   });
-    // }).catch((err) => {
-    //   alert('Failed to get location: ' + err);
-    // });
+     });     
   };
 
   showAddressModal() {
@@ -323,7 +262,6 @@ export class DashboardPage implements OnInit {
         .location
         .lng();
       let loc: LatLng = new google.maps.LatLng(latitude, longitude);
-      //this.createMarker(null, address, loc);
       this.destination = loc;
       this.addMarker(null, loc, "Destination");
       this.calculateAndDisplayRoute();
@@ -341,10 +279,6 @@ export class DashboardPage implements OnInit {
 
     this.sourceMarker.setMap(null);
     this.destMarker.setMap(null);
-
-    //var dist = this.getDistanceBetweenPoints(this.source, this.destination, 'miles').toFixed(2);
-
-    // alert(dist);
     let loading = this.loadingCtrl.create({
       content: 'Updating route and fare...'
     });
@@ -353,11 +287,9 @@ export class DashboardPage implements OnInit {
       if (_status == google.maps.DirectionsStatus.OK) {
         scope.directionsDisplay.setDirections(_response);
         var point = _response.routes[0].legs[0];
-
-        //alert(point.duration + "----" + point.distance.text);
         let miles = point.distance.value * 0.000621371;
         scope.distance = miles.toFixed(2);
-        setTimeout(() => {    //<<<---    using ()=> syntax
+        setTimeout(() => {   
           scope.timeTillArrival = scope.getTimeInMins(point.duration.value);
           scope.calculateFareValue(miles);
           loading.dismiss();
@@ -426,6 +358,12 @@ export class DashboardPage implements OnInit {
 
   resetUserScreen() {
 
+  }
+
+  rideNow(){
+    let rideModel = new RideModel(this.currentAddress, this.address.place, this.fareValue, this.distance,
+                    this.timeTillArrival, "Driver", "ajsknf 23u49");
+    this.navCtrl.push(PaymentPage, {model: rideModel});
   }
 
 }

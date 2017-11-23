@@ -12,7 +12,7 @@ import { SettingPage } from '../pages/setting/setting';
 import { RegisterPage } from '../pages/register/register';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EditAccountPage } from '../pages/edit-account/edit-account';
-import {PaymentPage} from '../pages/payment/payment';
+import { PaymentPage } from '../pages/payment/payment';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 
@@ -33,21 +33,25 @@ export class MyApp {
     public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events) {
     this.initializeApp();
     this.userName = "User";
-    let isLoggedIn = this.nativeStorage.getItem("isLoggedIn").then(() => {
-      if (isLoggedIn) {
+    this.nativeStorage.getItem("isLoggedIn").then((response => {
+      console.log(response);
+      if (response) {
         this.rootPage = DashboardPage;
       } else {
         this.rootPage = WelcomePage;
       }
-      
+
       events.subscribe('user:logged', user => {
         console.log(user);
-        if(user !== undefined && user !== ""){
+        if (user !== undefined && user !== "") {
           this.userName = user;
-          this.profileUrl = user.photoUrl;
         }
-     }) 
-    },
+      })
+      events.subscribe('user:logged:url', photoUrl => {
+        console.log(photoUrl);
+        this.profileUrl = photoUrl;
+      })
+    }),
       error => { });
 
     // used for an example of ngFor and navigation
@@ -55,7 +59,6 @@ export class MyApp {
       { title: 'Ride', component: DashboardPage },
       { title: 'My Trips', component: HomePage },
       { title: 'Settings', component: SettingPage }
-      // { title: 'Lists', component: ListPage}
 
     ];
 
@@ -77,6 +80,8 @@ export class MyApp {
   }
 
   logout() {
+    this.nativeStorage.setItem("isLoggedIn", false).then(() => {},
+    error => {});
     this.nav.setRoot(WelcomePage);
   }
 }

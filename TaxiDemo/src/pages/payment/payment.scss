@@ -8,6 +8,16 @@ page-payment {
         border-bottom: 1px solid #e2e2e2;
         box-shadow: 0 3px 9px -6px black;
     }
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .request-controls {
+        text-align: center;
+        background: #fff //linear-gradient(transparent, map-get($colors , light ));
+    }
     .text-input::-moz-placeholder {
         color: red;
     }
@@ -27,5 +37,12 @@ page-payment {
     }
     .item-inner {
         border: 0 !important;
+    }
+    .payment-label {
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    .payment-grid {
+        border-color: #000;
     }
 }

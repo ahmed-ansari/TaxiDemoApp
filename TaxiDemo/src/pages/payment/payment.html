@@ -1,12 +1,41 @@
 <ion-header>
     <ion-navbar class="black-bg">
-        <ion-title>Travel Details</ion-title>
+        <ion-title>Trip details</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
-        <ion-label>Ride confirmation</ion-label>
+    <ion-item text-wrap>
+        {{pickupAddress}}
     </ion-item>
+    <ion-item text-wrap>
+        {{dropoffAddress}}
+    </ion-item>
+    <ion-item>
+        <ion-label class="payment-label">$ {{fareValue}}</ion-label>
+    </ion-item>
+    <ion-grid class="payment-grid">
+        <ion-row justify-content-start>
+            <ion-col width-50>
+                <ion-label class="payment-label">{{distance}} Miles</ion-label>
+            </ion-col>
+            <ion-col width-50>
+                <ion-label class="payment-label">{{travelTime}} Mins</ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-start>
+            <ion-col width-50>
+                <ion-label class="payment-label">{{driverName}}</ion-label>
+            </ion-col>
+            <ion-col width-50>
+                <ion-label class="payment-label">{{taxiNumber}}</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div>
+        <ion-row align-items-center>
+            <button ion-button (click)="confirmRide()">Confirm Ride</button>
+        </ion-row>
+    </div>
 
 </ion-content>
