@@ -43,6 +43,9 @@ page-payment {
         font-size: 1.3em;
     }
     .payment-grid {
-        border-color: #000;
+        border: 1px solid #000;
+    }
+    .payment-cost {
+        color: blue;
     }
 }

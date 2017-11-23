@@ -11,11 +11,13 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { NativeStorage } from '@ionic-native/native-storage';
 import {DatePicker,DatePickerOptions} from '@ionic-native/date-picker';
 import {LocalNotifications} from '@ionic-native/local-notifications';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MyApp} from './app.component';
-import {HomePage} from '../pages/home/home';
+import {HistoryPage} from '../pages/history/history';
 import {ListPage} from '../pages/list/list';
-
 import {WelcomePage} from '../pages/welcome/welcome';
 import {LoginPage} from '../pages/login/login';
 import {RegisterPage} from '../pages/register/register';
@@ -32,9 +34,7 @@ import {RegisterService} from '../pages/register/register.service';
 import {UserModel} from '../pages/welcome/user.model';
 import {SettingService} from '../pages/setting/setting.service';
 import { PaymentService } from '../pages/payment/payment.service';
-
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
+import {StaticMapAPI} from '../pages/history/static.map';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -50,7 +50,7 @@ firebase.initializeApp(firebaseAuth);
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    HistoryPage,
     ListPage,
     WelcomePage,
     LoginPage,
@@ -66,14 +66,14 @@ firebase.initializeApp(firebaseAuth);
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    HistoryPage,
     ListPage,
-
     WelcomePage,
     LoginPage,
     RegisterPage,
@@ -104,7 +104,8 @@ firebase.initializeApp(firebaseAuth);
     SettingService,
     PaymentService,
 DatePicker,
-LocalNotifications
+LocalNotifications,
+    StaticMapAPI
   ]
 })
 export class AppModule {}
