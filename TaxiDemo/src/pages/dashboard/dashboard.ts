@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef, HostListener, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, LoadingController, Events } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
-import { angularLoad } from 'angular-load';
 import { Observable } from 'rxjs/Observable';
 import {
   GoogleMaps,
@@ -132,7 +131,7 @@ export class DashboardPage implements OnInit {
   centerLocation(location) {
 
     if (location) {
-      this.map.panTo(location);      
+      this.map.panTo(location);
       this.source = location;
       //this.addMarker(location, null);
       this.getLocationName(location);
