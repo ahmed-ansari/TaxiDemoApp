@@ -9,6 +9,8 @@ import {Geolocation} from '@ionic-native/geolocation';
 import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { NativeStorage } from '@ionic-native/native-storage';
+import {DatePicker,DatePickerOptions} from '@ionic-native/date-picker';
+import {LocalNotifications} from '@ionic-native/local-notifications';
 
 import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
@@ -100,7 +102,9 @@ firebase.initializeApp(firebaseAuth);
     UserModel,
     NativeStorage,
     SettingService,
-    PaymentService
+    PaymentService,
+DatePicker,
+LocalNotifications
   ]
 })
 export class AppModule {}

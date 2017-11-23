@@ -15,6 +15,8 @@ import {
   GroundOverlayOptions,
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import {DatePicker} from '@ionic-native/date-picker';
+import {LocalNotifications} from '@ionic-native/local-notifications';
 import { AutocompletePage } from '../autocomplete/autocomplete';
 import { PaymentService } from '../payment/payment.service';
 import { Environment } from '../payment/environment';
@@ -32,7 +34,9 @@ export class DashboardPage implements OnInit {
   map: any;
   currentAddress;
   //destinationAddress;
-  address;
+address = {
+  place: ''
+};
   source: LatLng;
   destination: LatLng;
   bottomSheet = false;
@@ -52,10 +56,14 @@ export class DashboardPage implements OnInit {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
     private nativeStorage: NativeStorage, private modalCtrl: ModalController,
-    private loadingCtrl: LoadingController, private pService: PaymentService, private events: Events) {
-    this.address = {
-      place: ''
-    };
+private loadingCtrl : LoadingController,
+private pService : PaymentService,
+private events : Events,
+private datePicker : DatePicker,
+private localNotifications : LocalNotifications) {
+    // this.address = {
+    //   place: ''
+    // };
     this.distance = 0;
     this.fareValue = 0;
     this.user = new UserModel()
@@ -73,6 +81,16 @@ export class DashboardPage implements OnInit {
       },
       error => console.error(error)
       );
+
+      this.localNotifications.on('click', function (notificationData) {
+this.address = {
+  place: ''
+};
+          let rideData = JSON.parse(notificationData.data);
+          console.log('Notification clicked...',rideData);
+          this.currentAddress = rideData.source;
+          this.address.place = rideData.destination;
+      });
   }
 
   ngOnInit() {
@@ -230,7 +248,7 @@ export class DashboardPage implements OnInit {
       console.log("Result::::"+res);
       this.addMarker(loc, null, res[0].formatted_address)
        this.currentAddress = res[0].formatted_address;
-     });     
+     });
   };
 
   showAddressModal() {
@@ -288,7 +306,7 @@ export class DashboardPage implements OnInit {
         var point = _response.routes[0].legs[0];
         let miles = point.distance.value * 0.000621371;
         scope.distance = miles.toFixed(2);
-        setTimeout(() => {   
+        setTimeout(() => {
           scope.timeTillArrival = scope.getTimeInMins(point.duration.value);
           scope.calculateFareValue(miles);
           loading.dismiss();
@@ -364,5 +382,25 @@ export class DashboardPage implements OnInit {
                     this.timeTillArrival, "Driver", "ajsknf 23u49");
     this.navCtrl.push(PaymentPage, {model: rideModel});
   }
+
+rideLater() {
+this.datePicker.show({date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK})
+  .then(date => {
+    console.log('Got date: ', date);
+this.localNotifications.schedule({
+    id: 1,
+    title: 'Taxi App',
+    text : 'Your ride is scheduled now!',
+    //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+    data: {
+        "source": this.currentAddress,
+        "destination": this.address.place
+    },
+    at: date
+  });
+},
+    err => console.log('Error occurred while getting date: ', err));
+}
+
 
 }
