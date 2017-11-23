@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        <ion-title>My Trips</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div padding>
+        <ion-segment [(ngModel)]="Trips">
+            <ion-segment-button value="Past">
+                Past
+            </ion-segment-button>
+            <ion-segment-button value="Upcommings">
+                Upcommings
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="Trips">
+        <ion-list *ngSwitchCase="'Past'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="{{this.staticMap}}">
+                </ion-thumbnail>
+                <p>8/24/17 at 04.19</p>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Upcommings'">
+            <ion-item>
+                <!-- <ion-thumbnail item-start>
+                  <img src="img/thumbnail-kitten-1.jpg"> 
+                </ion-thumbnail> -->
+                <p>9/12/17 at 01.40</p>
+            </ion-item>
+
+        </ion-list>
+    </div>
+
+    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+</ion-content>

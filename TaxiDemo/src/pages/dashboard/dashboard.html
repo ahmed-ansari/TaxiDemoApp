@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="bottom request-controls" ng-if="bottomSheet">
+    <div class="bottom request-controls" *ngIf="bottomSheet">
         <ion-row align-items-center>
             <ion-col width-50>
                 <!-- <button block ion-button (click)="makePayment()">
@@ -38,15 +38,15 @@
         </ion-row>
         <ion-row>
             <ion-col width-50>
-                <button ion-button block primary (click)="rideNow()">Ride Now</button>
+                <button ion-button block primary class="map-button-text" (click)="rideNow()">Ride Now</button>
             </ion-col>
             <ion-col width-50>
                 <button ion-button block secondary (click)="cancelPickup()">Ride Later</button>
             </ion-col>
         </ion-row>
-        <!-- <ion-row>
-            <ion-col>
-                Travel TIME IS APPROXIMATELY {{timeTillArrival}} MIN
+        <!-- <ion-row *ngIf="cancel">
+            <ion-col width-100>
+                <button ion-button (click)="cancelRide()">Cancel Ride</button>
             </ion-col>
         </ion-row> -->
     </div>

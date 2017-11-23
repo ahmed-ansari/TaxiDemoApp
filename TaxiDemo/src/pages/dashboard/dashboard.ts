@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, LoadingController, Events } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { angularLoad } from 'angular-load';
@@ -17,14 +17,12 @@ import {
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AutocompletePage } from '../autocomplete/autocomplete';
-import { PaymentService } from '../payment/payment.service';
 import { Environment } from '../payment/environment';
 import { UserModel } from '../welcome/user.model';
 import { PaymentPage } from '../payment/payment';
 import { RideModel } from '../payment/ride.model';
 
 declare var google: any;
-declare var StripeCheckout: any;
 @IonicPage()
 @Component({ selector: 'page-dashboard', templateUrl: 'dashboard.html' })
 export class DashboardPage implements OnInit {
@@ -38,22 +36,22 @@ export class DashboardPage implements OnInit {
   destination: LatLng;
   bottomSheet = false;
   directionsService = new google.maps.DirectionsService;
-  directionsDisplay = new google.maps.DirectionsRenderer;
+  directionsDisplay: any;
   sourceMarker: any;
   destMarker: any;
   timeTillArrival = 0;
   fareValue: any;
   fareValueWithoutSymbol: any;
-  handler: any;
   public user: UserModel;
   public isMapIdle: boolean;
   distance: any;
   public rideModel: RideModel;
+  public cancel = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
     private nativeStorage: NativeStorage, private modalCtrl: ModalController,
-    private loadingCtrl: LoadingController, private pService: PaymentService, private events: Events) {
+    private loadingCtrl: LoadingController, private events: Events) {
     this.address = {
       place: ''
     };
@@ -136,7 +134,7 @@ export class DashboardPage implements OnInit {
   centerLocation(location) {
 
     if (location) {
-      this.map.panTo(location);      
+      this.map.panTo(location);
       this.source = location;
       //this.addMarker(location, null);
       this.getLocationName(location);
@@ -153,17 +151,13 @@ export class DashboardPage implements OnInit {
 
 
   ionViewDidLoad() {
-    var context = this;
-    this.handler = StripeCheckout.configure({
-      key: Environment.stripeKey,
-      image: "https://stripe.com/img/documentation/checkout/marketplace.png",
-      locale: 'auto',
-      token: token => {
-        this.pService.processPayment(token, context.fareValueWithoutSymbol, context.user.userId);
-        context.navCtrl.setRoot(PaymentPage);
-      }
-    });
+    console.log("ionViewDidLoad");
+  }
 
+  ionViewDidEnter() {    
+    console.log("ionViewDidEnter");
+    this.resetUserScreen();
+    //this.address.place = "";
   }
 
   initMap() {
@@ -176,6 +170,7 @@ export class DashboardPage implements OnInit {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     this.map = new google.maps.Map(element, mapOptions);
+    this.directionsDisplay = new google.maps.DirectionsRenderer;
     this.directionsDisplay.setMap(this.map);
     return this.map;
   }
@@ -227,11 +222,11 @@ export class DashboardPage implements OnInit {
       position: latlng
     };
 
-    new google.maps.Geocoder().geocode({'location': latlng}, (res, status) =>{
-      console.log("Result::::"+res);
+    new google.maps.Geocoder().geocode({ 'location': latlng }, (res, status) => {
+      console.log("Result::::" + res);
       this.addMarker(loc, null, res[0].formatted_address)
-       this.currentAddress = res[0].formatted_address;
-     });     
+      this.currentAddress = res[0].formatted_address;
+    });
   };
 
   showAddressModal() {
@@ -279,6 +274,7 @@ export class DashboardPage implements OnInit {
 
     this.sourceMarker.setMap(null);
     this.destMarker.setMap(null);
+    this.destMarker = null;
     let loading = this.loadingCtrl.create({
       content: 'Updating route and fare...'
     });
@@ -289,9 +285,10 @@ export class DashboardPage implements OnInit {
         var point = _response.routes[0].legs[0];
         let miles = point.distance.value * 0.000621371;
         scope.distance = miles.toFixed(2);
-        setTimeout(() => {   
+        setTimeout(() => {
           scope.timeTillArrival = scope.getTimeInMins(point.duration.value);
           scope.calculateFareValue(miles);
+          scope.bottomSheet = true;
           loading.dismiss();
         }, 2000);
       }
@@ -341,29 +338,32 @@ export class DashboardPage implements OnInit {
     return minutes;
   }
 
-  makePayment() {
-    let scope = this;
-    this.handler.open({
-      name: 'Stripe.com',
-      description: '2 widgets',
-      zipCode: true,
-      amount: (scope.fareValueWithoutSymbol * 100)
-    });
-  }
-
-  @HostListener('window:popstate')
-  onpopstate() {
-    this.handler.close();
-  }
-
   resetUserScreen() {
-
+    //this.destMarker = null;
+    // if (this.directionsDisplay != null) {
+    //   this.directionsDisplay.setMap(null);
+    //   this.directionsDisplay = null;
+    //   this.initMap();
+    // }
+    this.bottomSheet = false;
+    //this.directionsDisplay.setMap(this.map);    
   }
 
-  rideNow(){
+  rideNow() {
     let rideModel = new RideModel(this.currentAddress, this.address.place, this.fareValue, this.distance,
-                    this.timeTillArrival, "Driver", "ajsknf 23u49");
-    this.navCtrl.push(PaymentPage, {model: rideModel});
+      this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId);
+    this.navCtrl.push(PaymentPage, { model: rideModel });
   }
 
+  cancelRide(){
+    if (this.directionsDisplay != null) {
+        this.directionsDisplay.setMap(null);
+        this.directionsDisplay = null;
+        this.initMap();
+      }
+      this.cancel = false;
+      this.getCurrentLocation().subscribe(location => {
+        this.centerLocation(location);
+      });
+  }
 }

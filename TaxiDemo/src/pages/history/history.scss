@@ -1,25 +1,4 @@
-page-dashboard {
-    .maparea {
-        height: 100%;
-        width: 100%;
-    }
-    .bottom {
-        position: absolute;
-        bottom: 0;
-        padding: 0;
-        width: 100%;
-    }
-    .map-label {
-        font-weight: bold;
-        font-size: 1.3em;
-    }
-    .request-controls {
-        text-align: center;
-        background: #fff //linear-gradient(transparent, map-get($colors , light ));
-    }
-    .text-center {
-        text-align: center;
-    }
+page-history {
     .black-bg {
         background: #000000;
     }
@@ -51,8 +30,5 @@ page-dashboard {
         border-top: 1px solid #e2e2e2 !important;
         color: gray;
         // font-size: 1.3rem;
-    }
-    .map-button-text {
-        text-align: center;
     }
 }
