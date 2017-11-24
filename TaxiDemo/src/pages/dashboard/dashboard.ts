@@ -47,6 +47,7 @@ export class DashboardPage implements OnInit {
   distance: any;
   public rideModel: RideModel;
   public cancel = false;
+  public travelTime: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
@@ -355,7 +356,7 @@ export class DashboardPage implements OnInit {
 
   rideNow() {
     let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-      this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId);
+      this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
     this.navCtrl.push(PaymentPage, { model: rideModel });
   }
 
