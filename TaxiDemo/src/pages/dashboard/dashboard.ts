@@ -15,8 +15,8 @@ import {
   GroundOverlayOptions,
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
-import {DatePicker} from '@ionic-native/date-picker';
-import {LocalNotifications} from '@ionic-native/local-notifications';
+import { DatePicker } from '@ionic-native/date-picker';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 import { AutocompletePage } from '../autocomplete/autocomplete';
 import { Environment } from '../payment/environment';
 import { UserModel } from '../welcome/user.model';
@@ -31,10 +31,7 @@ export class DashboardPage implements OnInit {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   currentAddress;
-  //destinationAddress;
-address = {
-  place: ''
-};
+  destinationAddress;
   source: LatLng;
   destination: LatLng;
   bottomSheet = false;
@@ -54,13 +51,10 @@ address = {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, private geocoder: Geocoder,
     private nativeStorage: NativeStorage, private modalCtrl: ModalController,
-private loadingCtrl : LoadingController,
-private events : Events,
-private datePicker : DatePicker,
-private localNotifications : LocalNotifications) {
-    // this.address = {
-    //   place: ''
-    // };
+    private loadingCtrl: LoadingController,
+    private events: Events,
+    private datePicker: DatePicker,
+    private localNotifications: LocalNotifications) {
     this.distance = 0;
     this.fareValue = 0;
     this.user = new UserModel()
@@ -78,26 +72,20 @@ private localNotifications : LocalNotifications) {
       },
       error => console.error(error)
       );
-
-      this.localNotifications.on('click', function (notificationData) {
-this.address = {
-  place: ''
-};
-          let rideData = JSON.parse(notificationData.data);
-          console.log('Notification clicked...',rideData);
-          this.currentAddress = rideData.source;
-          this.address.place = rideData.destination;
-      });
   }
 
   ngOnInit() {
-    //setTimeout(() => {
     this.initMap();
-    //}, 500);
     this.addMapEventListeners();
-
     this.getCurrentLocation().subscribe(location => {
       this.centerLocation(location);
+    });
+
+    this.localNotifications.on('click', function (notificationData) {
+      let rideData = JSON.parse(notificationData.data);
+      console.log('Notification clicked...', rideData);
+      this.currentAddress = rideData.source;
+      this.destinationAddress = rideData.destination;
     });
   }
 
@@ -251,7 +239,7 @@ this.address = {
       .create(AutocompletePage);
     let me = this;
     modal.onDidDismiss(data => {
-      this.address.place = data;
+      this.destinationAddress = data;
       this.geoCode(data);
     });
     modal.present();
@@ -366,40 +354,40 @@ this.address = {
   }
 
   rideNow() {
-    let rideModel = new RideModel(this.currentAddress, this.address.place, this.fareValue, this.distance,
+    let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
       this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId);
     this.navCtrl.push(PaymentPage, { model: rideModel });
   }
 
-rideLater() {
-this.datePicker.show({date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK})
-  .then(date => {
-    console.log('Got date: ', date);
-this.localNotifications.schedule({
-    id: 1,
-    title: 'Taxi App',
-    text : 'Your ride is scheduled now!',
-    //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-    data: {
-        "source": this.currentAddress,
-        "destination": this.address.place
-    },
-    at: date
-  });
-},
-    err => console.log('Error occurred while getting date: ', err));
-}
+  rideLater() {
+    this.datePicker.show({ date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK })
+      .then(date => {
+        console.log('Got date: ', date);
+        this.localNotifications.schedule({
+          id: 1,
+          title: 'Taxi App',
+          text: 'Your ride is scheduled now!',
+          //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+          data: {
+            "source": this.currentAddress,
+            "destination": this.destinationAddress
+          },
+          at: date
+        });
+      },
+      err => console.log('Error occurred while getting date: ', err));
+  }
 
 
-  cancelRide(){
+  cancelRide() {
     if (this.directionsDisplay != null) {
-        this.directionsDisplay.setMap(null);
-        this.directionsDisplay = null;
-        this.initMap();
-      }
-      this.cancel = false;
-      this.getCurrentLocation().subscribe(location => {
-        this.centerLocation(location);
-      });
+      this.directionsDisplay.setMap(null);
+      this.directionsDisplay = null;
+      this.initMap();
+    }
+    this.cancel = false;
+    this.getCurrentLocation().subscribe(location => {
+      this.centerLocation(location);
+    });
   }
 }

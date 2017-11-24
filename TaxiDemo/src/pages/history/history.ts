@@ -17,9 +17,12 @@ export class HistoryPage {
 
         // this.fdb.list("/Users/").push("list1");
         //console.log(map.getMapSnap(17.494626,78.392158,17.447666,78.353900));
-        map.getMapSnap(17.494626,78.392158,17.447666,78.353900).subscribe(response => {
-            this.staticMap = response;
-        });
+        // map.getMapSnap(17.494626,78.392158,17.447666,78.353900).subscribe(response => {
+        //     this.staticMap = response;
+        //     console.log("Success",response);
+        // },
+        // error => {console.log("Error",error);});
+        this.staticMap = map.getMapSnap(17.494626,78.392158,17.447666,78.353900);
     }
 
 

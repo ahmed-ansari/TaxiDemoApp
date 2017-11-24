@@ -12,7 +12,7 @@
         <ion-input (click)="showAddressModal()" [(ngModel)]="currentAddress" type="text" placeholder="Pickup" disabled></ion-input>
     </ion-item>
     <ion-item>
-        <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Where to Drop?" disabled></ion-input>
+        <ion-input (click)="showAddressModal()" [(ngModel)]="destinationAddress" type="text" placeholder="Where to Drop?" disabled></ion-input>
     </ion-item>
     <div #map id="map" class="maparea">
 
@@ -41,7 +41,7 @@
                 <button ion-button block primary class="map-button-text" (click)="rideNow()">Ride Now</button>
             </ion-col>
             <ion-col width-50>
-                <button ion-button block secondary (click)="cancelPickup()">Ride Later</button>
+                <button ion-button block secondary (click)="rideLater()">Ride Later</button>
             </ion-col>
         </ion-row>
         <!-- <ion-row *ngIf="cancel">

@@ -44,7 +44,7 @@ export class PaymentPage {
             image: "https://stripe.com/img/documentation/checkout/marketplace.png",
             locale: 'auto',
             token: token => {
-                this.pService.processPayment(token, context.fareValue, context.userId);
+                this.pService.processPayment(token, context.fareValue, context.userId, context.rideModel, true);
                 context.navCtrl.popToRoot();
             }
         });
@@ -68,6 +68,8 @@ export class PaymentPage {
                     role: 'cancel',
                     handler: () => {
                         //console.log('Buy clicked');
+                        this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel,
+                                                    false);
                         context.navCtrl.popToRoot();
                     }
                 }

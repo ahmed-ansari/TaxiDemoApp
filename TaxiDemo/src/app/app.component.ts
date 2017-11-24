@@ -22,7 +22,7 @@ import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any;
 
   pages: Array<{ title: string, component: any }>;
 
