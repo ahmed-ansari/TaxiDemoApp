@@ -1,0 +1,37 @@
+page-ridedetail {
+    .black {
+        color: #000000;
+        font-size: 1.5rem;
+    }
+    .border-top {
+        border-top: 1px solid #e2e2e2 !important;
+        color: gray;
+        // font-size: 1.3rem;
+    }
+    .mapImage {
+        width: 600px;
+        // height: 320px;
+    }
+    .date {
+        padding: 0 5px 0 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .at {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .time {
+        padding: 0 0 0 5px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .rs {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .car {
+        font-size: 1.5rem;
+        color: gray
+    }
+}

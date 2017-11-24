@@ -16,7 +16,7 @@ export class RideModel {
     userId: any;
     travelDate: any;
 
-    constructor(pick, drop, fare, dist, time, driver, number, userId, travelDate) { 
+    constructor(pick, drop, fare, dist, time, driver, number, userId, travelDate) {
         this.pickupAddress = pick;
         this.dropoffAddress = drop;
         this.fareValue = fare;

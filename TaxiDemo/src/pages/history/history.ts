@@ -6,6 +6,8 @@ import { StaticMapAPI } from './static.map';
 import { HistoryService } from './history.service';
 import {UserModel} from '../welcome/user.model';
 import {RideModel} from '../payment/ride.model';
+import {RidedetailPage} from '../ridedetail/ridedetail';
+
 
 @Component({
     selector: 'page-history',
@@ -14,11 +16,12 @@ import {RideModel} from '../payment/ride.model';
 export class HistoryPage {
     arrData = []
     Trips: string
-    staticMap: any;
+    staticMap: string;
     public user: UserModel;
     userId: any;
     public ride: RideModel;
     public rides: RideModel[] = [];
+
     constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
         private nativeStorage:NativeStorage) {
         this.Trips = "Past";
@@ -31,7 +34,7 @@ export class HistoryPage {
             this.user.givenName = jsonObj.name;
             this.user.displayName = jsonObj.displayName;
             this.user.photoUrl = jsonObj.photoUrl;
-            //this.locations = 
+            //this.locations =
             this.getRideHistory(jsonObj.userId);
           },
           error => console.error(error)
@@ -46,16 +49,40 @@ export class HistoryPage {
             console.log("User Rides" + JSON.stringify(snapshot.val()));
             console.log(keys);
             for (var key in keys) {
-              console.log("Value:::" + ridesData[keys[key]]);
-              let model = ridesData[keys[key]].rideModel;
-              let staticMap = ridesData[keys[key]].staticMap;
+              console.log("Value:::" , ridesData[keys[key]]);
+              this.ride = ridesData[keys[key]].rideModel;
+              this.rides.push(this.ride)
+              this.staticMap = ridesData[keys[key]].staticMap;
               //BIND
               //this.locations.push(location);
             }
+          console.log("Rides:::", this.rides);
           }).catch((er) => {
             console.log(er);
           });
     }
 
+    goToRideDetail(index) {
+      console.log("going..",index)
+      this.ride = this.rides[index]
+
+      console.log("ride",this.ride)
+      this.navCtrl.push(RidedetailPage, {params:this.ride,map:this.staticMap})
+    }
+
 
 }
+
+// export class RideModel {
+//   date : Date;
+//   userId : string;
+//   taxiName : string;
+//   fareValue : string;
+
+//   constructor(userInfo : any) {
+//     this.date = userInfo.date
+//     this.userId = userInfo.userId
+//     this.taxiName = userInfo.taxiName
+//     this.fareValue = userInfo.fareValue
+//   }
+// }
