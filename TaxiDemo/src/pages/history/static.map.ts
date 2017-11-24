@@ -15,7 +15,7 @@ export class StaticMapAPI {
     getMapSnap(sLat, sLng, dLat, dLng) {
         let url: string = "https://maps.googleapis.com/maps/api/staticmap?markers=color:green|label:S|" +
         sLat + "," + sLng + "&markers=color:red|label:D|" + dLat + "," + dLng + "&path=color:0x00000080|" +
-          sLat + "," + sLng + "|" + dLat + "," + dLng + "&zoom=12&size=600x320&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
+          sLat + "," + sLng + "|" + dLat + "," + dLng + "&zoom=10&size=600x320&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
         console.log(url);
         return url;
     }
@@ -23,7 +23,7 @@ export class StaticMapAPI {
     getStaticMapSnapFromAddress(sAddress, dAddress){
         let url: string = "https://maps.googleapis.com/maps/api/staticmap?markers=color:green|label:S|" +
         sAddress + "&markers=color:red|label:D|" + dAddress + "&path=color:0x00000080|" +
-        sAddress + "|" + dAddress + "&zoom=13&size=400x200&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
+        sAddress + "|" + dAddress + "&zoom=10&size=600x320&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
         //console.log(url);
         return url;
     }

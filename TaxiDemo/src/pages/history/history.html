@@ -23,7 +23,7 @@
             <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
                 <ion-row>
                     <div class=" mapImage ">
-                        <img src="{{this.staticMap}} " />
+                        <img src="{{this.staticMapArray[i]}} " />
                     </div>
                 </ion-row>
                 <ion-row>

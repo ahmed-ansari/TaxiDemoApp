@@ -21,6 +21,7 @@ export class HistoryPage {
     userId: any;
     public ride: RideModel;
     public rides: RideModel[] = [];
+    staticMapArray: string[] = [];
 
     constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
         private nativeStorage:NativeStorage) {
@@ -53,6 +54,7 @@ export class HistoryPage {
               this.ride = ridesData[keys[key]].rideModel;
               this.rides.push(this.ride)
               this.staticMap = ridesData[keys[key]].staticMap;
+              this.staticMapArray.push(this.staticMap);
               //BIND
               //this.locations.push(location);
             }
