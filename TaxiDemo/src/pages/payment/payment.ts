@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, AlertController
 import { Environment } from './environment';
 import { PaymentService } from './payment.service';
 import { RideModel } from './ride.model';
+import { StaticMapAPI } from '../history/static.map';
 
 declare var StripeCheckout: any;
 //@IonicPage()
@@ -23,9 +24,10 @@ export class PaymentPage {
     taxiNumber: string;
     userId: any;
     handler: any;
+    staticMapUrl: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
-        public alertCtrl: AlertController) {
+        public alertCtrl: AlertController, private staticMap: StaticMapAPI) {
         this.rideModel = navParams.get("model");
         this.dropoffAddress = this.rideModel.dropoffAddress;
         this.pickupAddress = this.rideModel.pickupAddress;
@@ -35,6 +37,7 @@ export class PaymentPage {
         this.driverName = this.rideModel.driverName;
         this.taxiNumber = this.rideModel.taxiName;
         this.userId = this.rideModel.userId;
+        this.staticMapUrl = this.staticMap.getStaticMapSnapFromAddress(this.pickupAddress, this.dropoffAddress);
     }
 
     ionViewDidLoad() {
@@ -44,7 +47,8 @@ export class PaymentPage {
             image: "https://stripe.com/img/documentation/checkout/marketplace.png",
             locale: 'auto',
             token: token => {
-                this.pService.processPayment(token, context.fareValue, context.userId, context.rideModel, true);
+                this.pService.processPayment(token, context.fareValue, context.userId, context.rideModel, true, this.staticMapUrl);
+                //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, true);
                 context.navCtrl.popToRoot();
             }
         });
@@ -68,8 +72,8 @@ export class PaymentPage {
                     role: 'cancel',
                     handler: () => {
                         //console.log('Buy clicked');
-                        this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel,
-                                                    false);
+                        this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel, false, this.staticMapUrl);
+                        //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, false);
                         context.navCtrl.popToRoot();
                     }
                 }
@@ -81,17 +85,17 @@ export class PaymentPage {
     makePayment() {
         let scope = this;
         this.handler.open({
-          name: 'Stripe.com',
-          description: '2 widgets',
-          zipCode: true,
-          amount: (scope.fareValue * 100)
+            name: 'Stripe.com',
+            description: '2 widgets',
+            zipCode: true,
+            amount: (scope.fareValue * 100)
         });
-      }
-    
-      @HostListener('window:popstate')
-      onpopstate() {
+    }
+
+    @HostListener('window:popstate')
+    onpopstate() {
         this.handler.close();
-      }
+    }
 }
 
 

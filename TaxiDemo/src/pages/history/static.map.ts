@@ -16,11 +16,19 @@ export class StaticMapAPI {
         let url: string = "https://maps.googleapis.com/maps/api/staticmap?markers=color:green|label:S|" + 
         sLat + "," + sLng + "&markers=color:red|label:D|" + dLat + "," + dLng + "&path=color:0x00000080|" +
           sLat + "," + sLng + "|" + dLat + "," + dLng + "&zoom=13&size=400x400&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
-        console.log(url);
+        //console.log(url);
         return url;
         //   return this.http.get(url).map(response => {
         //     console.log("Image Response:::",response);
         //     response
         // }).catch(error => error);
+    }
+
+    getStaticMapSnapFromAddress(sAddress, dAddress){
+        let url: string = "https://maps.googleapis.com/maps/api/staticmap?markers=color:green|label:S|" + 
+        sAddress + "&markers=color:red|label:D|" + dAddress + "&path=color:0x00000080|" +
+        sAddress + "|" + dAddress + "&zoom=13&size=400x400&key=AIzaSyCQHYSFVpwuo2aMuOOaW8yBQ7vpdfH8oGA";
+        //console.log(url);
+        return url;
     }
 }
