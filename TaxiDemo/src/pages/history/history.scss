@@ -31,4 +31,40 @@ page-history {
         color: gray;
         // font-size: 1.3rem;
     }
+    .mapImage {
+        width: 600px;
+        // height: 320px;
+    }
+    .segment {
+        background: #000000;
+    }
+    .segment-md .segment-button.activated,
+    .segment-md .segment-button.segment-activated {
+        color: #fff;
+    }
+    .segment-md .segment-button {
+        color: gray
+    }
+    .date {
+        padding: 0 5px 0 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .at {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .time {
+        padding: 0 0 0 5px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .rs {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .car {
+        font-size: 1.5rem;
+        color: gray
+    }
 }
