@@ -7,6 +7,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { HistoryPage } from '../pages/history/history';
 import { ListPage } from '../pages/list/list';
 
+
 import { WelcomePage } from '../pages/welcome/welcome';
 import { SettingPage } from '../pages/setting/setting';
 import { RegisterPage } from '../pages/register/register';

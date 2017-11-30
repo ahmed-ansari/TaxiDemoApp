@@ -1,60 +1,50 @@
 <ion-header>
     <ion-navbar>
+        <h1 text-center>Register</h1>
     </ion-navbar>
 </ion-header>
 <ion-content padding>
     <form [formGroup]="register" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
-                <ion-col col-6>
+                
                     <ion-item>
-                        <ion-label floating>First Name</ion-label>
-                        <ion-input type="text" formControlName="firstName"></ion-input>
+                        <ion-label floating>Driver Name</ion-label>
+                        <ion-input type="text" formControlName="driverName"></ion-input>
                     </ion-item>
-                    <div *ngIf="register?.controls['firstName']?.errors?.required && register?.controls['firstName'].touched">
+                    <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched">
                         <p float-right class="error">* This Field is required</p>
                     </div>
-                </ion-col>
-
-                <ion-col col-6>
+                </ion-row>
+                <ion-row>
                     <ion-item>
-                        <ion-label floating>Last Name</ion-label>
-                        <ion-input type="text" formControlName="LastName"></ion-input>
+                        <ion-label floating>Driver License</ion-label>
+                        <ion-input type="text" formControlName="driverLicense"></ion-input>
                     </ion-item>
-                    <div *ngIf="register?.controls['LastName']?.errors?.required && register?.controls['LastName'].touched">
+                    <div *ngIf="register?.controls['driverLicense']?.errors?.required && register?.controls['driverLicense'].touched">
                         <p class="error" float-right>* This Field is required</p>
                     </div>
-                </ion-col>
             </ion-row>
             <ion-row>
                 <ion-item>
-                    <ion-label floating>Mobile</ion-label>
-                    <ion-input type="tel" formControlName="mobile" disabled=true style="color:black;"></ion-input>
+                    <ion-label floating>Phone Number</ion-label>
+                    <ion-input type="tel" formControlName="phone" style="color:black;"></ion-input>
                 </ion-item>
-                <div *ngIf="register?.controls['mobile']?.errors?.required && register?.controls['mobile'].touched">
+                <div *ngIf="register?.controls['phone']?.errors?.required && register?.controls['phone'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
             </ion-row>
+            <br>
             <ion-row>
+                    <ion-item>
+                            <ion-label>Address</ion-label>
+                            <!-- [(ngModel)]="todo.description" -->
+                            <ion-textarea  formControlName="address"></ion-textarea>
+                          </ion-item>
+            </ion-row>
+         
 
-                <ion-item>
-                    <ion-label floating>Email</ion-label>
-                    <ion-input type="text" formControlName="email"></ion-input>
-                </ion-item>
-                <div *ngIf="register?.controls['email']?.errors?.required && register?.controls['email'].touched">
-                    <p class="error" float-right>* This Field is required</p>
-                </div>
-            </ion-row>
-
-            <ion-row>
-                <ion-item>
-                    <ion-label floating>Password</ion-label>
-                    <ion-input type="password" formControlName="password"></ion-input>
-                </ion-item>
-                <div *ngIf="register?.controls['password']?.errors?.required && register?.controls['password'].touched">
-                    <p class="error" float-right>* This Field is required</p>
-                </div>
-            </ion-row>
+          
 
         </ion-grid>
 

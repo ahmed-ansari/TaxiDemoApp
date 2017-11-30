@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { MobileAuthPage } from '../mobileauth/mobileauth'
-import { RegisterService } from '../register/register.service'
+import { MobileAuthPage } from '../mobileauth/mobileauth';
+import { RegisterService } from '../register/register.service';
+import { VehicledetailsPage } from '../vehicledetails/vehicledetails';
 
 @IonicPage()
 @Component({
@@ -11,19 +12,18 @@ import { RegisterService } from '../register/register.service'
 })
 export class RegisterPage {
   private register : FormGroup;
-  mobileNo: any = "";
+
   constructor( private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams,
         private regService: RegisterService) {
-    this.mobileNo = navParams.get("mobile");
+    // this.mobileNo = navParams.get("mobile");
   }
   ngOnInit () {
     this.register = this.formBuilder.group({
 
-      firstName: ['', Validators.required],
-      LastName: ['', Validators.required],
-      email : ['',this.validatorsEmail()],
-      password: ['',Validators.required],
-      mobile: [this.mobileNo]
+      driverName: ['', Validators.required],
+      driverLicense: ['', Validators.required],
+      phone : ['',this.validatorsMobile()],
+      address: ['',Validators.required]
     });
   }
 
@@ -41,10 +41,15 @@ export class RegisterPage {
   }
 
   logForm(){
-    console.log(this.register.value)
-    
-    this.regService.registerUser(this.register.value);
-    this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
+    console.log(this.register)
+
+    if (!this.register.invalid && this.register.status == "VALID") {
+      this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
+    }
+
+    // this.navCtrl.push(VehicledetailsPage)
+    // this.regService.registerUser(this.register.value);
+    // this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
   }
 
 

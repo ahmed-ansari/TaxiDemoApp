@@ -37,7 +37,7 @@ import { PaymentService } from '../pages/payment/payment.service';
 import { StaticMapAPI } from '../pages/history/static.map';
 import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
-
+import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -65,7 +65,8 @@ firebase.initializeApp(firebaseAuth);
     AutocompletePage,
     EditAccountPage,
     PaymentPage,
-    RidedetailPage
+    RidedetailPage,
+    VehicledetailsPage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -88,7 +89,8 @@ firebase.initializeApp(firebaseAuth);
     AutocompletePage,
     EditAccountPage,
     PaymentPage,
-    RidedetailPage
+    RidedetailPage,
+    VehicledetailsPage
   ],
   providers: [
     StatusBar,

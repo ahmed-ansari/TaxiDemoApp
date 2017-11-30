@@ -15,7 +15,10 @@ page-welcome {
         justify-content: flex-start !important;
     }
     .full-img {
-        width: 100vw
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+        margin-top: 30px;
     }
     .big-field {
         //  background: tomato;
