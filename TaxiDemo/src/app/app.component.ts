@@ -23,7 +23,7 @@ import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any = RegisterPage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -39,7 +39,7 @@ export class MyApp {
       if (response) {
         this.rootPage = DashboardPage;
       } else {
-        this.rootPage = WelcomePage;
+        this.rootPage = RegisterPage;
       }
 
       events.subscribe('user:logged', user => {
@@ -57,9 +57,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Ride', component: DashboardPage },
-      { title: 'My Trips', component: HistoryPage },
-      { title: 'Settings', component: SettingPage }
+      { title: 'Profile', component: EditAccountPage },
+      { title: 'My Rides', component: HistoryPage }
+     
 
     ];
 

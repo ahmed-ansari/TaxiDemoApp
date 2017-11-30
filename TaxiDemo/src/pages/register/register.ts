@@ -42,7 +42,8 @@ export class RegisterPage {
 
   logForm(){
     console.log(this.register)
-
+    this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
+    
     if (!this.register.invalid && this.register.status == "VALID") {
       this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
     }

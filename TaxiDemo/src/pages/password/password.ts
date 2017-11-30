@@ -5,6 +5,7 @@ import { DashboardPage } from '../dashboard/dashboard';
 import firebase from 'firebase';
 
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { HistoryPage } from '../history/history'
 
 @IonicPage()
 @Component({ selector: 'page-password', templateUrl: 'password.html' })
@@ -34,6 +35,10 @@ export class PasswordPage {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PasswordPage');
+  }
+
+  logForm() {
+    this.navCtrl.setRoot(HistoryPage);
   }
 
   goToDashboard() {

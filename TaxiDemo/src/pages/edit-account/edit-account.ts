@@ -21,8 +21,8 @@ export class EditAccountPage {
   public mobile: Number | String;
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams) {
-    this.user =  navParams.get("user");
-    //this.user.createDummyUser()  
+    // this.user =  navParams.get("user");
+    // this.user.createDummyUser()  
   }
 
   ionViewDidLoad() {
@@ -32,12 +32,19 @@ export class EditAccountPage {
   ngOnInit () {
     this.editAccount = this.formBuilder.group({
 
-      firstName: [this.user.displayName, Validators.required],
-      LastName: [this.user.displayName, Validators.required],
-      email : [this.user.email,this.validatorsEmail()],
+      firstName: ["F", Validators.required],
+      LastName: ["L", Validators.required],
+      email : ["e@e",this.validatorsEmail()],
       password: ['',Validators.required],
       mobile: ['',this.validatorsMobile()],
-      photoUrl: [this.user.photoUrl]
+      // photoUrl: ['']
+
+      // firstName: [this.user.displayName, Validators.required],
+      // LastName: [this.user.displayName, Validators.required],
+      // email : [this.user.email,this.validatorsEmail()],
+      // password: ['',Validators.required],
+      // mobile: ['',this.validatorsMobile()],
+      // photoUrl: [this.user.photoUrl]
     });
   }
 

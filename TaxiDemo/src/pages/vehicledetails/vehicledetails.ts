@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {HistoryPage} from '../history/history';
 /**
  * Generated class for the VehicledetailsPage page.
  *
@@ -35,6 +36,7 @@ export class VehicledetailsPage {
 
   logForm(){
     console.log(this.vehicle.value)
+    this.navCtrl.setRoot(HistoryPage);
    
   }
 
