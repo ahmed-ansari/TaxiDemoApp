@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
@@ -17,7 +16,7 @@ export class RegisterPage {
   imageSrc: string = "assets/imgs/profile_photo.png";
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams,
-    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController, public _DomSanitizer: DomSanitizer) {
+    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController) {
     // this.mobileNo = navParams.get("mobile");
   }
   ngOnInit() {
