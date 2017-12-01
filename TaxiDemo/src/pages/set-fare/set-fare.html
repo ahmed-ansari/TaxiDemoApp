@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar class="black-bg">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Set Fare</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="setFare" (ngSubmit)="updateFare()">
+        <ion-grid>
+            <br><br>
+            <ion-row>
+                <ion-list>
+                    <ion-item>
+                        <ion-label class="label-color-black">Vehicle Type</ion-label>
+                        <ion-select formControlName="vehicleType">
+                            <ion-option value="taxi">TAXI</ion-option>
+                            <ion-option value="sedan">SEDAN</ion-option>
+                            <ion-option value="suv">SUV</ion-option>
+                            <ion-option value="van">PASSENGER VAN</ion-option>
+                            <ion-option value="limo">STRETCH LIMO</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+                <div float-right *ngIf="setFare?.controls['vehicleType']?.errors?.required && setFare?.controls['vehicleType'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+            </ion-row>
+        </ion-grid>
+    </form>
+    <ion-footer>
+        <ion-fab right bottom margin-right>
+            <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-fab>
+    </ion-footer>
+</ion-content>
