@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <h1 text-center>Register</h1>
+        <h1>Register</h1>
     </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -14,7 +14,6 @@
                     <ion-label floating>Driver Name</ion-label>
                     <ion-input type="text" formControlName="driverName"></ion-input>
                 </ion-item>
-
                 <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched">
                     <p float-right class="error">* This Field is required</p>
                 </div>
@@ -37,7 +36,15 @@
                     <p class="error" float-right>* This Field is required</p>
                 </div>
             </ion-row>
-            <br>
+            <ion-row>
+                <ion-item>
+                    <ion-label>Password</ion-label>
+                    <ion-input formControlName="password" type="password"></ion-input>
+                </ion-item>
+                <div *ngIf="register?.controls['password']?.errors?.required && register?.controls['password'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+            </ion-row>
             <ion-row>
                 <ion-item>
                     <ion-label>Address</ion-label>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Events, MenuController } from 'ionic-angular';
 import firebase from 'firebase';
 
 
@@ -23,7 +23,9 @@ export class WelcomePage {
   private login : FormGroup;
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, private menu: MenuController) {
+
+      this.menu.swipeEnable(false)
 
   }
 
@@ -46,14 +48,36 @@ export class WelcomePage {
 
   validateUser() {
     //this.navCtrl.setRoot(HomePage);
+    var navController = this.navCtrl;
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    let encodedEmail = this.service.encodeEmail(this.login.value.email)
+    let promise = this.service.validateUser(encodedEmail)
+
+    promise.then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        loading.dismiss();
+        this.navCtrl.push(PasswordPage, { email: this.login.value.email })
+      } else {
+        console.log("No User found");
+        loading.dismiss();
+        this.navCtrl.push(RegisterPage, { email: this.login.value.email })
+      }
+    }).catch((er) => {
+      loading.dismiss();
+      console.log(er);
+    });
   }
 
   logForm(){
     console.log(this.login.value)
     this.login.controls['email'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
-      // this.navCtrl.push(PasswordPage,{email: this.login.value.email})
-      this.navCtrl.push(RegisterPage)
+      this.validateUser();
+      //this.navCtrl.push(RegisterPage)
     }
   }
 

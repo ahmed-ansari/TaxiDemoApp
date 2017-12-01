@@ -19,8 +19,9 @@ export class UserModel {
     uin: string;
     vehiclePhoto: string;
     timeStampe: any;
+    password: any;
 
-    // constructor(email, driverName, license, phone, address, profilePhoto, make, model, year, 
+    // constructor(email, driverName, license, phone, address, profilePhoto, make, model, year,
     //     regnum, uin, vehiclePhoto, timeStampe) {
     //     this.email = email;
     //     this.driverName = driverName;

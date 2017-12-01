@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, MenuController, LoadingController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
@@ -13,18 +13,23 @@ import { VehicledetailsPage } from '../vehicledetails/vehicledetails';
 })
 export class RegisterPage {
   private register: FormGroup;
+  emailId: string;
   imageSrc: string = "assets/imgs/profile_photo.png";
+  filename: string = '';
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams,
-    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController) {
-    // this.mobileNo = navParams.get("mobile");
+    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController,
+    private menu: MenuController, public loadingCtrl: LoadingController) {
+
+    this.emailId = navParams.get("email");
+    this.menu.swipeEnable(false)
   }
   ngOnInit() {
     this.register = this.formBuilder.group({
-
       driverName: ['', Validators.required],
       driverLicense: ['', Validators.required],
       phone: ['', this.validatorsMobile()],
+      password : ['', Validators.required],
       address: ['', Validators.required]
     });
   }
@@ -43,15 +48,14 @@ export class RegisterPage {
   }
 
   logForm() {
-    console.log(this.register)
-
     if (!this.formValid(this.register)) {
       return;
     }
-    // this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
+
+    console.log('######: ', this.register.value)
 
     if (!this.register.invalid && this.register.status == "VALID") {
-      this.navCtrl.push(VehicledetailsPage, { register: this.register.value })
+      this.navCtrl.push(VehicledetailsPage, { register: this.register.value, email: this.emailId, profile: this.filename })
     }
 
     // this.navCtrl.push(VehicledetailsPage)
@@ -107,9 +111,8 @@ export class RegisterPage {
     this.camera.getPicture(cameraOptions).then((imageData) => {
       let base64Image = imageData;
       this.imageSrc = 'data:image/jpeg;base64,' + base64Image
-      console.log('base 64 image: ', base64Image)
-      const filename = Math.floor(Date.now() / 1000);
-      var profilePromise = this.regService.uploadProfileImage(this.imageSrc, filename);
+      this.filename = Math.floor(Date.now() / 1000)+'.jpg';
+      var profilePromise = this.regService.uploadProfileImage(this.imageSrc, this.filename);
       profilePromise.then((datasnap) => {
         console.log("Profile Updated" + JSON.stringify(datasnap.val()));
       }).catch((er) => {
@@ -132,9 +135,8 @@ export class RegisterPage {
       console.log(imageData)
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.imageSrc = base64Image
-      console.log('base 64 image: ', base64Image)
-      const filename = Math.floor(Date.now() / 1000);
-      var profilePromise = this.regService.uploadProfileImage(base64Image, filename);
+      this.filename = Math.floor(Date.now() / 1000) + '.jpg';
+      var profilePromise = this.regService.uploadProfileImage(base64Image, this.filename);
       profilePromise.then((datasnap) => {
         console.log("Profile Updated" + JSON.stringify(datasnap.val()));
       }).catch((er) => {

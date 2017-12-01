@@ -19,18 +19,18 @@ export class RegisterService {
         const personObj: firebase.database.Reference = firebase.database().ref(`/Drivers/`);
         // var keyValueRef = personObj.push();
         var data = {
-            'driverName': user.firstname,
+            'driverName': user.driverName,
             'license': user.license,
             'email': user.email,
             'phone': user.phone,
-            'profilePhoto': user.profilePhoto,
+             'profilePhoto': (typeof user.profilePhoto != "undefined") ? user.profilePhoto : "",
             'address': user.address,
             'make': user.make,
             'model': user.model,
             'year': user.year,
             'regnum': user.regnum,
             'uin': user.uin,
-            'vehiclePhoto': user.vehiclePhoto
+            'vehiclePhoto': (typeof user.vehiclePhoto != "undefined") ? user.vehiclePhoto : "",
         };
         personObj.child(driverRef).set(data);
         // const userRef: firebase.database.Reference = firebase.database().ref(`/UserRef`);
@@ -38,7 +38,7 @@ export class RegisterService {
     }
 
     uploadProfileImage(imageString, timeStamp): any {
-        let image: string = timeStamp + '.jpg',
+        let image: string = timeStamp,
             storageRef: any,
             parseUpload: any;
 
@@ -62,7 +62,7 @@ export class RegisterService {
     }
 
     uploadVehicleImage(imageString, timeStamp): Promise<any> {
-        let image: string = timeStamp + '.jpg',
+        let image: string = timeStamp,
             storageRef: any,
             parseUpload: any;
 
