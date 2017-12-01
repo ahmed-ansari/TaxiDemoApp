@@ -39,7 +39,7 @@ import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
 import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { HomePage } from '../pages/home/home';
-import {FieldErrorDisplayComponent} from '../components/field-error-display/field-error-display'
+// import {FieldErrorDisplayComponent} from '../components/field-error-display/field-error-display'
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -70,7 +70,7 @@ firebase.initializeApp(firebaseAuth);
     RidedetailPage,
     VehicledetailsPage,
     HomePage,
-    FieldErrorDisplayComponent
+    // FieldErrorDisplayComponent
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -96,7 +96,7 @@ firebase.initializeApp(firebaseAuth);
     RidedetailPage,
     VehicledetailsPage,
     HomePage,
-    FieldErrorDisplayComponent
+    // FieldErrorDisplayComponent
   ],
   providers: [
     StatusBar,
