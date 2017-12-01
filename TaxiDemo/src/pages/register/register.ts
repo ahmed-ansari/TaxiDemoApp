@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
-import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { RegisterService } from '../register/register.service';
@@ -15,10 +14,10 @@ import { VehicledetailsPage } from '../vehicledetails/vehicledetails';
 })
 export class RegisterPage {
   private register: FormGroup;
-  imageSrc: any;
+  imageSrc: string = "assets/imgs/profile_photo.png";
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams,
-    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController) {
+    private regService: RegisterService, private camera: Camera, public actionSheetCtrl: ActionSheetController, public _DomSanitizer: DomSanitizer) {
     // this.mobileNo = navParams.get("mobile");
   }
   ngOnInit() {
@@ -74,7 +73,7 @@ export class RegisterPage {
     console.log('launch it')
     const cameraOptions: CameraOptions = {
       quality: 100,
-      // destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.PictureSourceType.CAMERA
     }
@@ -109,7 +108,6 @@ export class RegisterPage {
     this.camera.getPicture(cameraOptions).then((imageData) => {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.imageSrc = base64Image
-      console.log('base 64 image: ', base64Image)
     }, (err) => {
       console.log('Error captuing photo: ', err)
     });

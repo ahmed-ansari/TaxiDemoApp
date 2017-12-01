@@ -2,12 +2,9 @@
     <div>
         <img src="assets/imgs/logo.png" alt="bg" class="full-img">
     </div>
-
     <form [formGroup]="login" (ngSubmit)="logForm()">
         <ion-grid>
-       <br><br>
             <ion-row>
-
                 <ion-item>
                     <ion-label floating>Email</ion-label>
                     <ion-input type="text" formControlName="email"></ion-input>
@@ -19,23 +16,16 @@
                     <p class="error" float-right>* Invalid Email</p>
                 </div>
             </ion-row>
-
-         
-
         </ion-grid>
-
-        <ion-footer>
-            <!-- [disabled]="!register.valid" -->
-
+        <ion-row>
             <ion-fab right bottom margin-right>
                 <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
             </ion-fab>
-        </ion-footer>
-
+        </ion-row>
+        <!-- <ion-footer>
+            <ion-fab right bottom margin-right>
+                <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
+            </ion-fab>
+        </ion-footer> -->
     </form>
-
-
-
-
-
 </ion-content>
