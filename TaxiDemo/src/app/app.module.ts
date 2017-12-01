@@ -41,6 +41,8 @@ import { RidedetailPage } from '../pages/ridedetail/ridedetail';
 import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { HomePage } from '../pages/home/home';
 
+import {SetFarePage} from '../pages/set-fare/set-fare';
+
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
   authDomain: "taxiapp-8e144.firebaseapp.com",
@@ -69,7 +71,8 @@ firebase.initializeApp(firebaseAuth);
     PaymentPage,
     RidedetailPage,
     VehicledetailsPage,
-    HomePage
+    HomePage,
+    SetFarePage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -94,7 +97,8 @@ firebase.initializeApp(firebaseAuth);
     PaymentPage,
     RidedetailPage,
     VehicledetailsPage,
-    HomePage
+    HomePage,
+    SetFarePage
   ],
   providers: [
     StatusBar,

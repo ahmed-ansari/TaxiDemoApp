@@ -8,31 +8,113 @@
 </ion-header>
 
 <ion-content padding>
-    <form [formGroup]="setFare" (ngSubmit)="updateFare()">
+    <form [formGroup]="setFare" (ngSubmit)="logForm()">
         <ion-grid>
-            <br><br>
+            <br>
+            <br>
             <ion-row>
-                <ion-list>
-                    <ion-item>
-                        <ion-label class="label-color-black">Vehicle Type</ion-label>
-                        <ion-select formControlName="vehicleType">
-                            <ion-option value="taxi">TAXI</ion-option>
-                            <ion-option value="sedan">SEDAN</ion-option>
-                            <ion-option value="suv">SUV</ion-option>
-                            <ion-option value="van">PASSENGER VAN</ion-option>
-                            <ion-option value="limo">STRETCH LIMO</ion-option>
-                        </ion-select>
-                    </ion-item>
-                </ion-list>
-                <div float-right *ngIf="setFare?.controls['vehicleType']?.errors?.required && setFare?.controls['vehicleType'].touched">
+
+                <ion-item>
+                    <ion-label class="label-color-black">Vehicle Type</ion-label>
+                    <ion-select #v (ionChange)="onChange(v.value)" formControlName="vehicleType">
+                        <ion-option value="taxi">TAXI</ion-option>
+                        <ion-option value="sedan">SEDAN</ion-option>
+                        <ion-option value="suv">SUV</ion-option>
+                        <ion-option value="van">PASSENGER VAN</ion-option>
+                        <ion-option value="limo">STRETCH LIMO</ion-option>
+                    </ion-select>
+                </ion-item>
+                <div *ngIf="setFare?.controls['vehicleType']?.errors?.required && setFare?.controls['vehicleType'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+
+                <ion-item>
+                    <ion-label floating>Flag Drop</ion-label>
+                    <ion-input type="number" formControlName="flagDrop" style="color:black;"></ion-input>
+
+
+                </ion-item>
+                <div *ngIf="setFare?.controls['flagDrop']?.errors?.required && setFare?.controls['flagDrop'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+                <div *ngIf="setFare?.controls['flagDrop']?.errors?.pattern && setFare?.controls['flagDrop'].touched">
+                        <p class="error" float-right>* Invalid Number</p>
+                    </div>
+
+
+
+                <ion-item>
+                    <ion-label floating>Each Additional Mile</ion-label>
+                    <ion-input type="number" formControlName="eachAdditionalMile" style="color:black;"></ion-input>
+
+
+                </ion-item>
+                <div *ngIf="setFare?.controls['eachAdditionalMile']?.errors?.required && setFare?.controls['eachAdditionalMile'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+
+                <ion-item>
+                    <ion-label floating>Airport Toll</ion-label>
+                    <ion-input type="number" formControlName="airportToll" style="color:black;"></ion-input>
+
+
+                </ion-item>
+                <div *ngIf="setFare?.controls['airportToll']?.errors?.required && setFare?.controls['airportToll'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+
+
+
+
+                <ion-item>
+                    <ion-label floating>Fuel Surcharge</ion-label>
+                    <ion-input type="number" formControlName="fuelSurcharge" style="color:black;"></ion-input>
+
+
+                </ion-item>
+                <div *ngIf="setFare?.controls['fuelSurcharge']?.errors?.required && setFare?.controls['fuelSurcharge'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
+                <ion-item>
+                    <ion-label floating>Time Fare</ion-label>
+                    <ion-input type="number" formControlName="timeFare" style="color:black;"></ion-input>
+
+
+                </ion-item>
+                <div *ngIf="setFare?.controls['timeFare']?.errors?.required && setFare?.controls['timeFare'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
             </ion-row>
+
+
+
+            <ion-row>
+                <div formArrayName="hourlyRates" style="width: 100%">
+                    <div *ngFor="let prop of setFare.get('hourlyRates').controls; let i =  index">
+                        <ion-item>
+                            <ion-label floating> {{hourlyRatesArray[i]}}</ion-label>
+                            <ion-input type="number" [formControlName]="i" style="color:black;"></ion-input>
+
+                        </ion-item>
+                        <div *ngIf="setFare?.controls['hourlyRates'].controls[i]?.errors?.required && setFare?.controls['hourlyRates'].controls[i]?.touched">
+                            <p class="error">* This Field is required</p>
+                        </div>
+                    </div>
+                </div>
+            </ion-row>
+            <!-- <input type="text" class="form-control" [formControlName]="i"> -->
+
+
+
         </ion-grid>
+        <ion-footer>
+            <ion-fab right bottom margin-right>
+                <button ion-fab color="dark" type="submit">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+
+            </ion-fab>
+        </ion-footer>
     </form>
-    <ion-footer>
-        <ion-fab right bottom margin-right>
-            <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
-        </ion-fab>
-    </ion-footer>
+
 </ion-content>
