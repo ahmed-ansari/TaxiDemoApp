@@ -7,6 +7,9 @@
     <form [formGroup]="register" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
+                <img class="round-img" (click)="launchPicOptions()" src="{{this.imageSrc}}" alt="bg" />
+            </ion-row>
+            <ion-row>
                 <ion-item>
                     <ion-label floating>Driver Name</ion-label>
                     <ion-input type="text" formControlName="driverName"></ion-input>
@@ -44,18 +47,12 @@
                     <p class="error" float-right>* This Field is required</p>
                 </div>
             </ion-row>
-            <ion-row>
-                <img class="round-img" (click)="launchPicOptions()" src="{{this.imageSrc}}" />
-                <button ion-button (click)="launchPicOptions()" type="button">Click Here</button>
-            </ion-row>
         </ion-grid>
         <ion-footer>
             <ion-fab right bottom margin-right>
                 <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
             </ion-fab>
         </ion-footer>
-
-        <!--  -->
     </form>
 
 </ion-content>
