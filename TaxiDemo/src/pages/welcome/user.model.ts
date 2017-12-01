@@ -20,22 +20,22 @@ export class UserModel {
     vehiclePhoto: string;
     timeStampe: any;
 
-    constructor(email, driverName, license, phone, address, profilePhoto, make, model, year, 
-        regnum, uin, vehiclePhoto, timeStampe) {
-        this.email = email;
-        this.driverName = driverName;
-        this.license = license;
-        this.phone = phone;
-        this.address = address;
-        this.profilePhoto = profilePhoto;
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.regnum = regnum;
-        this.uin = uin;
-        this.vehiclePhoto = vehiclePhoto;
-        this.timeStampe = timeStampe;
-    }
+    // constructor(email, driverName, license, phone, address, profilePhoto, make, model, year, 
+    //     regnum, uin, vehiclePhoto, timeStampe) {
+    //     this.email = email;
+    //     this.driverName = driverName;
+    //     this.license = license;
+    //     this.phone = phone;
+    //     this.address = address;
+    //     this.profilePhoto = profilePhoto;
+    //     this.make = make;
+    //     this.model = model;
+    //     this.year = year;
+    //     this.regnum = regnum;
+    //     this.uin = uin;
+    //     this.vehiclePhoto = vehiclePhoto;
+    //     this.timeStampe = timeStampe;
+    // }
 }
 
 export class LocationModel {

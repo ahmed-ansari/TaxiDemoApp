@@ -31,11 +31,11 @@ export class SettingPage {
     this.nativeStorage.getItem('userData')
       .then(response => {
         let jsonObj = JSON.parse(response);
-        this.user.userId = jsonObj.userId;
+        // this.user.userId = jsonObj.userId;
         this.user.email = jsonObj.email;
-        this.user.givenName = jsonObj.name;
-        this.user.displayName = jsonObj.displayName;
-        this.user.photoUrl = jsonObj.photoUrl;
+        // this.user.givenName = jsonObj.name;
+        // this.user.displayName = jsonObj.displayName;
+        // this.user.photoUrl = jsonObj.photoUrl;
         this.locations = this.getSavedPlaces(jsonObj.userId);
       },
       error => console.error(error)

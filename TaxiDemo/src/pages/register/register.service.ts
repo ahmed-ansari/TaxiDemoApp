@@ -37,14 +37,16 @@ export class RegisterService {
         // userRef.child(user.mobile).set(keyValueRef.key);
     }
 
-    uploadProfileImage(imageString, timeStamp): Promise<any> {
+    uploadProfileImage(imageString, timeStamp): any {
         let image: string = timeStamp + '.jpg',
             storageRef: any,
             parseUpload: any;
 
         return new Promise((resolve, reject) => {
             storageRef = firebase.storage().ref('profile/' + image);
-            parseUpload = storageRef.putString(imageString, firebase.storage.StringFormat.DATA_URL);//'data_url');
+            console.log("Storage Ref::", storageRef);
+            parseUpload = storageRef.putString(imageString, 'data_url',
+                {contentType: 'image/jpg'});
 
             parseUpload.on('state_changed', (_snapshot) => {
                 // We could log the progress here IF necessary
@@ -66,7 +68,7 @@ export class RegisterService {
 
         return new Promise((resolve, reject) => {
             storageRef = firebase.storage().ref('vehicle/' + image);
-            parseUpload = storageRef.putString(imageString, 'data_url');
+            parseUpload = storageRef.putString(imageString, 'data_url', {contentType: 'image/jpg'});
 
             parseUpload.on('state_changed', (_snapshot) => {
                 // We could log the progress here IF necessary

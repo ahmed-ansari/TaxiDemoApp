@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { PhotoLibrary } from '@ionic-native/photo-library';
-import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { RegisterService } from '../register/register.service';
@@ -74,7 +72,7 @@ export class RegisterPage {
     console.log('launch it')
     const cameraOptions: CameraOptions = {
       quality: 100,
-      // destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.PictureSourceType.CAMERA
     }
@@ -107,9 +105,16 @@ export class RegisterPage {
 
   takePicture(cameraOptions) {
     this.camera.getPicture(cameraOptions).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      this.imageSrc = base64Image
+      let base64Image = imageData;
+      this.imageSrc = 'data:image/jpeg;base64,' + base64Image
       console.log('base 64 image: ', base64Image)
+      const filename = Math.floor(Date.now() / 1000);
+      var profilePromise = this.regService.uploadProfileImage(this.imageSrc, filename);
+      profilePromise.then((datasnap) => {
+        console.log("Profile Updated" + JSON.stringify(datasnap.val()));
+      }).catch((er) => {
+        console.log(er);
+      });
     }, (err) => {
       console.log('Error captuing photo: ', err)
     });
@@ -128,6 +133,13 @@ export class RegisterPage {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.imageSrc = base64Image
       console.log('base 64 image: ', base64Image)
+      const filename = Math.floor(Date.now() / 1000);
+      var profilePromise = this.regService.uploadProfileImage(base64Image, filename);
+      profilePromise.then((datasnap) => {
+        console.log("Profile Updated" + JSON.stringify(datasnap.val()));
+      }).catch((er) => {
+        console.log("Profile Update Error", er);
+      });
     }, (err) => {
       console.log('Error captuing photo: ', err)
     });
