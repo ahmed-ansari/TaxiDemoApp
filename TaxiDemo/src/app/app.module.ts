@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
+
 import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
 import { ListPage } from '../pages/list/list';
@@ -122,7 +123,7 @@ firebase.initializeApp(firebaseAuth);
     LocalNotifications,
     StaticMapAPI,
     HistoryService,
-    Camera
+    Camera,
   ]
 })
 export class AppModule { }
