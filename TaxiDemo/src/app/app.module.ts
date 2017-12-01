@@ -14,6 +14,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
@@ -39,7 +40,6 @@ import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
 import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { HomePage } from '../pages/home/home';
-import {FieldErrorDisplayComponent} from '../components/field-error-display/field-error-display'
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -69,8 +69,7 @@ firebase.initializeApp(firebaseAuth);
     PaymentPage,
     RidedetailPage,
     VehicledetailsPage,
-    HomePage,
-    FieldErrorDisplayComponent
+    HomePage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
@@ -95,8 +94,7 @@ firebase.initializeApp(firebaseAuth);
     PaymentPage,
     RidedetailPage,
     VehicledetailsPage,
-    HomePage,
-    FieldErrorDisplayComponent
+    HomePage
   ],
   providers: [
     StatusBar,
@@ -119,7 +117,8 @@ firebase.initializeApp(firebaseAuth);
     DatePicker,
     LocalNotifications,
     StaticMapAPI,
-    HistoryService
+    HistoryService,
+    Camera
   ]
 })
 export class AppModule { }

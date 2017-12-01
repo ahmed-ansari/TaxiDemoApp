@@ -14,13 +14,6 @@ import { UserModel } from './user.model';
 
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
-/**
- * Generated class for the WelcomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-welcome',
@@ -31,12 +24,12 @@ export class WelcomePage {
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
     public loadingCtrl: LoadingController) {
-    
+
   }
 
   ngOnInit () {
     this.login = this.formBuilder.group({
-     
+
       email : ['',this.validatorsEmail()]
     });
   }
@@ -59,13 +52,10 @@ export class WelcomePage {
     console.log(this.login.value)
     this.login.controls['email'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
-      this.navCtrl.push(PasswordPage,{email: this.login.value.email})
+      // this.navCtrl.push(PasswordPage,{email: this.login.value.email})
+      this.navCtrl.push(RegisterPage)
     }
-    
-    
   }
-
-
 
   goToAuthPage() {
     //this.navCtrl.push(DashboardPage);

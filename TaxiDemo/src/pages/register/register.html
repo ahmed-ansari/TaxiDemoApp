@@ -7,23 +7,23 @@
     <form [formGroup]="register" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
-                    <ion-item>
-                        <ion-label floating>Driver Name</ion-label>
-                        <ion-input type="text" formControlName="driverName"></ion-input>
-                    </ion-item>
+                <ion-item>
+                    <ion-label floating>Driver Name</ion-label>
+                    <ion-input type="text" formControlName="driverName"></ion-input>
+                </ion-item>
 
-                    <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched"> 
-                        <p float-right class="error">* This Field is required</p>
-                    </div>
-                </ion-row>
-                <ion-row>
-                    <ion-item>
-                        <ion-label floating>Driver License</ion-label>
-                        <ion-input type="text" formControlName="driverLicense"></ion-input>
-                    </ion-item>
-                    <div *ngIf="register?.controls['driverLicense']?.errors?.required && register?.controls['driverLicense'].touched">
-                        <p class="error" float-right>* This Field is required</p>
-                    </div>
+                <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched">
+                    <p float-right class="error">* This Field is required</p>
+                </div>
+            </ion-row>
+            <ion-row>
+                <ion-item>
+                    <ion-label floating>Driver License</ion-label>
+                    <ion-input type="text" formControlName="driverLicense"></ion-input>
+                </ion-item>
+                <div *ngIf="register?.controls['driverLicense']?.errors?.required && register?.controls['driverLicense'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
             </ion-row>
             <ion-row>
                 <ion-item>
@@ -36,24 +36,20 @@
             </ion-row>
             <br>
             <ion-row>
-                    <ion-item>
-                            <ion-label>Address</ion-label>
-                            <!-- [(ngModel)]="todo.description" -->
-                            <ion-textarea  formControlName="address"></ion-textarea>
-                          </ion-item>
-                          <div *ngIf="register?.controls['address']?.errors?.required && register?.controls['address'].touched">
-                            <p class="error" float-right>* This Field is required</p>
-                        </div>
+                <ion-item>
+                    <ion-label>Address</ion-label>
+                    <ion-textarea formControlName="address"></ion-textarea>
+                </ion-item>
+                <div *ngIf="register?.controls['address']?.errors?.required && register?.controls['address'].touched">
+                    <p class="error" float-right>* This Field is required</p>
+                </div>
             </ion-row>
-         
-
-          
-
+            <ion-row>
+                <img class="round-img" (click)="launchPicOptions()" src="{{this.imageSrc}}" />
+                <button ion-button (click)="launchPicOptions()" type="button">Click Here</button>
+            </ion-row>
         </ion-grid>
-
         <ion-footer>
-            <!-- [disabled]="!register.valid" -->
-
             <ion-fab right bottom margin-right>
                 <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
             </ion-fab>
@@ -61,6 +57,5 @@
 
         <!--  -->
     </form>
-
 
 </ion-content>
