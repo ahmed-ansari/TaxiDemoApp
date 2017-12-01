@@ -63,13 +63,13 @@ export class DashboardPage implements OnInit {
     this.nativeStorage.getItem('userData')
       .then(response => {
         let jsonObj = JSON.parse(response);
-        context.user.userId = jsonObj.userId;
+        // context.user.userId = jsonObj.userId;
         context.user.email = jsonObj.email;
-        context.user.givenName = jsonObj.name;
-        context.user.displayName = jsonObj.displayName;
-        context.user.photoUrl = jsonObj.photoUrl;
-        context.events.publish('user:logged', context.user.displayName);
-        context.events.publish('user:logged:url', context.user.photoUrl);
+        // context.user.givenName = jsonObj.name;
+        // context.user.displayName = jsonObj.displayName;
+        // context.user.photoUrl = jsonObj.photoUrl;
+        // context.events.publish('user:logged', context.user.displayName);
+        // context.events.publish('user:logged:url', context.user.photoUrl);
       },
       error => console.error(error)
       );
@@ -355,9 +355,9 @@ export class DashboardPage implements OnInit {
   }
 
   rideNow() {
-    let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-      this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
-    this.navCtrl.push(PaymentPage, { model: rideModel });
+    // let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
+      // this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
+    // this.navCtrl.push(PaymentPage, { model: rideModel });
   }
 
   rideLater() {

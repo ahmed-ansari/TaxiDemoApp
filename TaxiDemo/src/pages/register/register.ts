@@ -105,8 +105,16 @@ export class RegisterPage {
 
   takePicture(cameraOptions) {
     this.camera.getPicture(cameraOptions).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      this.imageSrc = base64Image
+      let base64Image = imageData;
+      this.imageSrc = 'data:image/jpeg;base64,' + base64Image
+      console.log('base 64 image: ', base64Image)
+      const filename = Math.floor(Date.now() / 1000);
+      var profilePromise = this.regService.uploadProfileImage(this.imageSrc, filename);
+      profilePromise.then((datasnap) => {
+        console.log("Profile Updated" + JSON.stringify(datasnap.val()));
+      }).catch((er) => {
+        console.log(er);
+      });
     }, (err) => {
       console.log('Error captuing photo: ', err)
     });
@@ -125,6 +133,13 @@ export class RegisterPage {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.imageSrc = base64Image
       console.log('base 64 image: ', base64Image)
+      const filename = Math.floor(Date.now() / 1000);
+      var profilePromise = this.regService.uploadProfileImage(base64Image, filename);
+      profilePromise.then((datasnap) => {
+        console.log("Profile Updated" + JSON.stringify(datasnap.val()));
+      }).catch((er) => {
+        console.log("Profile Update Error", er);
+      });
     }, (err) => {
       console.log('Error captuing photo: ', err)
     });
