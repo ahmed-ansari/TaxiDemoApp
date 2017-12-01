@@ -36,8 +36,21 @@ export class VehicledetailsPage {
 
   logForm(){
     console.log(this.vehicle.value)
+    if (!this.formValid(this.vehicle)) {
+      return;
+    }
     this.navCtrl.setRoot(HistoryPage);
    
+  }
+
+  formValid(formGroup: FormGroup): boolean {
+    return !Object.keys(formGroup.controls)
+      .map(controlName => formGroup.controls[controlName])
+      .filter(control => {
+        control.markAsTouched();
+        control.updateValueAndValidity();
+        return !control.valid;
+      }).length;
   }
 
 }

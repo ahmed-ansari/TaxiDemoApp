@@ -38,7 +38,13 @@ export class PasswordPage {
   }
 
   logForm() {
-    this.navCtrl.setRoot(HistoryPage);
+
+    this.login.controls['email'].markAsTouched()
+    this.login.controls['password'].markAsTouched()
+    if (!this.login.invalid && this.login.status == "VALID") {
+      this.navCtrl.setRoot(HistoryPage);
+    }
+    
   }
 
   goToDashboard() {

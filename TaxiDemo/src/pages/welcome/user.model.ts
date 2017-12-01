@@ -29,7 +29,7 @@ export class UserModel{
             this.familyName =  "Nagaraju"
             this.givenName =  "Nagaraju"
             this.photoUrl =  "Nagaraju"
-        }
+        }   
 }
 
 export class LocationModel {

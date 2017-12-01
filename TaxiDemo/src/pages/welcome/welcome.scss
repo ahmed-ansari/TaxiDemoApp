@@ -40,4 +40,11 @@ page-welcome {
         background-color: $auth-big-btn-bg;
         border-color: darken($auth-big-btn-bg, 2);
     }
+
+    .error {
+        font-size: 12px;
+        color: tomato;
+        margin-bottom: 0;
+    
+    }
 }

@@ -23,7 +23,7 @@ import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = RegisterPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -39,7 +39,7 @@ export class MyApp {
       if (response) {
         this.rootPage = DashboardPage;
       } else {
-        this.rootPage = RegisterPage;
+        this.rootPage = WelcomePage;
       }
 
       events.subscribe('user:logged', user => {
