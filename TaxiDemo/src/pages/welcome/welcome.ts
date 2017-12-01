@@ -57,9 +57,12 @@ export class WelcomePage {
 
   logForm(){
     console.log(this.login.value)
-    this.navCtrl.push(PasswordPage,{email: this.login.value.email})
-    // this.regService.registerUser(this.register.value);
-    // this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
+    this.login.controls['email'].markAsTouched()
+    if (!this.login.invalid && this.login.status == "VALID") {
+      this.navCtrl.push(PasswordPage,{email: this.login.value.email})
+    }
+    
+    
   }
 
 

@@ -15,6 +15,9 @@
                 <div float-right *ngIf="login?.controls['email']?.errors?.required && login?.controls['email'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
+                <div float-right *ngIf="login?.controls['email']?.errors?.email && login?.controls['email'].dirty">
+                    <p class="error" float-right>* Invalid Email</p>
+                </div>
             </ion-row>
 
          

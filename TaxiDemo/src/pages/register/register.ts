@@ -42,7 +42,11 @@ export class RegisterPage {
 
   logForm(){
     console.log(this.register)
-    this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
+
+    if (!this.formValid(this.register)) {
+      return;
+    }
+    // this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
     
     if (!this.register.invalid && this.register.status == "VALID") {
       this.navCtrl.push(VehicledetailsPage,{register: this.register.value})
@@ -52,7 +56,17 @@ export class RegisterPage {
     // this.regService.registerUser(this.register.value);
     // this.navCtrl.push(MobileAuthPage, {mobile: this.register.value.mobile, user: this.register.value})
   }
-
+  formValid(formGroup: FormGroup): boolean {
+    return !Object.keys(formGroup.controls)
+      .map(controlName => formGroup.controls[controlName])
+      .filter(control => {
+        control.markAsTouched();
+        control.updateValueAndValidity();
+        return !control.valid;
+      }).length;
+  }
 
 
 }
+
+

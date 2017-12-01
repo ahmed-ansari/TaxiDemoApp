@@ -7,12 +7,12 @@
     <form [formGroup]="register" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
-                
                     <ion-item>
                         <ion-label floating>Driver Name</ion-label>
                         <ion-input type="text" formControlName="driverName"></ion-input>
                     </ion-item>
-                    <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched">
+
+                    <div *ngIf="register?.controls['driverName']?.errors?.required && register?.controls['driverName'].touched"> 
                         <p float-right class="error">* This Field is required</p>
                     </div>
                 </ion-row>
@@ -41,6 +41,9 @@
                             <!-- [(ngModel)]="todo.description" -->
                             <ion-textarea  formControlName="address"></ion-textarea>
                           </ion-item>
+                          <div *ngIf="register?.controls['address']?.errors?.required && register?.controls['address'].touched">
+                            <p class="error" float-right>* This Field is required</p>
+                        </div>
             </ion-row>
          
 
