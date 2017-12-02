@@ -3,35 +3,39 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { DashboardPage } from '../dashboard/dashboard';
 import firebase from 'firebase';
+import { NativeStorage } from '@ionic-native/native-storage';
 
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { HistoryPage } from '../history/history'
 
 @IonicPage()
 @Component({ selector: 'page-password', templateUrl: 'password.html' })
 export class PasswordPage {
-  private login : FormGroup;
+  private login: FormGroup;
   password: any;
   userObject: any;
   mobile: any;
+  email: string;
+  object: any;
 
-  constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
-    // this.login.value.email = navParams.get("email");
+  constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams, 
+    private alertCtrl: AlertController, private nativeStorage: NativeStorage) {
+    this.email = navParams.get("email");
     // this.mobile = navParams.get("mobile");
-    console.log(navParams.get("email"))
-  
+    //console.log(navParams.get("email"))
+    this.object = navParams.get("object");
   }
-  ngOnInit () {
+  ngOnInit() {
     this.login = this.formBuilder.group({
-     
-      email : [this.navParams.get("email"),this.validatorsEmail()],
-      password: ['',Validators.required]
+
+      email: [this.email, this.validatorsEmail()],
+      password: ['', Validators.required]
     });
     // this.login.value.email = "as"
   }
 
   private validatorsEmail() {
-    return Validators.compose([ Validators.required,Validators.email])
+    return Validators.compose([Validators.required, Validators.email])
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PasswordPage');
@@ -42,15 +46,31 @@ export class PasswordPage {
     this.login.controls['email'].markAsTouched()
     this.login.controls['password'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
-      this.navCtrl.setRoot(HistoryPage);
+      if (this.login.value.password === this.object.password) {
+        this.nativeStorage.setItem("isLoggedIn", true).then(() => {},
+        error => {});
+        this.navCtrl.setRoot(HistoryPage);
+      } else {
+        this.presentAlert();
+      }
+      
     }
-    
+
+  }
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Login',
+      subTitle: 'Please enter valid credentials',
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 
   goToDashboard() {
     //console.log(this.password+" === "+this.userObject.password);
     if (this.password === this.userObject.password) {
-      this.navCtrl.push(DashboardPage, {user: this.userObject});
+      this.navCtrl.push(DashboardPage, { user: this.userObject });
     } else {
       let alert = this.alertCtrl.create({
         title: 'Password',
@@ -62,6 +82,6 @@ export class PasswordPage {
   }
 
   goToMobileAuth() {
-    this.navCtrl.push(MobileAuthPage, {mobile: this.mobile});
+    this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
   }
 }

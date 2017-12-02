@@ -30,6 +30,7 @@ export class RegisterService {
             'year': user.year,
             'regnum': user.regnum,
             'uin': user.uin,
+            'password': user.password,
             'vehiclePhoto': (typeof user.vehiclePhoto != "undefined") ? user.vehiclePhoto : "",
         };
         personObj.child(driverRef).set(data);

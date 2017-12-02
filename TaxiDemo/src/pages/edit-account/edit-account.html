@@ -5,8 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
     <ion-navbar class="black-bg">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
         <ion-title>Edit Account</ion-title>
     </ion-navbar>
 
@@ -18,7 +20,7 @@
         <ion-row>
             <ion-col col-4>
                 <ion-avatar>
-                    <!-- <img src="{{this.user.photoUrl}}" class="round-img"> -->
+                    <img class="round-img" (click)="launchPicOptions()" src="{{this.imageSrc}}" alt="bg" />
                 </ion-avatar>
             </ion-col>
             <ion-col col-8>
@@ -91,9 +93,9 @@
                 <!-- <ion-item > -->
                 <div right text-right float-end style="width: 100vw;">
                     <br>
-                    <button ion-button icon-only [disabled]="!editAccount.valid" color="dark"> 
-                  <ion-icon name="md-arrow-round-forward"></ion-icon> 
-                </button>
+                    <button ion-button icon-only [disabled]="!editAccount.valid" color="dark">
+                        <ion-icon name="md-arrow-round-forward"></ion-icon>
+                    </button>
                 </div>
 
                 <!-- </ion-item> -->

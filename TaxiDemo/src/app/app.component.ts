@@ -14,6 +14,7 @@ import { RegisterPage } from '../pages/register/register';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EditAccountPage } from '../pages/edit-account/edit-account';
 import { PaymentPage } from '../pages/payment/payment';
+import { SetFarePage } from '../pages/set-fare/set-fare';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
 
@@ -58,8 +59,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Profile', component: EditAccountPage },
-      { title: 'My Rides', component: HistoryPage }
-     
+      { title: 'My Rides', component: HistoryPage },
+      {title: 'Set Fare', component: SetFarePage}
 
     ];
 

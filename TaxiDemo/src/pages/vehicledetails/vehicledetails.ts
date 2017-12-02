@@ -6,7 +6,7 @@ import {HistoryPage} from '../history/history';
 import {RegisterService} from '../register/register.service';
 import { UserModel } from '../welcome/user.model';
 import { WelcomeService } from '../welcome/welcome.service';
-
+import { NativeStorage } from '@ionic-native/native-storage';
 
 
 @IonicPage()
@@ -22,7 +22,8 @@ export class VehicledetailsPage {
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController,
     public navParams: NavParams, private camera: Camera, public actionSheetCtrl: ActionSheetController,
-    private regService: RegisterService, private menu: MenuController, private welcomeService: WelcomeService) {
+    private regService: RegisterService, private menu: MenuController, private welcomeService: WelcomeService,
+    private nativeStorage: NativeStorage) {
 
     this.menu.swipeEnable(false)
     this.userModel = new UserModel()
@@ -70,6 +71,8 @@ export class VehicledetailsPage {
       let encodedEmail = this.welcomeService.encodeEmail(this.userModel.email)
       this.regService.registerUser(encodedEmail,this.userModel)
 
+      this.nativeStorage.setItem("isLoggedIn", true).then(() => {},
+      error => {});
       this.navCtrl.setRoot(HistoryPage);
     }
   }

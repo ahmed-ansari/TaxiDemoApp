@@ -60,7 +60,7 @@ export class WelcomePage {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         loading.dismiss();
-        this.navCtrl.push(PasswordPage, { email: this.login.value.email })
+        this.navCtrl.push(PasswordPage, { email: this.login.value.email , object: snapshot.val()})
       } else {
         console.log("No User found");
         loading.dismiss();

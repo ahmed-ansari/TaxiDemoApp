@@ -40,7 +40,7 @@ export class SetFarePage {
         // console.log(this.hourlyRatesA[i])
         if (this.hourlyRatesArray[i] !== undefined) {
           // console.log(this.hourlyRatesArray[i])
-          this.setFare.get("hourlyRates").push(new FormControl('', Validators.required))
+          //this.setFare.get("hourlyRates").push(new FormControl('', Validators.required))
         }
       }
 
@@ -87,7 +87,7 @@ export class SetFarePage {
     if (this.selected == "sedan" || this.selected == "suv" || this.selected == "van") {
       for (var i = 0; i <= this.hourlyRatesArray.length; i++) {
         if (this.hourlyRatesArray[i] !== undefined) {
-          this.setFare.controls['hourlyRates'].controls[i].markAsTouched()
+          //this.setFare.controls['hourlyRates'].controls[i].markAsTouched()
         }
 
 
