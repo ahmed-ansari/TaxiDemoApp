@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>DashBoard</ion-title>
+        <ion-title>Taxi</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -20,20 +20,30 @@
 
     <div class="bottom request-controls" *ngIf="bottomSheet">
         <ion-row align-items-center>
-            <ion-col width-50>
+            <ion-col width-50 class="fare-col">
                 <!-- <button block ion-button (click)="makePayment()">
                     <ion-icon name="card"></ion-icon>
                     Visa **34 {{fareValue}}
                 </button> -->
-                <ion-label class="map-label">$ {{fareValue}}</ion-label>
+                <ion-label class="fare-label">Fare</ion-label>
+                <ion-item no-lines>
+                    <ion-label class="fare-value-label">$ {{fareValue}}</ion-label>
+                </ion-item>
             </ion-col>
             <ion-col width-50>
                 <!-- <button block ion-button>
                     <ion-icon name="cash"></ion-icon>
                     Cash {{fareValue}}
                 </button> -->
-                <ion-label class="map-label">{{distance}} Miles</ion-label>
-                <ion-label class="map-label">{{timeTillArrival}} Mins</ion-label>
+                <ion-label class="fare-label">Distance</ion-label>
+                <ion-item no-lines>
+
+                    <ion-label class="map-label">{{distance}} Miles</ion-label>
+                </ion-item>
+                <ion-label class="fare-label">Approx. time</ion-label>
+                <ion-item no-lines>
+                    <ion-label class="map-label">{{timeTillArrival}} Mins</ion-label>
+                </ion-item>
             </ion-col>
         </ion-row>
         <ion-row>

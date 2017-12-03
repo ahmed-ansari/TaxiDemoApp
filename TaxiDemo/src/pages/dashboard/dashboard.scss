@@ -13,6 +13,16 @@ page-dashboard {
         font-weight: bold;
         font-size: 1.3em;
     }
+    .fare-label{
+        font-style: italic;
+    }
+    .fare-col{
+        border-right: #333333 1px dashed;
+    }
+    .fare-value-label{
+        font-weight: bold;
+        font-size: 2em
+    }
     .request-controls {
         text-align: center;
         background: #fff //linear-gradient(transparent, map-get($colors , light ));
