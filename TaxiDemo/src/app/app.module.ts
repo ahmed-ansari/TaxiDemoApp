@@ -43,6 +43,7 @@ import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { HomePage } from '../pages/home/home';
 
 import {SetFarePage} from '../pages/set-fare/set-fare';
+import { RideService } from '../providers/RideService';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -124,6 +125,7 @@ firebase.initializeApp(firebaseAuth);
     StaticMapAPI,
     HistoryService,
     Camera,
+    RideService
   ]
 })
 export class AppModule { }

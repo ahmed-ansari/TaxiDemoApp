@@ -10,7 +10,7 @@ import { WelcomeService } from './welcome.service';
 import { DashboardPage } from '../dashboard/dashboard';
 import { PasswordPage } from '../password/password';
 import { UserModel } from './user.model';
-
+import { RideService } from '../../providers/RideService';
 
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
@@ -23,10 +23,10 @@ export class WelcomePage {
   private login : FormGroup;
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
-    public loadingCtrl: LoadingController, private menu: MenuController) {
+    public loadingCtrl: LoadingController, private menu: MenuController, private rideService: RideService) {
 
       this.menu.swipeEnable(false)
-
+      this.rideService.subscribeForRideRequests();
   }
 
   ngOnInit () {
