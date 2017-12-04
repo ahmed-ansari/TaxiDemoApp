@@ -110,6 +110,7 @@ export class WelcomePage {
             console.log(response);
             this.model.userId = res.authResponse.userID;
             this.model.email = response.email;
+            this.model.mobile = response.mobile;
             this.model.displayName = response.name;
             this.model.familyName = response.name;
             this.model.photoUrl = "http://graph.facebook.com/" + res.authResponse.userID + "/picture?type=large"
@@ -122,16 +123,16 @@ export class WelcomePage {
 
   googleSignIn() {
     this.googlePlus.login({}).then(res => {
-        console.log(res);
-        //http://picasaweb.google.com/data/entry/api/user/103521401204989084478?alt=json        
-        this.model.email = res.email;
-        this.model.displayName = res.displayName;
-        this.model.familyName = res.familyName;
-        this.model.userId = res.userId;
-        this.model.givenName = res.givenName;
-        this.model.photoUrl = res.imageUrl;
-        this.validateUserExistance(this.model);
-      })
+      console.log(res);
+      //http://picasaweb.google.com/data/entry/api/user/103521401204989084478?alt=json
+      this.model.email = res.email;
+      this.model.displayName = res.displayName;
+      this.model.familyName = res.familyName;
+      this.model.userId = res.userId;
+      this.model.givenName = res.givenName;
+      this.model.photoUrl = res.imageUrl;
+      this.validateUserExistance(this.model);
+    })
       .catch(err => console.error(err));
   }
 
@@ -142,24 +143,39 @@ export class WelcomePage {
     });
     loading.present();
     var promise = this.service.validateUserWithuserId(userModel.userId);
+    var userData = null;
     promise.then((snapshot) => {
       if (!snapshot.exists()) {
         console.log('No User found');
         this.service.registerUser(userModel);
+        userData = JSON.stringify(userModel);
+        this.nativeStorage.setItem('userData', userData)
+          .then(() => console.log('Stored item!'),
+          error => console.error('Error storing item', error));
+        loading.dismiss();
+        scope.navCtrl.setRoot(DashboardPage);
+      } else {
+        let userPromise = this.service.getUserObject(snapshot.val());
+        userPromise.then((datasnap) => {
+          userData = JSON.stringify(datasnap.val());
+          this.nativeStorage.setItem('userData', userData)
+            .then(() => console.log('Stored item!'),
+            error => console.error('Error storing item', error));
+          loading.dismiss();
+          scope.navCtrl.setRoot(DashboardPage);
+        }).catch((er) => {
+          console.log(er);
+        });
       }
       //this.userChanged.emit(userModel.givenName);
       //scope.events.publish('user:logged', userModel);
-      let userData = JSON.stringify(userModel);
-      this.nativeStorage.setItem('userData', userData)
-        .then(() => console.log('Stored item!'),
-        error => console.error('Error storing item', error));
-        this.nativeStorage.setItem('isLoggedIn', true).then(() => {},
-        error => {});
-        loading.dismiss();
-        scope.navCtrl.setRoot(DashboardPage);
+
+
+      this.nativeStorage.setItem('isLoggedIn', true).then(() => { },
+        error => { });
     }).catch((er) => {
       console.log("Error" + er);
-       loading.dismiss();
+      loading.dismiss();
     });
   }
 

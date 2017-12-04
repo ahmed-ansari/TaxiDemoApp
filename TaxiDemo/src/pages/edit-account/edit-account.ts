@@ -22,7 +22,7 @@ export class EditAccountPage {
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams) {
     this.user =  navParams.get("user");
-    //this.user.createDummyUser()  
+    //this.user.createDummyUser()
   }
 
   ionViewDidLoad() {
@@ -35,8 +35,8 @@ export class EditAccountPage {
       firstName: [this.user.displayName, Validators.required],
       LastName: [this.user.displayName, Validators.required],
       email : [this.user.email,this.validatorsEmail()],
-      password: ['',Validators.required],
-      mobile: ['',this.validatorsMobile()],
+     // password: ['',Validators.required],
+      mobile: [this.user.mobile,this.validatorsMobile()],
       photoUrl: [this.user.photoUrl]
     });
   }

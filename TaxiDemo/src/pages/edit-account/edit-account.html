@@ -76,7 +76,7 @@
                 </div>
             </ion-row>
 
-            <ion-row>
+            <!-- <ion-row>
                 <ion-item>
                     <ion-label stacked>Password</ion-label>
                     <ion-input class="text-input" type="password" formControlName="password"></ion-input>
@@ -84,15 +84,15 @@
                 <div *ngIf="editAccount?.controls['password']?.errors?.required && editAccount?.controls['password'].touched">
                     <p class="error" float-right> * This Field is required</p>
                 </div>
-            </ion-row>
+            </ion-row> -->
 
             <ion-row>
                 <!-- right bottom margin-right -->
                 <!-- <ion-item > -->
                 <div right text-right float-end style="width: 100vw;">
                     <br>
-                    <button ion-button icon-only [disabled]="!editAccount.valid" color="dark"> 
-                  <ion-icon name="md-arrow-round-forward"></ion-icon> 
+                    <button ion-button icon-only [disabled]="!editAccount.valid" color="dark">
+                  <ion-icon name="md-arrow-round-forward"></ion-icon>
                 </button>
                 </div>
 

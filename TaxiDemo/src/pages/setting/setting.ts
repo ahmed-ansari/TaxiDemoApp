@@ -30,9 +30,11 @@ export class SettingPage {
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
       .then(response => {
+        console.log('Settings: ', response)
         let jsonObj = JSON.parse(response);
         this.user.userId = jsonObj.userId;
         this.user.email = jsonObj.email;
+        this.user.mobile = jsonObj.mobile;
         this.user.givenName = jsonObj.name;
         this.user.displayName = jsonObj.displayName;
         this.user.photoUrl = jsonObj.photoUrl;

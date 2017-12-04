@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, LoadingController, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController, Events, AlertController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Observable } from 'rxjs/Observable';
 import {
@@ -22,6 +22,7 @@ import { Environment } from '../payment/environment';
 import { UserModel } from '../welcome/user.model';
 import { PaymentPage } from '../payment/payment';
 import { RideModel } from '../payment/ride.model';
+import { WelcomeService } from '../welcome/welcome.service';
 
 declare var google: any;
 @IonicPage()
@@ -55,7 +56,9 @@ export class DashboardPage implements OnInit {
     private loadingCtrl: LoadingController,
     private events: Events,
     private datePicker: DatePicker,
-    private localNotifications: LocalNotifications) {
+    private localNotifications: LocalNotifications,
+    private alertCtrl: AlertController,
+    private welcomeService: WelcomeService) {
     this.distance = 0;
     this.fareValue = 0;
     this.user = new UserModel()
@@ -65,6 +68,7 @@ export class DashboardPage implements OnInit {
         let jsonObj = JSON.parse(response);
         context.user.userId = jsonObj.userId;
         context.user.email = jsonObj.email;
+        context.user.mobile = jsonObj.mobile;
         context.user.givenName = jsonObj.name;
         context.user.displayName = jsonObj.displayName;
         context.user.photoUrl = jsonObj.photoUrl;
@@ -355,30 +359,37 @@ export class DashboardPage implements OnInit {
   }
 
   rideNow() {
-    let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-      this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
-    this.navCtrl.push(PaymentPage, { model: rideModel });
+    if (typeof this.user.mobile === "undefined") {
+      this.updateMobileNumber()
+    } else {
+      let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
+        this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
+      this.navCtrl.push(PaymentPage, { model: rideModel });
+    }
   }
 
   rideLater() {
-    this.datePicker.show({ date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK })
-      .then(date => {
-        console.log('Got date: ', date);
-        this.localNotifications.schedule({
-          id: 1,
-          title: 'Taxi App',
-          text: 'Your ride is scheduled now!',
-          //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-          data: {
-            "source": this.currentAddress,
-            "destination": this.destinationAddress
-          },
-          at: date
-        });
-      },
-      err => console.log('Error occurred while getting date: ', err));
+    if (typeof this.user.mobile === "undefined") {
+      this.updateMobileNumber()
+    } else {
+      this.datePicker.show({ date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK })
+        .then(date => {
+          console.log('Got date: ', date);
+          this.localNotifications.schedule({
+            id: 1,
+            title: 'Taxi App',
+            text: 'Your ride is scheduled now!',
+            //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+            data: {
+              "source": this.currentAddress,
+              "destination": this.destinationAddress
+            },
+            at: date
+          });
+        },
+        err => console.log('Error occurred while getting date: ', err));
+    }
   }
-
 
   cancelRide() {
     if (this.directionsDisplay != null) {
@@ -390,5 +401,54 @@ export class DashboardPage implements OnInit {
     this.getCurrentLocation().subscribe(location => {
       this.centerLocation(location);
     });
+  }
+
+  updateMobileNumber() {
+    let prompt = this.alertCtrl.create({
+      title: 'Taxi App',
+      message: "Please update mobile number before booking",
+      inputs: [
+        {
+          name: 'mobile',
+          placeholder: 'Mobile',
+          type: 'tel'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Update',
+          handler: data => {
+            console.log('Updated: ', data)
+            if (data.mobile.length > 10) {
+              this.showAlert("Please enter a valid mobile number")
+            } else {
+              this.user.mobile = data.mobile
+              this.nativeStorage.setItem('userData', JSON.stringify(this.user))
+                .then(() => {
+                  this.showAlert("Mobile number updated successfully")
+                  this.welcomeService.updateMobileNumber(this.user.userId, data.mobile)
+                },
+                error => this.showAlert("Failed to update mobile number, please try again!"));
+            }
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
+  showAlert(msg: string) {
+    let alert = this.alertCtrl.create({
+      title: 'Taxi App',
+      subTitle: msg,
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }
