@@ -52,4 +52,9 @@ export class WelcomeService {
       });
     });
   }
+
+  updateRideRequest(userModel): any {
+    const rideObj: firebase.database.Reference = firebase.database().ref(`/RideRequests/`);
+
+  }
 }
