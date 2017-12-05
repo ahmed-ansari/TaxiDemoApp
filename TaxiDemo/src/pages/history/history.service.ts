@@ -14,4 +14,9 @@ export class HistoryService{
         const rideHistory: firebase.database.Reference = firebase.database().ref(`/RideHistory/`+ userId);
         return rideHistory.once('value');
     }
+
+    getUpcomingRides(userId){
+        const upcomingRide: firebase.database.Reference = firebase.database().ref(`/RideRequests/`+userId);
+        return upcomingRide.once('value');
+    }
 }

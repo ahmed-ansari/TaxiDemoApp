@@ -21,6 +21,7 @@ export class HistoryPage {
     userId: any;
     public ride: RideModel;
     public rides: RideModel[] = [];
+    public upcomingRides: RideModel[] = [];
     staticMapArray: string[] = [];
 
     constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
@@ -37,6 +38,7 @@ export class HistoryPage {
             this.user.photoUrl = jsonObj.photoUrl;
             //this.locations =
             this.getRideHistory(jsonObj.userId);
+            this.getUpcomingRides(jsonObj.userId);
           },
           error => console.error(error)
           );
@@ -72,6 +74,24 @@ export class HistoryPage {
       this.navCtrl.push(RidedetailPage, {params:this.ride,map:this.staticMap})
     }
 
+    getUpcomingRides(userId){
+      let promise = this.service.getUpcomingRides(userId);
+      promise.then((snapshot) => {
+          let ridesData = snapshot.val();
+          var keys = Object.keys(ridesData);
+          console.log("User Upcoming Rides" + JSON.stringify(snapshot.val()));
+          console.log(keys);
+          for (var key in keys) {
+            console.log("Value:::" , ridesData[keys[key]]);
+            this.ride = ridesData[keys[key]].rideModel;
+            let status = ridesData[keys[key]].rideStatus;
+            if(status)this.upcomingRides.push(this.ride);
+          }
+        console.log("Rides:::", this.rides);
+        }).catch((er) => {
+          console.log(er);
+        });
+    }
 
 }
 

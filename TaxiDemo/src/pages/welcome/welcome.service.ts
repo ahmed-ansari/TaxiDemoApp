@@ -54,11 +54,9 @@ export class WelcomeService {
   }
 
   updateRideRequest(userId, rideModel): any {
+    let rideStatus : boolean = false;
+    const data = {rideModel, rideStatus};
     const rideObj: firebase.database.Reference = firebase.database().ref(`/RideRequests/`);
-    var keyValueRef = rideObj.push();
-    keyValueRef.set({
-      'userId': userId,
-      'rideModel': rideModel
-    });
+    rideObj.child(userId).push(data);
   }
 }

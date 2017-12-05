@@ -46,25 +46,21 @@
         </ion-list>
 
         <ion-list *ngSwitchCase=" 'Upcommings' ">
-            <ion-item>
-                <ion-row>
-                    <div class="mapImage ">
-                        <img src="{{this.staticMap}} " />
-                    </div>
-                </ion-row>
+            <ion-item *ngFor="let ride of upcomingRides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
+                
                 <ion-row>
                     <ion-col col-9>
-                        <label class="date ">25/08/2017</label>
+                        <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
                         <label class="at ">at</label>
-                        <label class="time ">05.19</label>
+                        <label class="time ">{{ride.travelDate | date: 'HH:mm'}}</label>
                     </ion-col>
                     <ion-col col-3>
-                        <label class="rs ">Rs 225.07</label>
+                        <label class="rs ">$ {{ride.fareValue}}</label>
                     </ion-col>
                 </ion-row>
                 <ion-row>
                     <ion-col col-8>
-                        <label class="car ">Maruthi Swift Dezire 5</label>
+                        <label class="car ">Your trip with {{ride.driverName}}</label>
                     </ion-col>
                     <ion-col col-4>
 
