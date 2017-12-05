@@ -363,7 +363,7 @@ export class DashboardPage implements OnInit {
       this.updateMobileNumber()
     } else {
       let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-        this.timeTillArrival, "Amand Sharma", "MX 1284 Lincoln", this.user.userId, Date.now());
+        this.timeTillArrival, "", "", this.user.userId, Date.now());
       this.navCtrl.push(PaymentPage, { model: rideModel });
     }
   }
@@ -375,6 +375,9 @@ export class DashboardPage implements OnInit {
       this.datePicker.show({ date: new Date(), mode: 'datetime', androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK })
         .then(date => {
           console.log('Got date: ', date);
+          let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
+            this.timeTillArrival, "", "", this.user.userId, Date.now());
+          this.welcomeService.updateRideRequest(this.user.userId, rideModel);
           this.localNotifications.schedule({
             id: 1,
             title: 'Taxi App',

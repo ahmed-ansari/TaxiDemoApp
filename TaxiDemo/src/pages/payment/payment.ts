@@ -4,6 +4,7 @@ import { Environment } from './environment';
 import { PaymentService } from './payment.service';
 import { RideModel } from './ride.model';
 import { StaticMapAPI } from '../history/static.map';
+import { WelcomeService } from '../welcome/welcome.service';
 
 declare var StripeCheckout: any;
 //@IonicPage()
@@ -27,7 +28,7 @@ export class PaymentPage {
     staticMapUrl: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
-        public alertCtrl: AlertController, private staticMap: StaticMapAPI) {
+        public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService) {
         this.rideModel = navParams.get("model");
         this.dropoffAddress = this.rideModel.dropoffAddress;
         this.pickupAddress = this.rideModel.pickupAddress;
@@ -49,6 +50,7 @@ export class PaymentPage {
             token: token => {
                 this.pService.processPayment(token, context.fareValue, context.userId, context.rideModel, true, this.staticMapUrl);
                 //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, true);
+                this.welcomeService.updateRideRequest(context.userId, context.rideModel);
                 context.navCtrl.popToRoot();
             }
         });
@@ -74,6 +76,7 @@ export class PaymentPage {
                         //console.log('Buy clicked');
                         this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel, false, this.staticMapUrl);
                         //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, false);
+                        this.welcomeService.updateRideRequest(context.userId, context.rideModel);
                         context.navCtrl.popToRoot();
                     }
                 }
