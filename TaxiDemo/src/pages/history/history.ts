@@ -94,17 +94,3 @@ export class HistoryPage {
     }
 
 }
-
-// export class RideModel {
-//   date : Date;
-//   userId : string;
-//   taxiName : string;
-//   fareValue : string;
-
-//   constructor(userInfo : any) {
-//     this.date = userInfo.date
-//     this.userId = userInfo.userId
-//     this.taxiName = userInfo.taxiName
-//     this.fareValue = userInfo.fareValue
-//   }
-// }
