@@ -17,6 +17,7 @@ import { PaymentPage } from '../pages/payment/payment';
 import { SetFarePage } from '../pages/set-fare/set-fare';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
+import { WelcomeService } from '../pages/welcome/welcome.service';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,13 +33,14 @@ export class MyApp {
   profileUrl: string;
 
   constructor(public platform: Platform, public statusBar: StatusBar,
-    public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events) {
+    public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events,
+    private welcomeService: WelcomeService) {
     this.initializeApp();
     this.userName = "User";
     this.nativeStorage.getItem("isLoggedIn").then((response => {
       console.log(response);
       if (response) {
-        this.rootPage = DashboardPage;
+        this.rootPage = HistoryPage;
       } else {
         this.rootPage = WelcomePage;
       }
@@ -84,6 +86,10 @@ export class MyApp {
   logout() {
     this.nativeStorage.setItem("isLoggedIn", false).then(() => {},
     error => {});
+    this.nativeStorage.getItem("email").then(email => { 
+      this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(email), false);
+    },error => { });
+    
     this.nav.setRoot(WelcomePage);
   }
 }

@@ -56,4 +56,11 @@ export class WelcomeService {
 
     return plus;
   }
+
+  updateDriverLoginStatus(email, status){
+    const personObjectRef: firebase.database.Reference = firebase.database().ref(`/Drivers/` + email);
+    personObjectRef.update({
+      "loggedIn": status
+    });
+  }
 }

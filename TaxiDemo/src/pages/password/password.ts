@@ -6,7 +6,8 @@ import firebase from 'firebase';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { HistoryPage } from '../history/history'
+import { HistoryPage } from '../history/history';
+import { WelcomeService } from '../welcome/welcome.service'
 
 @IonicPage()
 @Component({ selector: 'page-password', templateUrl: 'password.html' })
@@ -18,8 +19,8 @@ export class PasswordPage {
   email: string;
   object: any;
 
-  constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams, 
-    private alertCtrl: AlertController, private nativeStorage: NativeStorage) {
+  constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams,
+    private alertCtrl: AlertController, private nativeStorage: NativeStorage, private welcomeService: WelcomeService) {
     this.email = navParams.get("email");
     // this.mobile = navParams.get("mobile");
     //console.log(navParams.get("email"))
@@ -47,13 +48,25 @@ export class PasswordPage {
     this.login.controls['password'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
       if (this.login.value.password === this.object.password) {
-        this.nativeStorage.setItem("isLoggedIn", true).then(() => {},
-        error => {});
-        this.navCtrl.setRoot(HistoryPage);
+        if (!this.object.loggedIn && this.object.active) {
+          this.nativeStorage.setItem("isLoggedIn", true).then(() => { },
+            error => { });
+            this.nativeStorage.setItem("email", this.email).then(() => { },
+            error => { });
+            this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.email), true);
+          this.navCtrl.setRoot(HistoryPage);
+        } else {
+          let alert = this.alertCtrl.create({
+            title: 'Login',
+            subTitle: 'This account is already using in another device, please contact admin.',
+            buttons: ['Ok']
+          });
+          alert.present();
+        }
       } else {
         this.presentAlert();
       }
-      
+
     }
 
   }
@@ -83,5 +96,14 @@ export class PasswordPage {
 
   goToMobileAuth() {
     this.navCtrl.push(MobileAuthPage, { mobile: this.mobile });
+  }
+
+  forgotPassword(){
+    let alert = this.alertCtrl.create({
+      title: 'Login',
+      subTitle: 'Please contact admin for reset password.',
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 }
