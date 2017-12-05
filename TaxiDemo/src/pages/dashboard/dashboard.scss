@@ -11,6 +11,10 @@ page-dashboard {
     }
     .map-label {
         font-weight: bold;
+        font-size: 1em;
+    }
+    .map-label-fare {
+        font-weight: bold;
         font-size: 1.3em;
     }
     .request-controls {
@@ -54,5 +58,21 @@ page-dashboard {
     }
     .map-button-text {
         text-align: center;
+    }
+    .dollar {
+        font-weight: bold;
+        font-size: 1.8em;
+    }
+    .dash_bottom_label {
+        font-size: 1.3em;
+    }
+    .dotted_line {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 3em;
+        left: 50%;
+        border-left: 3px dotted #444;
+        /*change these values to suit your liking*/
     }
 }

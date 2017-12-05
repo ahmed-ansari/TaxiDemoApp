@@ -13,17 +13,17 @@
         </ion-row>
         <ion-row>
             <ion-col col-9>
-                <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
+                <label class="date ">{{this.ride.travelDate | date: 'MM/dd/yyyy'}}</label>
                 <label class="at ">at</label>
-                <label class="time ">{{ride.travelDate | date: 'HH:mm'}}</label>
+                <label class="time ">{{this.ride.travelDate | date: 'HH:mm'}}</label>
             </ion-col>
             <ion-col col-3>
-                <label class="rs ">$ {{ride.fareValue}}</label>
+                <label class="rs ">$ {{this.ride.fareValue}}</label>
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col col-8>
-                <label class="car ">{{ride.taxiName}}</label>
+                <label class="car ">{{this.ride.taxiName}}</label>
             </ion-col>
             <ion-col col-4></ion-col>
         </ion-row>
@@ -32,7 +32,7 @@
                 <ion-icon name="square"></ion-icon>
             </ion-col>
             <ion-col col-9>
-                <label class="address " text-wrap>                
+                <label class="address " text-wrap>
                 {{this.ride.pickupAddress}}</label></ion-col>
         </ion-row>
         <ion-row text-wrap>
@@ -40,11 +40,12 @@
                 <ion-icon name="square"></ion-icon>
             </ion-col>
             <ion-col col-9>
-                <label class="address " text-wrap>                
-                        {{this.ride.dropoffAddress}}</label></ion-col>
+                <label class="address " text-wrap>
+                {{this.ride.dropoffAddress}}</label></ion-col>
         </ion-row>
         <ion-row class="address " text-wrap>
             Your trip with {{this.ride.driverName}}
+            <ion-icon name="call" (click)="callDriver()"></ion-icon>
         </ion-row>
     </ion-item>
 </ion-content>
