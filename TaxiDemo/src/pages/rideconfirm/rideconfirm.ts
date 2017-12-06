@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,11 +8,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RideconfirmPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  destination:string;
+  travelDate:string;
+  fareValue:string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    this.destination = this.navParams.get("destination")
+    this.fareValue = this.navParams.get("fare")
+    this.travelDate = this.navParams.get("date")
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RideconfirmPage');
+  }
+
+  dismissModal() {
+    this.viewCtrl.dismiss();
   }
 
 }

@@ -90,7 +90,8 @@ firebase.initializeApp(firebaseAuth);
     AutocompletePage,
     EditAccountPage,
     PaymentPage,
-    RidedetailPage
+    RidedetailPage,
+    RideconfirmPage
   ],
   providers: [
     StatusBar,

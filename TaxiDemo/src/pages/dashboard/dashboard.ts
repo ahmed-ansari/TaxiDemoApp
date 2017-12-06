@@ -390,7 +390,7 @@ export class DashboardPage implements OnInit {
             },
             at: date
           });
-          this.showRideConfirmation()
+          this.showRideConfirmation(date)
         },
         err => console.log('Error occurred while getting date: ', err));
     }
@@ -457,8 +457,14 @@ export class DashboardPage implements OnInit {
     alert.present();
   }
 
-  showRideConfirmation(){
-    let modal = this.modalCtrl.create(RideconfirmPage);
-    modal.present();
+  showRideConfirmation(date){
+    this.modalCtrl.create(RideconfirmPage, {
+      "destination": this.destinationAddress,
+      "fare": this.fareValue,
+      "date": date
+    }, {
+      showBackdrop : false,
+      enableBackdropDismiss: false
+    }).present();
   }
 }

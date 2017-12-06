@@ -1,16 +1,16 @@
-<ion-header>
-    <ion-navbar class="black-bg">
-        <ion-title>Messages</ion-title>
-    </ion-navbar>
-</ion-header>
+<ion-content>
+    <div>
+        <img src="assets/imgs/bg.jpg">
+    </div>
+    <div padding>
+        <ion-label class="upcoming">Upcoming trip set</ion-label>
+        <ion-label class="destination">{{this.destination}}</ion-label>
 
-<ion-content padding>
-    <ion-label>Upcoming Ride</ion-label>
-    <ion-label>Your ride is coming up soon.</ion-label>
+        <ion-label class="date">{{this.travelDate}}</ion-label>
+        <ion-label class="fare">${{this.fareValue}}</ion-label>
 
-    <ion-label>Pickup Time</ion-label>
-    <ion-label>Wed, Nov 29 14:05 - 14:20</ion-label>
-
-    <ion-label>To</ion-label>
-    <ion-label>Suma Pride Apartment</ion-label>
+        <ion-label class="note" text-wrap>Actual estimate to be provided prior to pick-up.</ion-label>
+        <ion-label class="note" text-wrap>Fares may vary due to traffic, weather & other factors. Taxi App doesn't guarantee a partner driver will confirm your ride request.</ion-label>
+        <button ion-button block (click)="dismissModal()">Done</button>
+    </div>
 </ion-content>
