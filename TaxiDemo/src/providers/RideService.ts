@@ -24,6 +24,7 @@ export class RideService {
     unSubscribeForRideRequests() {
         const rideReqRef: firebase.database.Reference = firebase.database().ref('/RideRequests/');
         rideReqRef.off('child_added');
+        rideReqRef.off('child_removed');
     }
 
 }

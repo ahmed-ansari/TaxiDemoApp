@@ -5,6 +5,7 @@ import firebase from 'firebase';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
+import { VehicledetailsPage } from '../vehicledetails/vehicledetails';
 import { MobileAuthPage } from '../mobileauth/mobileauth';
 import { WelcomeService } from './welcome.service';
 import { DashboardPage } from '../dashboard/dashboard';
@@ -64,7 +65,7 @@ export class WelcomePage {
       } else {
         console.log("No User found");
         loading.dismiss();
-        this.navCtrl.push(RegisterPage, { email: this.login.value.email })
+        this.navCtrl.push(VehicledetailsPage, { email: this.login.value.email })
       }
     }).catch((er) => {
       loading.dismiss();
@@ -88,27 +89,6 @@ export class WelcomePage {
       content: 'Please wait...'
     });
     loading.present();
-    // var promise = this.service.validateUser(this.mobile);
-    // promise.then((snapshot) => {
-    //   if (snapshot.exists()) {
-    //     console.log(snapshot.val());
-    //     var userPromise = this.service.getUserObject(snapshot.val());
-    //     userPromise.then((datasnap) => {
-    //       console.log("User found" + JSON.stringify(datasnap.val()));
-    //       loading.dismiss();
-    //       // navController.push(PasswordPage, { mobile: this.mobile, user: datasnap.val() });
-    //     }).catch((er) => {
-    //       console.log(er);
-    //     });
-    //   } else {
-    //     console.log("No User found");
-    //     loading.dismiss();
-    //     // navController.push(RegisterPage, { mobile: this.mobile });
-    //   }
-    // }).catch((er) => {
-    //   loading.dismiss();
-    //   console.log(er);
-    // });
   }
 
 

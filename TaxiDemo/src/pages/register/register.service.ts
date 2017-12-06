@@ -19,12 +19,12 @@ export class RegisterService {
         const personObj: firebase.database.Reference = firebase.database().ref(`/Drivers/`);
         // var keyValueRef = personObj.push();
         var data = {
-            'driverName': user.driverName,
-            'license': user.license,
-            'email': user.email,
-            'phone': user.phone,
-             'profilePhoto': (typeof user.profilePhoto != "undefined") ? user.profilePhoto : "",
-            'address': user.address,
+            // 'driverName': user.driverName,
+            // 'license': user.license,
+            // 'email': user.email,
+            // 'phone': user.phone,
+            //  'profilePhoto': (typeof user.profilePhoto != "undefined") ? user.profilePhoto : "",
+            // 'address': user.address,
             'make': user.make,
             'model': user.model,
             'year': user.year,
@@ -33,7 +33,7 @@ export class RegisterService {
             'password': user.password,
             'vehiclePhoto': (typeof user.vehiclePhoto != "undefined") ? user.vehiclePhoto : "",
         };
-        personObj.child(driverRef).set(data);
+        personObj.child(driverRef).update(data);
         // const userRef: firebase.database.Reference = firebase.database().ref(`/UserRef`);
         // userRef.child(user.mobile).set(keyValueRef.key);
     }

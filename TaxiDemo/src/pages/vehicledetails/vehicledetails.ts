@@ -27,15 +27,15 @@ export class VehicledetailsPage {
 
     this.menu.swipeEnable(false)
     this.userModel = new UserModel()
-    let driverInfo = this.navParams.get("register")
+    //let driverInfo = this.navParams.get("register")
 
-    this.userModel.driverName = driverInfo.driverName;
-    this.userModel.license =driverInfo.driverLicense
-    this.userModel.phone = driverInfo.phone
-    this.userModel.password = driverInfo.password
-    this.userModel.address = driverInfo.address
+    // this.userModel.driverName = driverInfo.driverName;
+    // this.userModel.license =driverInfo.driverLicense
+    // this.userModel.phone = driverInfo.phone
+    // this.userModel.password = driverInfo.password
+    // this.userModel.address = driverInfo.address
     this.userModel.email = this.navParams.get("email")
-    this.userModel.profilePhoto = this.navParams.get("profile")
+    //this.userModel.profilePhoto = this.navParams.get("profile")
 
   }
 
