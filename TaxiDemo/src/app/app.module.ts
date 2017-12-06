@@ -44,6 +44,7 @@ import { HomePage } from '../pages/home/home';
 
 import {SetFarePage} from '../pages/set-fare/set-fare';
 import { RideService } from '../providers/RideService';
+import { Broadcaster } from '../providers/Broadcast';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -125,7 +126,8 @@ firebase.initializeApp(firebaseAuth);
     StaticMapAPI,
     HistoryService,
     Camera,
-    RideService
+    RideService,
+    Broadcaster
   ]
 })
 export class AppModule { }

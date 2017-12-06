@@ -5,6 +5,8 @@ import { UserModel } from '../welcome/user.model'
 import { LocationModel } from '../welcome/user.model'
 import { NativeStorage } from '@ionic-native/native-storage'
 import { SettingService } from './setting.service'
+
+import { Broadcaster } from '../../providers/Broadcast';
 /**
  * Generated class for the SettingPage page.
  *
@@ -25,7 +27,7 @@ export class SettingPage {
   public locations: LocationModel[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private nativeStorage: NativeStorage,
-    private service: SettingService) {
+    private service: SettingService, private broadcaster: Broadcaster) {
     //this.user.createDummyUser()
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
@@ -45,6 +47,7 @@ export class SettingPage {
     // this.locations = this.location.createDummyLocations()
 
     // console.log(this.locations)
+    this.registerStringBroadcast();
 
   }
 
@@ -73,6 +76,13 @@ export class SettingPage {
     });
 
     return this.locations;
+  }
+
+  registerStringBroadcast() {
+    this.broadcaster.on<any>('RideRequests')
+      .subscribe(message => {
+        console.log("Reccived Request:::",message);
+      });
   }
 
 }

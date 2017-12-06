@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import firebase from 'firebase';
 
+import { Broadcaster } from './Broadcast';
+
 @Injectable()
 export class RideService {
 
-    constructor() {
+    constructor(private broadcaster: Broadcaster) {
 
     }
 
@@ -14,6 +16,7 @@ export class RideService {
 
         Observable.fromEvent(rideReqRef, 'child_added').subscribe((dataSnap) =>{
             console.log("child_added", dataSnap);
+            this.broadcaster.broadcast('RideRequests', dataSnap);
         })
 
         Observable.fromEvent(rideReqRef, 'child_removed').subscribe((dataSnap) =>{
