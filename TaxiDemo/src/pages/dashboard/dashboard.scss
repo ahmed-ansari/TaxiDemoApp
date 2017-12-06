@@ -11,11 +11,11 @@ page-dashboard {
     }
     .map-label {
         font-weight: bold;
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .map-label-fare {
         font-weight: bold;
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
     .request-controls {
         text-align: center;
@@ -61,18 +61,22 @@ page-dashboard {
     }
     .dollar {
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 1.3em;
     }
     .dash_bottom_label {
-        font-size: 1.3em;
+        font-size: 1em;
+        font-style: italic;
     }
     .dotted_line {
         content: "";
         position: absolute;
         top: 0;
-        bottom: 3em;
+        bottom: 4em;
         left: 50%;
         border-left: 3px dotted #444;
         /*change these values to suit your liking*/
+    }
+    .label-md {
+        margin: 0px 8px 0px 0;
     }
 }
