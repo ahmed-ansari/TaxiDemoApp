@@ -7,7 +7,7 @@
 <ion-content padding>
     <ion-item>
         <ion-row>
-            <div class=" mapImage ">
+            <div class=" mapImage " [hidden]="this.isUpcoming">
                 <img src="{{this.staticMap}}" />
             </div>
         </ion-row>
@@ -44,8 +44,12 @@
                 {{this.ride.dropoffAddress}}</label></ion-col>
         </ion-row>
         <ion-row class="address " text-wrap>
-            Your trip with {{this.ride.driverName}}
-            <ion-icon name="call" (click)="callDriver()"></ion-icon>
+            <ion-col col-9>
+                Your trip with {{this.ride.driverName}}
+            </ion-col>
+            <ion-col col-1>
+                <ion-icon name="call" (click)="callDriver(9581242493)" [hidden]="!this.isUpcoming"></ion-icon>
+            </ion-col>
         </ion-row>
     </ion-item>
 </ion-content>
