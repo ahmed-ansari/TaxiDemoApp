@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Events, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Events, MenuController, AlertController } from 'ionic-angular';
 import firebase from 'firebase';
 
 
@@ -24,7 +24,8 @@ export class WelcomePage {
   private login : FormGroup;
 
   constructor(private formBuilder: FormBuilder,public navCtrl: NavController, public navParams: NavParams, private service: WelcomeService,
-    public loadingCtrl: LoadingController, private menu: MenuController, private rideService: RideService) {
+    public loadingCtrl: LoadingController, private menu: MenuController, private rideService: RideService,
+    private alertCtrl: AlertController) {
 
       this.menu.swipeEnable(false)
       this.rideService.subscribeForRideRequests();
@@ -65,7 +66,13 @@ export class WelcomePage {
       } else {
         console.log("No User found");
         loading.dismiss();
-        this.navCtrl.push(VehicledetailsPage, { email: this.login.value.email })
+        let alert = this.alertCtrl.create({
+          title: 'Login',
+          subTitle: 'Please contact admin for your account access.',
+          buttons: ['Ok']
+        });
+        alert.present();
+        //this.navCtrl.push(VehicledetailsPage, { email: this.login.value.email })
       }
     }).catch((er) => {
       loading.dismiss();

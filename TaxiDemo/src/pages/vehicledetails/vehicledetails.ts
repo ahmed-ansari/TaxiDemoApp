@@ -70,7 +70,7 @@ export class VehicledetailsPage {
 
       let encodedEmail = this.welcomeService.encodeEmail(this.userModel.email)
       this.regService.registerUser(encodedEmail,this.userModel)
-
+      this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.userModel.email), true);
       this.nativeStorage.setItem("isLoggedIn", true).then(() => {},
       error => {});
       this.navCtrl.setRoot(HistoryPage);
