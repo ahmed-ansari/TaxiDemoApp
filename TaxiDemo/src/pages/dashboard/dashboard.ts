@@ -23,6 +23,7 @@ import { UserModel } from '../welcome/user.model';
 import { PaymentPage } from '../payment/payment';
 import { RideModel } from '../payment/ride.model';
 import { WelcomeService } from '../welcome/welcome.service';
+import { RideconfirmPage } from '../rideconfirm/rideconfirm';
 
 declare var google: any;
 @IonicPage()
@@ -376,7 +377,7 @@ export class DashboardPage implements OnInit {
         .then(date => {
           console.log('Got date: ', date);
           let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-            this.timeTillArrival, "", "", this.user.userId, Date.now());
+          this.timeTillArrival, "", "", this.user.userId, Date.now());
           this.welcomeService.updateRideRequest(this.user.userId, rideModel);
           this.localNotifications.schedule({
             id: 1,
@@ -389,6 +390,7 @@ export class DashboardPage implements OnInit {
             },
             at: date
           });
+          this.showRideConfirmation()
         },
         err => console.log('Error occurred while getting date: ', err));
     }
@@ -453,5 +455,10 @@ export class DashboardPage implements OnInit {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  showRideConfirmation(){
+    let modal = this.modalCtrl.create(RideconfirmPage);
+    modal.present();
   }
 }

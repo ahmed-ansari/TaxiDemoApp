@@ -37,6 +37,7 @@ import { PaymentService } from '../pages/payment/payment.service';
 import { StaticMapAPI } from '../pages/history/static.map';
 import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
+import { RideconfirmPage} from '../pages/rideconfirm/rideconfirm';
 
 
 const firebaseAuth = {
@@ -65,7 +66,8 @@ firebase.initializeApp(firebaseAuth);
     AutocompletePage,
     EditAccountPage,
     PaymentPage,
-    RidedetailPage
+    RidedetailPage,
+    RideconfirmPage
   ],
   imports: [
     BrowserModule, IonicModule.forRoot(MyApp),
