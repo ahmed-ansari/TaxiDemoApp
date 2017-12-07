@@ -5,6 +5,7 @@ import { PaymentService } from './payment.service';
 import { RideModel } from './ride.model';
 import { StaticMapAPI } from '../history/static.map';
 import { WelcomeService } from '../welcome/welcome.service';
+import { Broadcaster } from '../../providers/Broadcaster';
 
 declare var StripeCheckout: any;
 //@IonicPage()
@@ -28,7 +29,8 @@ export class PaymentPage {
     staticMapUrl: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
-        public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService) {
+        public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService, private loadingCtrl: LoadingController,
+        private broadcaster: Broadcaster) {
         this.rideModel = navParams.get("model");
         this.dropoffAddress = this.rideModel.dropoffAddress;
         this.pickupAddress = this.rideModel.pickupAddress;
@@ -57,6 +59,14 @@ export class PaymentPage {
     }
 
     confirmRide() {
+        var navController = this.navCtrl;
+        let loading = this.loadingCtrl.create({
+            content: 'Waiting for driver confirmation...'
+        });
+        loading.present();
+    }
+
+    makeConfirmedRidePayment() {
         var context = this;
         let alert = this.alertCtrl.create({
             title: 'Confirm Ride',
@@ -98,6 +108,30 @@ export class PaymentPage {
     @HostListener('window:popstate')
     onpopstate() {
         this.handler.close();
+    }
+
+    registerRideConfirmBroadcast() {
+        const context = this;
+        this.broadcaster.on<any>('cancel')
+            .subscribe(user => {
+                let alert = this.alertCtrl.create({
+                    title: 'Ride Request',
+                    subTitle: 'SORRY WE ARE UNABLE TO ACCEPT YOUR RIDE at THIS TIME We sincerely regret the inconvenience caused.',
+                    buttons: [{
+                        text: 'Ok',
+                        role: 'cancel',
+                        handler: () => {
+                            context.navCtrl.popToRoot();
+                        }
+                    }]
+                });
+                alert.present();
+            });
+
+        this.broadcaster.on<any>('confirm')
+            .subscribe(user => {
+                context.makeConfirmedRidePayment();
+            });
     }
 }
 

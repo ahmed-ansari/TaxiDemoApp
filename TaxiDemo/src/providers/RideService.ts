@@ -10,15 +10,15 @@ export class RideService {
 
     }
 
-    subscribeForRideRequests() {
-        const rideReqRef: firebase.database.Reference = firebase.database().ref('/CancelledRequests/');
+    subscribeForRideRequests(userId) {
+        const rideReqRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+userId);
         rideReqRef.on('value', (data) => {
             this.boradcaster.broadcast("cancel", data);
         });
     }
 
-    unSubscribeForRideRequests() {
-        const rideReqRef: firebase.database.Reference = firebase.database().ref('/CancelledRequests/');
+    unSubscribeForRideRequests(userId) {
+        const rideReqRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+userId);
         rideReqRef.off('value');
     }
 

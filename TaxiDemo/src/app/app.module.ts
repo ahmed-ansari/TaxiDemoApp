@@ -38,6 +38,7 @@ import { StaticMapAPI } from '../pages/history/static.map';
 import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
 import { RideconfirmPage} from '../pages/rideconfirm/rideconfirm';
+import { RideService } from '../providers/RideService';
 
 import { Broadcaster } from '../providers/Broadcaster';
 
@@ -116,7 +117,8 @@ firebase.initializeApp(firebaseAuth);
     LocalNotifications,
     StaticMapAPI,
     HistoryService,
-    Broadcaster
+    Broadcaster,
+    RideService
   ]
 })
 export class AppModule { }

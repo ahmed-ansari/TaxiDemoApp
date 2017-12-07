@@ -36,6 +36,8 @@ export class MyApp {
     private broadcaster: Broadcaster, private userModel: UserModel, private alertCtrl: AlertController) {
     this.initializeApp();
     this.userName = "User";
+
+    this.registerUserBroadcast();
     this.nativeStorage.getItem("isLoggedIn").then((response => {
       console.log(response);
       if (response) {
@@ -43,8 +45,6 @@ export class MyApp {
       } else {
         this.rootPage = WelcomePage;
       }
-
-      this.registerUserBroadcast();
     }),
       error => { });
 
@@ -70,8 +70,8 @@ export class MyApp {
   }
 
   logout() {
-    this.nativeStorage.setItem("isLoggedIn", false).then(() => {},
-    error => {});
+    this.nativeStorage.setItem("isLoggedIn", false).then(() => { },
+      error => { });
     this.nav.setRoot(WelcomePage);
   }
 
@@ -81,15 +81,5 @@ export class MyApp {
         this.userName = user.displayName;
         this.profileUrl = user.photoUrl;
       });
-
-      this.broadcaster.on<UserModel>('cancel')
-      .subscribe(user => {
-        let alert = this.alertCtrl.create({
-          title: 'Ride Request',
-          subTitle: 'SORRY WE ARE UNABLE TO ACCEPT YOUR RIDE at THIS TIME We sincerely regret the inconvenience caused.',
-          buttons: ['Ok']
-        });
-        alert.present();
-      });
-    }
+  }
 }

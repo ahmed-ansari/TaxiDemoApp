@@ -25,6 +25,7 @@ import { RideModel } from '../payment/ride.model';
 import { WelcomeService } from '../welcome/welcome.service';
 import { RideconfirmPage } from '../rideconfirm/rideconfirm';
 import { Broadcaster } from '../../providers/Broadcaster';
+import { RideService } from '../../providers/RideService';
 
 declare var google: any;
 @IonicPage()
@@ -60,7 +61,7 @@ export class DashboardPage implements OnInit {
     private datePicker: DatePicker,
     private localNotifications: LocalNotifications,
     private alertCtrl: AlertController,
-    private welcomeService: WelcomeService, private broadcaster: Broadcaster) {
+    private welcomeService: WelcomeService, private broadcaster: Broadcaster, private rideService: RideService) {
     this.distance = 0;
     this.fareValue = 0;
     this.user = new UserModel()
@@ -75,6 +76,7 @@ export class DashboardPage implements OnInit {
         context.user.displayName = jsonObj.displayName;
         context.user.photoUrl = jsonObj.photoUrl;
         context.broadcaster.broadcast('UserData', context.user);
+        this.rideService.subscribeForRideRequests( context.user.userId);
       },
       error => console.error(error)
       );
