@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 
 
 import { MyApp } from './app.component';
@@ -127,7 +128,8 @@ firebase.initializeApp(firebaseAuth);
     HistoryService,
     Camera,
     RideService,
-    Broadcaster
+    Broadcaster,
+    LaunchNavigator
   ]
 })
 export class AppModule { }

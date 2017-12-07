@@ -20,8 +20,14 @@ page-edit-account {
         font-size: 1.2rem;
     }
     .round-img {
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border-radius: 30%;
+    }
+    .vehicle-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 30%;
     }
     .item-inner {
         border: 0 !important;

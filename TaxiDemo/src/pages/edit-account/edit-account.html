@@ -5,7 +5,7 @@
         </button>
         <ion-title>Edit Account</ion-title>
         <ion-buttons end>
-            <button ion-button clear type="submit">Done</button>
+            <button ion-button clear (click)="navigateToMaps()">Done</button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
@@ -93,15 +93,12 @@
                     <ion-label>Vehicle Image</ion-label>
                 </ion-col>
                 <ion-col width-50>
-                    <img class="round-img" src="{{this.vehicleSrc}}" onerror="this.style.display='none'" />
-                    <button ion-button (click)="launchPicOptions(1)" type="button" clear><ion-icon name="car" class="carButton"></ion-icon></button>
+                    <img class="vehicle-img" src="{{this.vehicleSrc}}" (click)="launchPicOptions(1)" />
                 </ion-col>
             </ion-row>
+            <ion-row>
+                <button ion-button block type="submit">Done</button>
+            </ion-row>
         </ion-grid>
-        <!-- <ion-footer>
-            <ion-fab right bottom margin-right>
-                <button ion-fab color="dark" type="submit"><ion-icon name="arrow-forward"></ion-icon></button>
-            </ion-fab>
-        </ion-footer> -->
     </form>
 </ion-content>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, ToastController } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { NativeStorage } from '@ionic-native/native-storage'
 import { UserModel } from '../welcome/user.model'
 import { WelcomeService } from '../welcome/welcome.service';
 import { RegisterService } from '../register/register.service';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 
 
 @IonicPage()
@@ -13,33 +14,38 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   selector: 'page-edit-account',
   templateUrl: 'edit-account.html',
 })
+
 export class EditAccountPage {
   private vehicle: FormGroup;
   private userModel: UserModel;
   public mobile: Number | String;
   imageSrc: string = "assets/imgs/profile_photo.png";
-  vehicleSrc: string = "";
+  vehicleSrc: string = "assets/imgs/vehicle_photo.png";
   profileFilename: string = '';
   vehicleFilename: string = '';
   name: string;
   email: string;
+  storageData:any;
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams, private camera: Camera,
     public actionSheetCtrl: ActionSheetController, private welcomeService: WelcomeService, private regService: RegisterService,
-    private nativeStorage: NativeStorage) {
+    private nativeStorage: NativeStorage, public toastCtrl: ToastController, private launchNavigator: LaunchNavigator) {
 
-    // this.nativeStorage.getItem('email')
-    //   .then(response => {
-    //     let jsonObj = JSON.parse(response);
-    //     this.getDriverDetails(jsonObj.email)
-    //   },
-    //   error => console.error(error)
-    //   );
+    this.nativeStorage.getItem('userData').then(response => {
+      this.name = response.driverName
+      this.email = response.email
+      this.mobile = response.mobile
+      this.storageData = response
+    },error => console.error(error)
+    );
 
-    // this.name = this.userModel.driverName
-     this.email = this.userModel.email
-     console.log('In edit: ', this.email)
-    // this.mobile = this.userModel.phone
+    // this.vehicle.setValue({
+    //   make: this.storageData.make,
+    //   model: this.storageData.model,
+    //   year: this.storageData.year,
+    //   regno: this.storageData.regnum,
+    //   uinnumber : this.storageData.uin
+    // });
   }
 
   ionViewDidLoad() {
@@ -57,17 +63,6 @@ export class EditAccountPage {
     });
   }
 
-  getDriverDetails() {
-
-    let encodedEmail = this.welcomeService.encodeEmail(this.email)
-    let promise = this.welcomeService.getUserObject(encodedEmail)
-    promise.then((datasnap) => {
-      console.log("Driver Details: " + JSON.stringify(datasnap.val()));
-    }).catch((er) => {
-      console.log(er);
-    });
-  }
-
   logForm() {
     console.log(this.vehicle.value)
     if (!this.formValid(this.vehicle)) {
@@ -75,6 +70,7 @@ export class EditAccountPage {
     }
 
     if (!this.vehicle.invalid && this.vehicle.status == "VALID") {
+      this.userModel = new UserModel()
       this.userModel.make = this.vehicle.value.make
       this.userModel.model = this.vehicle.value.model
       this.userModel.year = this.vehicle.value.year
@@ -89,8 +85,16 @@ export class EditAccountPage {
         this.userModel.profilePhoto = this.profileFilename
       }
 
-      let encodedEmail = this.welcomeService.encodeEmail(this.userModel.email)
-      this.regService.registerUser(encodedEmail, this.userModel)
+      let encodedEmail = this.welcomeService.encodeEmail(this.email)
+      this.regService.registerUser(encodedEmail, this.userModel).then(()=>{
+
+        // this.nativeStorage.setItem("userData", this.userModel).then(()=>{}, error=>{});
+        this.toastCtrl.create({
+          message: 'Profile updated successfully',
+          duration: 3000,
+          position: 'bottom'
+        }).present();
+      }, error =>{});
     }
   }
 
@@ -192,4 +196,17 @@ export class EditAccountPage {
       console.log('Error captuing photo: ', err)
     });
   }
+
+  navigateToMaps() {
+
+    let options: LaunchNavigatorOptions = {
+      start: 'DLF Gachibowli Hyderabad Telangana India'
+    };
+
+    this.launchNavigator.navigate('Lingampally Hyderabad Telangana India', options).then(
+      success => console.log('Launched navigator'),
+      error => console.log('Error launching navigator', error)
+    );
+  }
+
 }

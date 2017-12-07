@@ -17,7 +17,7 @@ export class HistoryService{
 
     updateRideStatus(status, rideRequest){
         const rideReqRef: firebase.database.Reference = firebase.database().ref('/RideRequests/'+rideRequest.parent+"/"+rideRequest.child);
-        if(status){            
+        if(status){
             rideReqRef.update({
                 "rideStatus": status
               });
@@ -25,13 +25,13 @@ export class HistoryService{
               rideReqCancelRef.set({
                   "ride": "confirm"
               });
-        }else{           
+        }else{
             rideReqRef.remove();
             const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
             rideReqCancelRef.set({
                 "ride": "cancel"
             });
-        }       
-        
+        }
+
     }
 }

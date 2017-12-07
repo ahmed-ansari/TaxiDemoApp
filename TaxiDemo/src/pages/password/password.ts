@@ -43,7 +43,7 @@ export class PasswordPage {
   }
 
   logForm() {
-
+    const context = this;
     this.login.controls['email'].markAsTouched()
     this.login.controls['password'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
@@ -51,9 +51,9 @@ export class PasswordPage {
         if (!this.object.loggedIn && this.object.active) {
           this.nativeStorage.setItem("isLoggedIn", true).then(() => { },
             error => { });
-            this.nativeStorage.setItem("email", JSON.stringify(this.email)).then(() => { },
+          this.nativeStorage.setItem("userData", context.object).then(() => { },
             error => { });
-            this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.email), true);
+          this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(context.email), true);
           this.navCtrl.setRoot(HistoryPage);
         } else {
           let alert = this.alertCtrl.create({
