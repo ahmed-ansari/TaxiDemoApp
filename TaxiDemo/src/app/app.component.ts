@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Events } from 'ionic-angular';
+import { Nav, Platform, Events, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -33,7 +33,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar,
     public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events,
-    private broadcaster: Broadcaster, private userModel: UserModel) {
+    private broadcaster: Broadcaster, private userModel: UserModel, private alertCtrl: AlertController) {
     this.initializeApp();
     this.userName = "User";
     this.nativeStorage.getItem("isLoggedIn").then((response => {
@@ -80,6 +80,16 @@ export class MyApp {
       .subscribe(user => {
         this.userName = user.displayName;
         this.profileUrl = user.photoUrl;
+      });
+
+      this.broadcaster.on<UserModel>('cancel')
+      .subscribe(user => {
+        let alert = this.alertCtrl.create({
+          title: 'Ride Request',
+          subTitle: 'SORRY WE ARE UNABLE TO ACCEPT YOUR RIDE at THIS TIME We sincerely regret the inconvenience caused.',
+          buttons: ['Ok']
+        });
+        alert.present();
       });
     }
 }
