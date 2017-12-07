@@ -77,13 +77,14 @@ export class HistoryPage {
 
   registerStringBroadcast() {
     this.broadcaster.on<any>('RideRequests')
-      .subscribe(message => {
-        console.log("Received Request:::", message);
-        this.rideConfirm();
+      .subscribe(rideRequest => {
+        console.log("Received Request:::", rideRequest);
+        this.rideConfirm(rideRequest);
       });      
   }
 
-  rideConfirm() {
+  rideConfirm(rideRequest) {
+    let scope = this;
     let alert = this.alertCtrl.create({
       title: 'Ride Request',
       message: 'Do you want to accept this ride?',
@@ -93,12 +94,14 @@ export class HistoryPage {
           role: 'cancel',
           handler: () => {
             console.log('Denied');
+            scope.service.updateRideStatus(false, rideRequest);
           }
         },
         {
           text: 'Accept',
           handler: () => {
             console.log('Accepted');
+            scope.service.updateRideStatus(true, rideRequest);
           }
         }
       ]

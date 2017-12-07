@@ -14,9 +14,18 @@ export class RideService {
     subscribeForRideRequests() {
         const rideReqRef: firebase.database.Reference = firebase.database().ref('/RideRequests/');
 
-        Observable.fromEvent(rideReqRef, 'child_added').subscribe((dataSnap) =>{
-            console.log("child_added", dataSnap);
-            this.broadcaster.broadcast('RideRequests', dataSnap);
+        rideReqRef.on('child_added', (dataSnap) =>{
+            console.log("child_added", dataSnap,"Child Key", dataSnap.key);            
+            rideReqRef.child(dataSnap.key).once('value').then(snap =>{
+                let ridesData = snap.val();
+                var keys = Object.keys(ridesData);
+               // console.log("Ride Data:::", ridesData);
+                for (var key in keys) {
+                  //  console.log("Key:::", keys[key]);
+                  //  console.log("Value:::", ridesData[keys[key]]);
+                  this.broadcaster.broadcast('RideRequests', {"parent":dataSnap.key, "child":keys[key]});
+                }                
+            });            
         })
 
         Observable.fromEvent(rideReqRef, 'child_removed').subscribe((dataSnap) =>{
