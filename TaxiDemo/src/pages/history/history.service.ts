@@ -21,13 +21,17 @@ export class HistoryService{
             rideReqRef.update({
                 "rideStatus": status
               });
+              const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/'+rideRequest.parent);
+              rideReqCancelRef.set({
+                  "ride": "confirm"
+              });
         }else{           
             rideReqRef.remove();
-        }
+            const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
+            rideReqCancelRef.set({
+                "ride": "cancel"
+            });
+        }       
         
-        const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
-        rideReqCancelRef.set({
-            "ride": "cancel"
-        });
     }
 }
