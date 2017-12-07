@@ -20,7 +20,7 @@
 
     <div [ngSwitch]="Trips">
         <ion-list *ngSwitchCase="'Past'">
-            <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
+            <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetailFromPast(i)">
                 <ion-row>
                     <div class=" mapImage ">
                         <img src="{{this.staticMapArray[i]}} " />
@@ -46,8 +46,8 @@
         </ion-list>
 
         <ion-list *ngSwitchCase=" 'Upcommings' ">
-            <ion-item *ngFor="let ride of upcomingRides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
-                
+            <ion-item *ngFor="let ride of upcomingRides; let i = index" [attr.data-index]="i" (click)="goToRideDetailFromUpcoming(i)">
+
                 <ion-row>
                     <ion-col col-9>
                         <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>

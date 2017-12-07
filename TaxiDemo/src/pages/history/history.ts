@@ -66,14 +66,21 @@ export class HistoryPage {
           });
     }
 
-    goToRideDetail(index) {
+    goToRideDetailFromPast(index) {
       console.log("going..",index)
       this.ride = this.rides[index]
 
       console.log("ride",this.ride)
-      this.navCtrl.push(RidedetailPage, {params:this.ride,map:this.staticMap})
+      this.navCtrl.push(RidedetailPage, {params:this.ride, map:this.staticMap, isUpcoming: false})
     }
 
+  goToRideDetailFromUpcoming(index){
+    console.log("going..", index)
+    this.ride = this.rides[index]
+
+    console.log("ride", this.ride)
+    this.navCtrl.push(RidedetailPage, { params: this.ride, map: this.staticMap, isUpcoming: true })
+}
     getUpcomingRides(userId){
       let promise = this.service.getUpcomingRides(userId);
       promise.then((snapshot) => {

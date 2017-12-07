@@ -20,19 +20,15 @@
 
     <div class="bottom request-controls" *ngIf="bottomSheet">
         <ion-row align-items-center>
-            <ion-col width-50>
-                <!-- <button block ion-button (click)="makePayment()">
-                    <ion-icon name="card"></ion-icon>
-                    Visa **34 {{fareValue}}
-                </button> -->
-                <ion-label class="map-label">$ {{fareValue}}</ion-label>
+            <ion-col width-45>
+                <ion-label class="dash_bottom_label">Fare</ion-label>
+                <ion-label class="map-label-fare"><span>$</span>{{fareValue}}</ion-label>
             </ion-col>
-            <ion-col width-50>
-                <!-- <button block ion-button>
-                    <ion-icon name="cash"></ion-icon>
-                    Cash {{fareValue}}
-                </button> -->
+            <ion-col width-10 class="dotted_line"></ion-col>
+            <ion-col width-45>
+                <ion-label class="dash_bottom_label">Distance</ion-label>
                 <ion-label class="map-label">{{distance}} Miles</ion-label>
+                <ion-label class="dash_bottom_label">Time</ion-label>
                 <ion-label class="map-label">{{timeTillArrival}} Mins</ion-label>
             </ion-col>
         </ion-row>
