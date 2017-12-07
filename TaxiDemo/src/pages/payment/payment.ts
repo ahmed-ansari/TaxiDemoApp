@@ -27,6 +27,7 @@ export class PaymentPage {
     userId: any;
     handler: any;
     staticMapUrl: string;
+    loading: any;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
         public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService, private loadingCtrl: LoadingController,
@@ -41,6 +42,8 @@ export class PaymentPage {
         this.taxiNumber = this.rideModel.taxiName;
         this.userId = this.rideModel.userId;
         this.staticMapUrl = this.staticMap.getStaticMapSnapFromAddress(this.pickupAddress, this.dropoffAddress);
+
+        this.registerRideConfirmBroadcast();
     }
 
     ionViewDidLoad() {
@@ -60,10 +63,11 @@ export class PaymentPage {
 
     confirmRide() {
         var navController = this.navCtrl;
-        let loading = this.loadingCtrl.create({
+        this.loading = this.loadingCtrl.create({
             content: 'Waiting for driver confirmation...'
         });
-        loading.present();
+        this.loading.present();
+        this.welcomeService.updateRideRequest(this.userId, this.rideModel);
     }
 
     makeConfirmedRidePayment() {
@@ -86,7 +90,7 @@ export class PaymentPage {
                         //console.log('Buy clicked');
                         this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel, false, this.staticMapUrl);
                         //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, false);
-                        this.welcomeService.updateRideRequest(context.userId, context.rideModel);
+                        
                         context.navCtrl.popToRoot();
                     }
                 }
@@ -121,6 +125,7 @@ export class PaymentPage {
                         text: 'Ok',
                         role: 'cancel',
                         handler: () => {
+                            context.loading.dismiss();
                             context.navCtrl.popToRoot();
                         }
                     }]
@@ -130,6 +135,7 @@ export class PaymentPage {
 
         this.broadcaster.on<any>('confirm')
             .subscribe(user => {
+                context.loading.dismiss();
                 context.makeConfirmedRidePayment();
             });
     }
