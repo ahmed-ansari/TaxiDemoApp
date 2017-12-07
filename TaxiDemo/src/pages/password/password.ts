@@ -51,7 +51,7 @@ export class PasswordPage {
         if (!this.object.loggedIn && this.object.active) {
           this.nativeStorage.setItem("isLoggedIn", true).then(() => { },
             error => { });
-            this.nativeStorage.setItem("email", this.email).then(() => { },
+            this.nativeStorage.setItem("email", JSON.stringify(this.email)).then(() => { },
             error => { });
             this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.email), true);
           this.navCtrl.setRoot(HistoryPage);

@@ -29,7 +29,7 @@ export class HistoryPage {
     private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController) {
     this.Trips = "Past";
     this.user = new UserModel()
-    this.nativeStorage.getItem('userData')
+    this.nativeStorage.getItem('email')
       .then(response => {
         let jsonObj = JSON.parse(response);
         // this.user.userId = jsonObj.userId;
@@ -80,7 +80,7 @@ export class HistoryPage {
       .subscribe(message => {
         console.log("Received Request:::", message);
         this.rideConfirm();
-      });      
+      });
   }
 
   rideConfirm() {
