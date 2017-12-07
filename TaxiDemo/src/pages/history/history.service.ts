@@ -17,8 +17,17 @@ export class HistoryService{
 
     updateRideStatus(status, rideRequest){
         const rideReqRef: firebase.database.Reference = firebase.database().ref('/RideRequests/'+rideRequest.parent+"/"+rideRequest.child);
-        rideReqRef.update({
-            "rideStatus": status
-          });
+        if(status){            
+            rideReqRef.update({
+                "rideStatus": status
+              });
+        }else{           
+            rideReqRef.remove();
+        }
+        
+        const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
+        rideReqCancelRef.set({
+            "ride": "cancel"
+        });
     }
 }

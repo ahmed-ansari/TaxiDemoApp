@@ -19,10 +19,7 @@ export class RideService {
             rideReqRef.child(dataSnap.key).once('value').then(snap =>{
                 let ridesData = snap.val();
                 var keys = Object.keys(ridesData);
-               // console.log("Ride Data:::", ridesData);
                 for (var key in keys) {
-                  //  console.log("Key:::", keys[key]);
-                  //  console.log("Value:::", ridesData[keys[key]]);
                   this.broadcaster.broadcast('RideRequests', {"parent":dataSnap.key, "child":keys[key]});
                 }                
             });            
