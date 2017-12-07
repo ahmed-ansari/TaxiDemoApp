@@ -5,12 +5,22 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item text-wrap>
-        {{pickupAddress}}
-    </ion-item>
-    <ion-item text-wrap>
-        {{dropoffAddress}}
-    </ion-item>
+    <ion-row text-wrap>
+        <ion-col col-1>
+            <ion-icon name="square"></ion-icon>
+        </ion-col>
+        <ion-col col-9>
+            <label class="address " text-wrap>                
+                    {{pickupAddress}}</label></ion-col>
+    </ion-row>
+    <ion-row text-wrap>
+        <ion-col col-1>
+            <ion-icon name="square"></ion-icon>
+        </ion-col>
+        <ion-col col-9>
+            <label class="address " text-wrap>                
+                            {{dropoffAddress}}</label></ion-col>
+    </ion-row>
     <!-- <ion-item>
         <ion-label class="payment-label payment-cost">$ {{fareValue}}</ion-label>
     </ion-item> -->
@@ -18,13 +28,13 @@
         <ion-row align-items-center>
             <ion-col width-50>
                 <ion-label class="dash_bottom_label">Fare</ion-label>
-                <ion-label class="map-label-fare"><span class="dollar">$</span>{{fareValue}}</ion-label>
+                <ion-label class="map-label-fare">${{fareValue}}</ion-label>
             </ion-col>
-            <ion-col width-50>
+            <ion-col width-50 center>
                 <ion-label class="dash_bottom_label">Distance</ion-label>
                 <ion-label class="map-label">{{distance}} Miles</ion-label>
                 <ion-label class="dash_bottom_label">Time</ion-label>
-                <ion-label class="map-label">{{timeTillArrival}} Mins</ion-label>
+                <ion-label class="map-label">{{travelTime}} Mins</ion-label>
             </ion-col>
         </ion-row>
         <ion-row>

@@ -39,6 +39,7 @@ import { HistoryService } from '../pages/history/history.service';
 import { RidedetailPage } from '../pages/ridedetail/ridedetail';
 import { RideconfirmPage} from '../pages/rideconfirm/rideconfirm';
 
+import { Broadcaster } from '../providers/Broadcaster';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -114,7 +115,8 @@ firebase.initializeApp(firebaseAuth);
     DatePicker,
     LocalNotifications,
     StaticMapAPI,
-    HistoryService
+    HistoryService,
+    Broadcaster
   ]
 })
 export class AppModule { }

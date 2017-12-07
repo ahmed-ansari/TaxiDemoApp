@@ -15,6 +15,8 @@ import { EditAccountPage } from '../pages/edit-account/edit-account';
 import { PaymentPage } from '../pages/payment/payment';
 
 import { MobileAuthPage } from '../pages/mobileauth/mobileauth';
+import { Broadcaster } from '../providers/Broadcaster';
+import { UserModel } from '../pages/welcome/user.model';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +32,8 @@ export class MyApp {
   profileUrl: string;
 
   constructor(public platform: Platform, public statusBar: StatusBar,
-    public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events) {
+    public splashScreen: SplashScreen, private nativeStorage: NativeStorage, events: Events,
+    private broadcaster: Broadcaster, private userModel: UserModel) {
     this.initializeApp();
     this.userName = "User";
     this.nativeStorage.getItem("isLoggedIn").then((response => {
@@ -41,16 +44,7 @@ export class MyApp {
         this.rootPage = WelcomePage;
       }
 
-      events.subscribe('user:logged', user => {
-        console.log(user);
-        if (user !== undefined && user !== "") {
-          this.userName = user;
-        }
-      })
-      events.subscribe('user:logged:url', photoUrl => {
-        console.log(photoUrl);
-        this.profileUrl = photoUrl;
-      })
+      this.registerUserBroadcast();
     }),
       error => { });
 
@@ -66,16 +60,12 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
 
@@ -84,4 +74,12 @@ export class MyApp {
     error => {});
     this.nav.setRoot(WelcomePage);
   }
+
+  registerUserBroadcast() {
+    this.broadcaster.on<UserModel>('UserData')
+      .subscribe(user => {
+        this.userName = user.displayName;
+        this.profileUrl = user.photoUrl;
+      });
+    }
 }
