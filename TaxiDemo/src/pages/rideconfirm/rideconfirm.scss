@@ -6,7 +6,11 @@ page-rideconfirm {
         font-size: 1.2em;
     }
     .fare {
-        font-size: 1.2em;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgba(0, 0, 255, 0.644);
+        margin: 20px 0 20px 0;
+        text-align: center;
     }
     .date {
         font-size: 1em;
@@ -14,5 +18,9 @@ page-rideconfirm {
     }
     .note {
         color: #999;
+    }
+    .rideBtn {
+        bottom: 0px;
+        position: fixed;
     }
 }

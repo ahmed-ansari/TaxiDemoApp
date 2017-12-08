@@ -4,13 +4,15 @@
     </div>
     <div padding>
         <ion-label class="upcoming">Upcoming trip set</ion-label>
-        <ion-label class="destination">{{this.destination}}</ion-label>
+        <ion-label class="destination" text-wrap>{{this.destination}}</ion-label>
 
         <ion-label class="date">{{this.travelDate}}</ion-label>
         <ion-label class="fare">${{this.fareValue}}</ion-label>
 
-        <ion-label class="note" text-wrap>Actual estimate to be provided prior to pick-up.</ion-label>
-        <ion-label class="note" text-wrap>Fares may vary due to traffic, weather & other factors. Taxi App doesn't guarantee a partner driver will confirm your ride request.</ion-label>
+        <!-- <ion-label class="note" text-wrap>Actual estimate to be provided prior to pick-up.</ion-label>
+        <ion-label class="note" text-wrap>Fares may vary due to traffic, weather & other factors. Taxi App doesn't guarantee a partner driver will confirm your ride request.</ion-label> -->
+
         <button ion-button block (click)="dismissModal()">Done</button>
+
     </div>
 </ion-content>

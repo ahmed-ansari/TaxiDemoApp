@@ -24,6 +24,8 @@ import { PaymentPage } from '../payment/payment';
 import { RideModel } from '../payment/ride.model';
 import { WelcomeService } from '../welcome/welcome.service';
 import { RideconfirmPage } from '../rideconfirm/rideconfirm';
+import { Broadcaster } from '../../providers/Broadcaster';
+import { RideService } from '../../providers/RideService';
 
 declare var google: any;
 @IonicPage()
@@ -59,7 +61,7 @@ export class DashboardPage implements OnInit {
     private datePicker: DatePicker,
     private localNotifications: LocalNotifications,
     private alertCtrl: AlertController,
-    private welcomeService: WelcomeService) {
+    private welcomeService: WelcomeService, private broadcaster: Broadcaster, private rideService: RideService) {
     this.distance = 0;
     this.fareValue = 0;
     this.user = new UserModel()
@@ -73,8 +75,8 @@ export class DashboardPage implements OnInit {
         context.user.givenName = jsonObj.name;
         context.user.displayName = jsonObj.displayName;
         context.user.photoUrl = jsonObj.photoUrl;
-        context.events.publish('user:logged', context.user.displayName);
-        context.events.publish('user:logged:url', context.user.photoUrl);
+        context.broadcaster.broadcast('UserData', context.user);
+        this.rideService.subscribeForRideRequests( context.user.userId);
       },
       error => console.error(error)
       );
@@ -370,6 +372,7 @@ export class DashboardPage implements OnInit {
   }
 
   rideLater() {
+    let context = this;
     if (typeof this.user.mobile === "undefined") {
       this.updateMobileNumber()
     } else {
@@ -377,8 +380,8 @@ export class DashboardPage implements OnInit {
         .then(date => {
           console.log('Got date: ', date);
           let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-          this.timeTillArrival, "", "", this.user.userId, Date.now());
-          this.welcomeService.updateRideRequest(this.user.userId, rideModel);
+          this.timeTillArrival, "", "", context.user.userId, Date.now());
+          this.welcomeService.updateRideRequest(context.user.userId, rideModel);
           this.localNotifications.schedule({
             id: 1,
             title: 'Taxi App',

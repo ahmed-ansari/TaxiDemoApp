@@ -50,6 +50,10 @@ page-payment {
     }
     .map-label-fare {
         font-weight: bold;
+        font-size: 1.8em;
+    }
+    .map-label {
+        font-weight: bold;
         font-size: 1.3em;
     }
     .dollar {
@@ -57,7 +61,8 @@ page-payment {
         font-size: 1.8em;
     }
     .dash_bottom_label {
-        font-size: 1.3em;
+        font-size: 1em;
+        font-style: italic;
     }
     .dotted_line {
         content: "";

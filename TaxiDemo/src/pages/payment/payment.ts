@@ -5,6 +5,7 @@ import { PaymentService } from './payment.service';
 import { RideModel } from './ride.model';
 import { StaticMapAPI } from '../history/static.map';
 import { WelcomeService } from '../welcome/welcome.service';
+import { Broadcaster } from '../../providers/Broadcaster';
 
 declare var StripeCheckout: any;
 //@IonicPage()
@@ -26,9 +27,11 @@ export class PaymentPage {
     userId: any;
     handler: any;
     staticMapUrl: string;
+    loading: any;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
-        public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService) {
+        public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService, private loadingCtrl: LoadingController,
+        private broadcaster: Broadcaster) {
         this.rideModel = navParams.get("model");
         this.dropoffAddress = this.rideModel.dropoffAddress;
         this.pickupAddress = this.rideModel.pickupAddress;
@@ -39,6 +42,8 @@ export class PaymentPage {
         this.taxiNumber = this.rideModel.taxiName;
         this.userId = this.rideModel.userId;
         this.staticMapUrl = this.staticMap.getStaticMapSnapFromAddress(this.pickupAddress, this.dropoffAddress);
+
+        this.registerRideConfirmBroadcast();
     }
 
     ionViewDidLoad() {
@@ -57,6 +62,15 @@ export class PaymentPage {
     }
 
     confirmRide() {
+        var navController = this.navCtrl;
+        this.loading = this.loadingCtrl.create({
+            content: 'Waiting for driver confirmation...'
+        });
+        this.loading.present();
+        this.welcomeService.updateRideRequest(this.userId, this.rideModel);
+    }
+
+    makeConfirmedRidePayment() {
         var context = this;
         let alert = this.alertCtrl.create({
             title: 'Confirm Ride',
@@ -76,7 +90,7 @@ export class PaymentPage {
                         //console.log('Buy clicked');
                         this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel, false, this.staticMapUrl);
                         //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, false);
-                        this.welcomeService.updateRideRequest(context.userId, context.rideModel);
+                        
                         context.navCtrl.popToRoot();
                     }
                 }
@@ -98,6 +112,32 @@ export class PaymentPage {
     @HostListener('window:popstate')
     onpopstate() {
         this.handler.close();
+    }
+
+    registerRideConfirmBroadcast() {
+        const context = this;
+        this.broadcaster.on<any>('cancel')
+            .subscribe(user => {
+                let alert = this.alertCtrl.create({
+                    title: 'Ride Request',
+                    subTitle: 'SORRY WE ARE UNABLE TO ACCEPT YOUR RIDE at THIS TIME We sincerely regret the inconvenience caused.',
+                    buttons: [{
+                        text: 'Ok',
+                        role: 'cancel',
+                        handler: () => {
+                            context.loading.dismiss();
+                            context.navCtrl.popToRoot();
+                        }
+                    }]
+                });
+                alert.present();
+            });
+
+        this.broadcaster.on<any>('confirm')
+            .subscribe(user => {
+                context.loading.dismiss();
+                context.makeConfirmedRidePayment();
+            });
     }
 }
 
