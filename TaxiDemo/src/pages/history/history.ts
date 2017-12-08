@@ -29,15 +29,16 @@ export class HistoryPage {
     private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController) {
     this.Trips = "Past";
     this.user = new UserModel()
-    this.nativeStorage.getItem('email')
+    this.nativeStorage.getItem('userData')
       .then(response => {
-        let jsonObj = JSON.parse(response);
+        let jsonObj = response;
         // this.user.userId = jsonObj.userId;
         this.user.email = jsonObj.email;
         // this.user.givenName = jsonObj.name;
         // this.user.displayName = jsonObj.displayName;
         // this.user.photoUrl = jsonObj.photoUrl;
         //this.locations =
+        this.broadcaster.broadcast('user', {"user": jsonObj});
         this.getRideHistory(jsonObj.userId);
       },
       error => console.error(error)

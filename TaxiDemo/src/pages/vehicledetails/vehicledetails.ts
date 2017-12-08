@@ -27,15 +27,15 @@ export class VehicledetailsPage {
 
     this.menu.swipeEnable(false)
     this.userModel = new UserModel()
-    //let driverInfo = this.navParams.get("register")
+    let driverInfo = this.navParams.get("driver")
 
-    // this.userModel.driverName = driverInfo.driverName;
-    // this.userModel.license =driverInfo.driverLicense
-    // this.userModel.phone = driverInfo.phone
-    // this.userModel.password = driverInfo.password
-    // this.userModel.address = driverInfo.address
-    this.userModel.email = this.navParams.get("email")
-    //this.userModel.profilePhoto = this.navParams.get("profile")
+    this.userModel.driverName = driverInfo.driverName;
+    this.userModel.license =driverInfo.driverLicense
+    this.userModel.phone = driverInfo.phone
+    this.userModel.password = driverInfo.password
+    this.userModel.address = driverInfo.address
+    this.userModel.email = driverInfo.email
+    this.userModel.profilePhoto = (driverInfo.photoUrl != null)?driverInfo.photoUrl:"";
 
   }
 
@@ -70,6 +70,8 @@ export class VehicledetailsPage {
 
       let encodedEmail = this.welcomeService.encodeEmail(this.userModel.email)
       this.regService.registerUser(encodedEmail,this.userModel)
+      this.nativeStorage.setItem("userData", this.userModel).then(() => { },
+      error => { });
       this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.userModel.email), true);
       this.nativeStorage.setItem("isLoggedIn", true).then(() => {},
       error => {});

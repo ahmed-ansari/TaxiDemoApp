@@ -7,7 +7,7 @@ import { WelcomeService } from '../welcome/welcome.service';
 import { RegisterService } from '../register/register.service';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
-
+import { Constants } from '../../app/app.constants';
 
 @IonicPage()
 @Component({
@@ -25,34 +25,13 @@ export class EditAccountPage {
   vehicleFilename: string = '';
   name: string;
   email: string;
-  storageData:any;
+  storageData: any;
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams, private camera: Camera,
     public actionSheetCtrl: ActionSheetController, private welcomeService: WelcomeService, private regService: RegisterService,
-    private nativeStorage: NativeStorage, public toastCtrl: ToastController, private launchNavigator: LaunchNavigator) {
+    private nativeStorage: NativeStorage, public toastCtrl: ToastController, private launchNavigator: LaunchNavigator,
+    private constants: Constants) {
 
-    this.nativeStorage.getItem('userData').then(response => {
-      this.name = response.driverName
-      this.email = response.email
-      this.mobile = response.mobile
-      this.storageData = response
-    },error => console.error(error)
-    );
-
-    // this.vehicle.setValue({
-    //   make: this.storageData.make,
-    //   model: this.storageData.model,
-    //   year: this.storageData.year,
-    //   regno: this.storageData.regnum,
-    //   uinnumber : this.storageData.uin
-    // });
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditAccountPage');
-  }
-
-  ngOnInit() {
     this.vehicle = this.formBuilder.group({
 
       make: ['', Validators.required],
@@ -61,6 +40,40 @@ export class EditAccountPage {
       regno: ['', Validators.required],
       uinnumber: ['', Validators.required]
     });
+
+    this.nativeStorage.getItem('userData').then(response => {
+      console.log("Native Storage User", response);
+      this.name = response.driverName
+      this.email = response.email
+      this.mobile = response.mobile
+      this.storageData = response
+      this.vehicleFilename = response.vehiclePhoto;
+      this.profileFilename = response.profilePhoto;
+      this.imageSrc = (response.profilePhoto != null && response.profilePhoto != "") ? constants.getFirebaseImageUrl(response.profilePhoto) : "assets/imgs/profile_photo.png";
+      this.vehicle.value.make = this.storageData.make
+      this.vehicle.value.model = this.storageData.mdel
+      this.vehicle.value.year = this.storageData.year
+      this.vehicle.value.regno = this.storageData.regnum
+      this.vehicle.value.uinnumber = this.storageData.uin
+      this.vehicleSrc = (this.storageData.vehiclePhoto != null && response.profilePhoto != "") ? constants.getFirebaseVehicleImageUrl(this.storageData.vehiclePhoto) : "assets/imgs/vehicle_photo.png"
+    
+
+      this.vehicle.setValue({
+        make: this.storageData.make,
+        model: this.storageData.model,
+        year: this.storageData.year,
+        regno: this.storageData.regnum,
+        uinnumber: this.storageData.uin
+      });
+    }, error => console.error(error)
+    );
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad EditAccountPage');
+  }
+
+  ngOnInit() {
   }
 
   logForm() {
@@ -71,30 +84,37 @@ export class EditAccountPage {
 
     if (!this.vehicle.invalid && this.vehicle.status == "VALID") {
       this.userModel = new UserModel()
+      this.userModel.driverName = this.storageData.driverName;
+      this.userModel.license = this.storageData.driverLicense
+      this.userModel.phone = this.storageData.phone
+      this.userModel.address = this.storageData.address
+      this.userModel.email = this.storageData.email
+      //this.userModel.profilePhoto = (this.storageData.profilePhoto != null)?this.storageData.profilePhoto:"";
       this.userModel.make = this.vehicle.value.make
       this.userModel.model = this.vehicle.value.model
       this.userModel.year = this.vehicle.value.year
       this.userModel.regnum = this.vehicle.value.regno
       this.userModel.uin = this.vehicle.value.uinnumber
 
-      if (this.vehicleFilename != "") {
+      if (this.vehicleFilename != null && this.vehicleFilename != "") {
         this.userModel.vehiclePhoto = this.vehicleFilename
       }
 
-      if (this.userModel.profilePhoto != "") {
+      if (this.profileFilename != null && this.profileFilename != "") {
         this.userModel.profilePhoto = this.profileFilename
       }
+      console.log("Profile", this.profileFilename);
+
+      this.nativeStorage.setItem("userData", this.userModel).then(() => { }, error => { });
 
       let encodedEmail = this.welcomeService.encodeEmail(this.email)
-      this.regService.registerUser(encodedEmail, this.userModel).then(()=>{
-
-        // this.nativeStorage.setItem("userData", this.userModel).then(()=>{}, error=>{});
+      this.regService.registerUser(encodedEmail, this.userModel).then(() => {
         this.toastCtrl.create({
           message: 'Profile updated successfully',
           duration: 3000,
           position: 'bottom'
         }).present();
-      }, error =>{});
+      }, error => { });
     }
   }
 

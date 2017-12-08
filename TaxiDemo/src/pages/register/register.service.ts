@@ -23,7 +23,7 @@ export class RegisterService {
             // 'license': user.license,
             // 'email': user.email,
             // 'phone': user.phone,
-            //  'profilePhoto': (typeof user.profilePhoto != "undefined") ? user.profilePhoto : "",
+            'profilePhoto': (typeof user.profilePhoto != "undefined") ? user.profilePhoto : "",
             // 'address': user.address,
             'make': user.make,
             'model': user.model,

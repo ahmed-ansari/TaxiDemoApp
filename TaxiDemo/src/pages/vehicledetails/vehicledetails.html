@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-    <form [formGroup]="vehicledeatils" (ngSubmit)="logForm()">
+    <form [formGroup]="vehicle" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
                 <ion-item>
                     <ion-label floating>Make</ion-label>
                     <ion-input type="text" formControlName="make"></ion-input>
                 </ion-item>
-                <div *ngIf="vehicledeatils?.controls['make']?.errors?.required && vehicledeatils?.controls['make'].touched">
+                <div *ngIf="vehicle?.controls['make']?.errors?.required && vehicle?.controls['make'].touched">
                     <p float-right class="error">* This Field is required</p>
                 </div>
             </ion-row>
