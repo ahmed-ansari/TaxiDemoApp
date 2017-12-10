@@ -367,7 +367,7 @@ export class DashboardPage implements OnInit {
     } else {
       let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
         this.timeTillArrival, "", "", this.user.userId, Date.now());
-      this.navCtrl.push(PaymentPage, { model: rideModel });
+      this.navCtrl.push(PaymentPage, { model: rideModel, from:"RideNow", selectedDate: new Date() });
     }
   }
 
@@ -380,20 +380,21 @@ export class DashboardPage implements OnInit {
         .then(date => {
           console.log('Got date: ', date);
           let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-          this.timeTillArrival, "", "", context.user.userId, Date.now());
-          this.welcomeService.updateRideRequest(context.user.userId, rideModel);
-          this.localNotifications.schedule({
-            id: 1,
-            title: 'Taxi App',
-            text: 'Your ride is scheduled now!',
-            //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-            data: {
-              "source": this.currentAddress,
-              "destination": this.destinationAddress
-            },
-            at: date
-          });
-          this.showRideConfirmation(date)
+          this.timeTillArrival, "", "", context.user.userId, date);
+          //this.welcomeService.updateRideRequest(context.user.userId, rideModel);
+          // this.localNotifications.schedule({
+          //   id: 1,
+          //   title: 'Taxi App',
+          //   text: 'Your ride is scheduled now!',
+          //   //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+          //   data: {
+          //     "source": this.currentAddress,
+          //     "destination": this.destinationAddress
+          //   },
+          //   at: date
+          // });
+          //this.showRideConfirmation(date)
+          this.navCtrl.push(PaymentPage, { model: rideModel , from:"RideLater", selectedDate: date});
         },
         err => console.log('Error occurred while getting date: ', err));
     }
@@ -464,6 +465,7 @@ export class DashboardPage implements OnInit {
     this.modalCtrl.create(RideconfirmPage, {
       "destination": this.destinationAddress,
       "fare": this.fareValue,
+      "distance": this.distance,
       "date": date
     }, {
       showBackdrop : false,

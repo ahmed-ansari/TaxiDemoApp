@@ -1,11 +1,13 @@
 import { Component, HostListener } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController, ModalController } from 'ionic-angular';
 import { Environment } from './environment';
 import { PaymentService } from './payment.service';
 import { RideModel } from './ride.model';
 import { StaticMapAPI } from '../history/static.map';
 import { WelcomeService } from '../welcome/welcome.service';
 import { Broadcaster } from '../../providers/Broadcaster';
+import { RideconfirmPage } from '../rideconfirm/rideconfirm';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 declare var StripeCheckout: any;
 //@IonicPage()
@@ -28,10 +30,12 @@ export class PaymentPage {
     handler: any;
     staticMapUrl: string;
     loading: any;
+    from: string;
+    selectedDate: any;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
         public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService, private loadingCtrl: LoadingController,
-        private broadcaster: Broadcaster) {
+        private broadcaster: Broadcaster, private modalCtrl: ModalController, private localNotifications: LocalNotifications) {
         this.rideModel = navParams.get("model");
         this.dropoffAddress = this.rideModel.dropoffAddress;
         this.pickupAddress = this.rideModel.pickupAddress;
@@ -42,8 +46,10 @@ export class PaymentPage {
         this.taxiNumber = this.rideModel.taxiName;
         this.userId = this.rideModel.userId;
         this.staticMapUrl = this.staticMap.getStaticMapSnapFromAddress(this.pickupAddress, this.dropoffAddress);
+        this.from = navParams.get("from");
+        this.selectedDate = navParams.get("selectedDate");
 
-        this.registerRideConfirmBroadcast();
+        if (this.from === "RideNow")this.registerRideConfirmBroadcast();
     }
 
     ionViewDidLoad() {
@@ -55,19 +61,28 @@ export class PaymentPage {
             token: token => {
                 this.pService.processPayment(token, context.fareValue, context.userId, context.rideModel, true, this.staticMapUrl);
                 //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, true);
-                this.welcomeService.updateRideRequest(context.userId, context.rideModel);
-                context.navCtrl.popToRoot();
+                //this.welcomeService.updateRideRequest(context.userId, context.rideModel);
+                // context.navCtrl.popToRoot();
+                context.showRideConfirmation(context.selectedDate);
+                if (context.from === 'RideLater') {
+                    this.showRideRequestedNotification();
+                }
             }
         });
     }
 
     confirmRide() {
-        var navController = this.navCtrl;
-        this.loading = this.loadingCtrl.create({
-            content: 'Waiting for driver confirmation...'
-        });
-        this.loading.present();
-        this.welcomeService.updateRideRequest(this.userId, this.rideModel);
+        if (this.from === "RideNow") {
+            var navController = this.navCtrl;
+            this.loading = this.loadingCtrl.create({
+                content: 'Waiting for driver confirmation...'
+            });
+            this.loading.present();
+            this.welcomeService.updateRideRequest(this.userId, this.rideModel);
+        } else {
+            this.makeConfirmedRidePayment();
+        }
+
     }
 
     makeConfirmedRidePayment() {
@@ -90,8 +105,12 @@ export class PaymentPage {
                         //console.log('Buy clicked');
                         this.pService.processPayment(null, context.fareValue, context.userId, context.rideModel, false, this.staticMapUrl);
                         //this.pService.updateUserRides(context.fareValue, context.userId, context.rideModel, this.staticMapUrl, false);
-                        
-                        context.navCtrl.popToRoot();
+
+                        //context.navCtrl.popToRoot();
+                        context.showRideConfirmation(context.selectedDate);
+                        if (context.from === 'RideLater') {
+                            this.showRideRequestedNotification();
+                        }
                     }
                 }
             ]
@@ -138,6 +157,33 @@ export class PaymentPage {
                 context.loading.dismiss();
                 context.makeConfirmedRidePayment();
             });
+    }
+
+    showRideConfirmation(date) {
+        //this.navCtrl.popToRoot();
+        this.modalCtrl.create(RideconfirmPage, {
+            "destination": this.dropoffAddress,
+            "fare": this.fareValue,
+            "distance": this.distance,
+            "date": date
+        }, {
+                showBackdrop: false,
+                enableBackdropDismiss: false
+            }).present();
+    }
+
+    showRideRequestedNotification() {
+        this.localNotifications.schedule({
+            id: 1,
+            title: 'Taxi App',
+            text: 'Your ride is scheduled now!',
+            //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+            data: {
+                "source": this.pickupAddress,
+                "destination": this.dropoffAddress
+            },
+            at: this.selectedDate
+        });
     }
 }
 
