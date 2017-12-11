@@ -39,15 +39,15 @@ export class HistoryPage {
         // this.user.photoUrl = jsonObj.photoUrl;
         //this.locations =
         this.broadcaster.broadcast('user', {"user": jsonObj});
-        this.getRideHistory(jsonObj.userId);
+        this.getRideHistory();
       },
       error => console.error(error)
       );
     this.registerStringBroadcast();
   }
 
-  getRideHistory(userId) {
-    let promise = this.service.getUserHistory(userId);
+  getRideHistory() {
+    let promise = this.service.getConfirmedRideRequests();
     promise.then((snapshot) => {
       let ridesData = snapshot.val();
       var keys = Object.keys(ridesData);

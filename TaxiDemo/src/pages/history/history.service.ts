@@ -34,4 +34,9 @@ export class HistoryService{
         }
 
     }
+
+    getConfirmedRideRequests(){
+        const rideHistory: firebase.database.Reference = firebase.database().ref(`/ConfirmRideRequests/`);
+        return rideHistory.once('value');
+    }
 }
