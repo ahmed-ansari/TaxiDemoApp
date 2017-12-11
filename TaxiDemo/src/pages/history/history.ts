@@ -71,6 +71,7 @@ export class HistoryPage {
       loading.dismiss();
       console.log("Rides:::", this.rides);
     }).catch((er) => {
+      loading.dismiss();
       console.log(er);
     });
   }
