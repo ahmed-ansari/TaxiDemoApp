@@ -79,7 +79,7 @@ export class PaymentPage {
             });
             this.loading.present();
             this.welcomeService.updateRideRequest(this.userId, this.rideModel);
-        } else {
+        } else if (this.from === "RideLater") {
             this.makeConfirmedRidePayment();
         }
 
