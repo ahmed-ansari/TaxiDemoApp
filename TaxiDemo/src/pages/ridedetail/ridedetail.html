@@ -14,7 +14,13 @@
                 <img src="{{this.staticMap}}" />
             </div>
         </ion-row>
-        <!-- <ion-row>
+        <ion-row>
+            <label class="date " text-wrap>{{ride.pickupAddress}}</label>
+        </ion-row>
+        <ion-row>
+            <label class="date " text-wrap>{{ride.dropoffAddress}}</label>
+        </ion-row>
+        <ion-row>
             <ion-col col-9>
                 <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
                 <label class="at ">at</label>
@@ -29,6 +35,6 @@
                 <label class="car ">{{ride.taxiName}}</label>
             </ion-col>
             <ion-col col-4></ion-col>
-        </ion-row> -->
+        </ion-row>
     </ion-item>
 </ion-content>

@@ -27,7 +27,7 @@ export class HistoryPage {
 
   constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
     private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController) {
-    this.Trips = "Past";
+    this.Trips = "Upcoming";
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
       .then(response => {
@@ -55,10 +55,10 @@ export class HistoryPage {
       console.log(keys);
       for (var key in keys) {
         console.log("Value:::", ridesData[keys[key]]);
-        this.ride = ridesData[keys[key]].rideModel;
+        this.ride = ridesData[keys[key]].model;
         this.rides.push(this.ride)
-        this.staticMap = ridesData[keys[key]].staticMap;
-        this.staticMapArray.push(this.staticMap);
+        //this.staticMap = ridesData[keys[key]].staticMap;
+        //this.staticMapArray.push(this.staticMap);
         //BIND
         //this.locations.push(location);
       }
@@ -73,6 +73,7 @@ export class HistoryPage {
     this.ride = this.rides[index]
 
     console.log("ride", this.ride)
+    //let map = this
     this.navCtrl.push(RidedetailPage, { params: this.ride, map: this.staticMap })
   }
 
