@@ -48,6 +48,7 @@ export class HistoryPage {
   }
 
   getRideHistory() {
+    this.rides = [];
     let loading = this.loadingCtrl.create({
       content: 'Please wait while loading rides...'
     });
