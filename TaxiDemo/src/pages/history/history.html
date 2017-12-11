@@ -13,9 +13,9 @@
                 Today
             </ion-segment-button> -->
 
-            <ion-segment-button value="Upcoming">
-                    Upcoming
-                </ion-segment-button>
+            <ion-segment-button value="Upcoming" (ionSelect)="getRideHistory()">
+                Upcoming
+            </ion-segment-button>
             <ion-segment-button value="Past">
                 Past
             </ion-segment-button>
@@ -49,7 +49,7 @@
                         </ion-row>
                     </ion-card-content>
                 </ion-card>
-                
+
                 <!-- <ion-row>
                     <div class=" mapImage ">
                         <img src="{{this.staticMapArray[i]}} " />

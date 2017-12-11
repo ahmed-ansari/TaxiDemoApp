@@ -62,14 +62,10 @@ export class HistoryPage {
       for (var key in keys) {
         console.log("Value:::", ridesData[keys[key]]);
         this.ride = ridesData[keys[key]].model;
-        this.rides.push(this.ride)
-        //this.staticMap = ridesData[keys[key]].staticMap;
-        //this.staticMapArray.push(this.staticMap);
-        //BIND
-        //this.locations.push(location);
+        this.rides.push(this.ride);
+        console.log("Rides:::", this.ride);
       }
       loading.dismiss();
-      console.log("Rides:::", this.rides);
     }).catch((er) => {
       loading.dismiss();
       console.log(er);
