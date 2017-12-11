@@ -24,7 +24,11 @@ export class PaymentService{
         return historyRef.child(userId).push(history);
     }
 
-    updateConfirmRides(status, rideModel){
-
+    updateRideStatus(userId, rideModel){
+        const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/'+userId);
+        rideReqCancelRef.push({
+            "ride": "confirm",
+            "model": rideModel
+        });
     }
 }

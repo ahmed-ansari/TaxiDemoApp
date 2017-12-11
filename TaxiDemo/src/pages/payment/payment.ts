@@ -72,12 +72,28 @@ export class PaymentPage {
     }
 
     confirmRide() {
+        let context = this;
         if (this.from === "RideNow") {
             var navController = this.navCtrl;
             this.loading = this.loadingCtrl.create({
                 content: 'Waiting for driver confirmation...'
             });
             this.loading.present();
+            setTimeout(() => {
+                this.loading.dismiss();
+                let alert = this.alertCtrl.create({
+                    title: 'Ride Request',
+                    subTitle: 'Driver is not responding or busy attending another ride, Please try again after some time..',
+                    buttons: [{
+                        text: 'Ok',
+                        role: 'cancel',
+                        handler: () => {
+                            context.loading.dismiss();
+                        }
+                    }]
+                });
+                alert.present();
+              }, 30000);
             this.welcomeService.updateRideRequest(this.userId, this.rideModel);
         } else if (this.from === "RideLater") {
             this.makeConfirmedRidePayment();
@@ -109,7 +125,8 @@ export class PaymentPage {
                         //context.navCtrl.popToRoot();
                         context.showRideConfirmation(context.selectedDate);
                         if (context.from === 'RideLater') {
-                            this.showRideRequestedNotification();
+                            context.showRideRequestedNotification();
+                            context.pService.updateRideStatus(context.userId, context.rideModel);
                         }
                     }
                 }
