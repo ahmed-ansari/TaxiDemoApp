@@ -13,17 +13,17 @@
                 Today
             </ion-segment-button> -->
 
+            <ion-segment-button value="Upcoming">
+                    Upcoming
+                </ion-segment-button>
             <ion-segment-button value="Past">
                 Past
-            </ion-segment-button>
-            <ion-segment-button value="Upcommings">
-                Upcomming
             </ion-segment-button>
         </ion-segment>
     </div>
 
     <div [ngSwitch]="Trips">
-        <ion-list *ngSwitchCase="'Upcommings'">
+        <ion-list *ngSwitchCase="'Upcoming'">
             <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
                 <ion-card>
 

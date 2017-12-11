@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage'
 
 import { StaticMapAPI } from './static.map';
@@ -26,7 +26,8 @@ export class HistoryPage {
   staticMapArray: string[] = [];
 
   constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
-    private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController) {
+    private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController) {
     this.Trips = "Upcoming";
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
@@ -47,6 +48,11 @@ export class HistoryPage {
   }
 
   getRideHistory() {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait while loading rides...'
+    });
+  
+    loading.present();
     let promise = this.service.getConfirmedRideRequests();
     promise.then((snapshot) => {
       let ridesData = snapshot.val();
@@ -62,6 +68,7 @@ export class HistoryPage {
         //BIND
         //this.locations.push(location);
       }
+      loading.dismiss();
       console.log("Rides:::", this.rides);
     }).catch((er) => {
       console.log(er);
@@ -73,8 +80,9 @@ export class HistoryPage {
     this.ride = this.rides[index]
 
     console.log("ride", this.ride)
-    //let map = this
-    this.navCtrl.push(RidedetailPage, { params: this.ride, map: this.staticMap })
+    let mapImage = this.map.getStaticMapSnapFromAddress(this.ride.pickupAddress, this.ride.dropoffAddress);
+    console.log("Static Map",mapImage);
+    this.navCtrl.push(RidedetailPage, { params: this.ride, map: mapImage })
   }
 
   registerStringBroadcast() {
