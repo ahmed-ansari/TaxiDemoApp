@@ -1,112 +1,104 @@
-<!--
-  Generated template for the EditAccountPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
     <ion-navbar class="black-bg">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>Edit Account</ion-title>
+        <!-- <ion-buttons end>
+            <button ion-button clear (click)="navigateToMaps()">Done</button>
+        </ion-buttons> -->
     </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-    <ion-grid class="bottom-shadow">
+    <ion-grid>
         <ion-row>
             <ion-col col-4>
                 <ion-avatar>
-                    <img class="round-img" (click)="launchPicOptions()" src="{{this.imageSrc}}" alt="bg" />
+                    <img src="{{this.imageSrc}}" class="round-img" (click)="launchPicOptions(0)">
                 </ion-avatar>
             </ion-col>
             <ion-col col-8>
-
             </ion-col>
         </ion-row>
     </ion-grid>
 
-    <form [formGroup]="editAccount" (ngSubmit)="logForm()">
+    <form [formGroup]="vehicle" (ngSubmit)="logForm()">
         <ion-grid>
             <ion-row>
-
                 <ion-item>
-                    <ion-label stacked>First Name</ion-label>
-                    <ion-input class="text-input1" type="text" formControlName="firstName"></ion-input>
+                    <ion-label stacked>Name</ion-label>
+                    <ion-label>{{this.name}}</ion-label>
                 </ion-item>
-                <div *ngIf="editAccount?.controls['firstName']?.errors?.required && editAccount?.controls['firstName'].touched">
+            </ion-row>
+            <ion-row>
+                <ion-item>
+                    <ion-label stacked>Mobile</ion-label>
+                    <ion-label>{{this.mobile}}</ion-label>
+                </ion-item>
+            </ion-row>
+            <ion-row>
+                <ion-item>
+                    <ion-label stacked>Email</ion-label>
+                    <ion-label>{{this.email}}</ion-label>
+                </ion-item>
+            </ion-row>
+            <ion-row>
+                <ion-item>
+                    <ion-label stacked>Make</ion-label>
+                    <ion-input type="text" formControlName="make"></ion-input>
+                </ion-item>
+                <div *ngIf="vehicle?.controls['make']?.errors?.required && vehicle?.controls['make'].touched">
                     <p float-right class="error">* This Field is required</p>
                 </div>
             </ion-row>
             <ion-row>
                 <ion-item>
-                    <ion-label stacked>Last Name</ion-label>
-                    <ion-input class="text-input" type="text" formControlName="LastName"></ion-input>
+                    <ion-label stacked>Model</ion-label>
+                    <ion-input type="text" formControlName="model"></ion-input>
                 </ion-item>
-                <div *ngIf="editAccount?.controls['LastName']?.errors?.required && editAccount?.controls['LastName'].touched">
+                <div *ngIf="vehicle?.controls['model']?.errors?.required && vehicle?.controls['model'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
-
             </ion-row>
             <ion-row>
                 <ion-item>
-                    <ion-label stacked>Mobile</ion-label>
-                    <ion-input class="text-input" type="number" formControlName="mobile" maxlength="10"></ion-input>
+                    <ion-label stacked>Year</ion-label>
+                    <ion-input type="text" formControlName="year" style="color:black;"></ion-input>
                 </ion-item>
-                <div *ngIf="editAccount?.controls['mobile']?.errors?.required && editAccount?.controls['mobile'].touched">
+                <div *ngIf="vehicle?.controls['year']?.errors?.required && vehicle?.controls['year'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
-                <div *ngIf="editAccount?.controls['mobile']?.errors?.maxlength && editAccount?.controls['mobile'].touched">
-                    <p class="error" float-right>* Number should not be more than 10 digit</p>
-                </div>
-
             </ion-row>
             <ion-row>
-
                 <ion-item>
-                    <ion-label stacked>Email</ion-label>
-                    <ion-input class="text-input" type="text" formControlName="email"></ion-input>
+                    <ion-label stacked>Reg No</ion-label>
+                    <ion-input type="text" formControlName="regno" style="color:black;"></ion-input>
                 </ion-item>
-                <div *ngIf="editAccount?.controls['email']?.errors?.required && editAccount?.controls['email'].touched">
+                <div *ngIf="vehicle?.controls['regno']?.errors?.required && vehicle?.controls['regno'].touched">
                     <p class="error" float-right>* This Field is required</p>
                 </div>
-                <div *ngIf="editAccount?.controls['email']?.errors?.email && editAccount?.controls['email'].touched">
-                    <p class="error" float-right>* This Email is Invalid</p>
-                </div>
             </ion-row>
-
             <ion-row>
                 <ion-item>
-                    <ion-label stacked>Password</ion-label>
-                    <ion-input class="text-input" type="password" formControlName="password"></ion-input>
+                    <ion-label stacked>VIN Number</ion-label>
+                    <ion-input type="text" formControlName="uinnumber" style="color:black;"></ion-input>
                 </ion-item>
-                <div *ngIf="editAccount?.controls['password']?.errors?.required && editAccount?.controls['password'].touched">
-                    <p class="error" float-right> * This Field is required</p>
+                <div *ngIf="vehicle?.controls['uinnumber']?.errors?.required && vehicle?.controls['uinnumber'].touched">
+                    <p class="error" float-right>* This Field is required</p>
                 </div>
             </ion-row>
-
             <ion-row>
-                <!-- right bottom margin-right -->
-                <!-- <ion-item > -->
-                <div right text-right float-end style="width: 100vw;">
-                    <br>
-                    <button ion-button icon-only [disabled]="!editAccount.valid" color="dark">
-                        <ion-icon name="md-arrow-round-forward"></ion-icon>
-                    </button>
-                </div>
-
-                <!-- </ion-item> -->
+                <ion-col width-50>
+                    <ion-label>Vehicle Image</ion-label>
+                </ion-col>
+                <ion-col width-50>
+                    <img class="vehicle-img" src="{{this.vehicleSrc}}" (click)="launchPicOptions(1)" />
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <button ion-button block type="submit">Done</button>
             </ion-row>
         </ion-grid>
-
-
-        <!-- [disabled]="!editAccount.valid" -->
-
-
-
-        <!--  -->
     </form>
 </ion-content>

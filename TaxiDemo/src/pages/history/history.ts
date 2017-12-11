@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage'
 
 import { StaticMapAPI } from './static.map';
@@ -26,27 +26,34 @@ export class HistoryPage {
   staticMapArray: string[] = [];
 
   constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
-    private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController) {
-    this.Trips = "Past";
+    private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController) {
+    this.Trips = "Upcoming";
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
       .then(response => {
-        let jsonObj = JSON.parse(response);
+        let jsonObj = response;
         // this.user.userId = jsonObj.userId;
         this.user.email = jsonObj.email;
         // this.user.givenName = jsonObj.name;
         // this.user.displayName = jsonObj.displayName;
         // this.user.photoUrl = jsonObj.photoUrl;
         //this.locations =
-        this.getRideHistory(jsonObj.userId);
+        this.broadcaster.broadcast('user', {"user": jsonObj});
+        this.getRideHistory();
       },
       error => console.error(error)
       );
     this.registerStringBroadcast();
   }
 
-  getRideHistory(userId) {
-    let promise = this.service.getUserHistory(userId);
+  getRideHistory() {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait while loading rides...'
+    });
+  
+    loading.present();
+    let promise = this.service.getConfirmedRideRequests();
     promise.then((snapshot) => {
       let ridesData = snapshot.val();
       var keys = Object.keys(ridesData);
@@ -54,15 +61,17 @@ export class HistoryPage {
       console.log(keys);
       for (var key in keys) {
         console.log("Value:::", ridesData[keys[key]]);
-        this.ride = ridesData[keys[key]].rideModel;
+        this.ride = ridesData[keys[key]].model;
         this.rides.push(this.ride)
-        this.staticMap = ridesData[keys[key]].staticMap;
-        this.staticMapArray.push(this.staticMap);
+        //this.staticMap = ridesData[keys[key]].staticMap;
+        //this.staticMapArray.push(this.staticMap);
         //BIND
         //this.locations.push(location);
       }
+      loading.dismiss();
       console.log("Rides:::", this.rides);
     }).catch((er) => {
+      loading.dismiss();
       console.log(er);
     });
   }
@@ -72,7 +81,9 @@ export class HistoryPage {
     this.ride = this.rides[index]
 
     console.log("ride", this.ride)
-    this.navCtrl.push(RidedetailPage, { params: this.ride, map: this.staticMap })
+    let mapImage = this.map.getStaticMapSnapFromAddress(this.ride.pickupAddress, this.ride.dropoffAddress);
+    console.log("Static Map",mapImage);
+    this.navCtrl.push(RidedetailPage, { params: this.ride, map: mapImage })
   }
 
   registerStringBroadcast() {
@@ -80,7 +91,7 @@ export class HistoryPage {
       .subscribe(rideRequest => {
         console.log("Received Request:::", rideRequest);
         this.rideConfirm(rideRequest);
-      });      
+      });
   }
 
   rideConfirm(rideRequest) {

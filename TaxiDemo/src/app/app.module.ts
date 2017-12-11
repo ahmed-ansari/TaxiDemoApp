@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 
 
 import { MyApp } from './app.component';
@@ -45,6 +46,7 @@ import { HomePage } from '../pages/home/home';
 import {SetFarePage} from '../pages/set-fare/set-fare';
 import { RideService } from '../providers/RideService';
 import { Broadcaster } from '../providers/Broadcast';
+import { Constants } from '../app/app.constants';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCO42BxmWnDpkATYBkYqpWDEzr8OkHRBmo",
@@ -127,7 +129,9 @@ firebase.initializeApp(firebaseAuth);
     HistoryService,
     Camera,
     RideService,
-    Broadcaster
+    Broadcaster,
+    LaunchNavigator,
+    Constants
   ]
 })
 export class AppModule { }

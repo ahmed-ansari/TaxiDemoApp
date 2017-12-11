@@ -17,21 +17,33 @@ export class HistoryService{
 
     updateRideStatus(status, rideRequest){
         const rideReqRef: firebase.database.Reference = firebase.database().ref('/RideRequests/'+rideRequest.parent+"/"+rideRequest.child);
-        if(status){            
-            rideReqRef.update({
-                "rideStatus": status
-              });
-              const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/'+rideRequest.parent);
-              rideReqCancelRef.set({
-                  "ride": "confirm"
-              });
-        }else{           
-            rideReqRef.remove();
-            const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
-            rideReqCancelRef.set({
-                "ride": "cancel"
-            });
-        }       
-        
+        console.log("RideRef::", rideReqRef);
+
+        let response = rideReqRef.once('value');
+        response.then((snapshot) => {
+            let snap = snapshot.val();
+            let rideModel = snap.rideModel;
+
+            if(status){
+                  const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/'+rideRequest.parent);
+                  rideReqCancelRef.push({
+                      "ride": "confirm",
+                      "model": rideModel
+                  });
+                  rideReqRef.remove();
+            }else{
+                const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
+                rideReqCancelRef.push({
+                    "ride": "cancel",
+                    "model": rideModel
+                });
+                rideReqRef.remove();
+            }
+        });
+    }
+
+    getConfirmedRideRequests(){
+        const rideHistory: firebase.database.Reference = firebase.database().ref(`/ConfirmRideRequests/`);
+        return rideHistory.once('value');
     }
 }

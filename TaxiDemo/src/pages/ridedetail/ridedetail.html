@@ -1,7 +1,9 @@
 <ion-header>
 
-    <ion-navbar>
-        <ion-title><label class="black">Trip Details</label></ion-title>
+    <ion-navbar class="black-bg">
+        <ion-title>
+            <label class="white">Trip Details</label>
+        </ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -11,10 +13,28 @@
     <ion-item>
         <ion-row>
             <div class=" mapImage ">
-                <img src="{{this.staticMap}}" />
+                <img src="{{this.staticMap}}" (click)="navigateToMaps()" />
             </div>
         </ion-row>
-        <!-- <ion-row>
+        <ion-row text-wrap>
+            <ion-col col-1>
+                <ion-icon name="square"></ion-icon>
+            </ion-col>
+            <ion-col col-9>
+                <label class="address " text-wrap>
+                    {{ride.pickupAddress}}</label>
+            </ion-col>
+        </ion-row>
+        <ion-row text-wrap>
+            <ion-col col-1>
+                <ion-icon name="square"></ion-icon>
+            </ion-col>
+            <ion-col col-9>
+                <label class="address " text-wrap>
+                    {{ride.dropoffAddress}}</label>
+            </ion-col>
+        </ion-row>
+        <ion-row>
             <ion-col col-9>
                 <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
                 <label class="at ">at</label>
@@ -29,6 +49,6 @@
                 <label class="car ">{{ride.taxiName}}</label>
             </ion-col>
             <ion-col col-4></ion-col>
-        </ion-row> -->
+        </ion-row>
     </ion-item>
 </ion-content>

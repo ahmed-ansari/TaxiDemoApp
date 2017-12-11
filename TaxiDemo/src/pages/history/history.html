@@ -9,12 +9,13 @@
 <ion-content>
     <div>
         <ion-segment [(ngModel)]="Trips">
-            <ion-segment-button value="Today">
+            <!-- <ion-segment-button value="Today">
                 Today
-            </ion-segment-button>
-            <ion-segment-button value="Upcommings">
-                Upcomming
-            </ion-segment-button>
+            </ion-segment-button> -->
+
+            <ion-segment-button value="Upcoming">
+                    Upcoming
+                </ion-segment-button>
             <ion-segment-button value="Past">
                 Past
             </ion-segment-button>
@@ -22,14 +23,39 @@
     </div>
 
     <div [ngSwitch]="Trips">
-        <ion-list *ngSwitchCase="'Past'">
+        <ion-list *ngSwitchCase="'Upcoming'">
             <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
-                <ion-row>
+                <ion-card>
+
+                    <ion-card-content>
+                        <ion-card-title>
+                            <label class="date "> {{ride.dropoffAddress}}</label>
+                        </ion-card-title>
+                        <ion-row>
+                            <ion-col col-9>
+                                <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
+                                <label class="at ">at</label>
+                                <label class="time ">{{ride.travelDate | date: 'HH:mm'}}</label>
+                            </ion-col>
+                            <ion-col col-3>
+                                <label class="rs ">$ {{ride.fareValue}}</label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-8>
+                                <label class="car ">{{ride.taxiName}}</label>
+                            </ion-col>
+                            <ion-col col-4></ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+                
+                <!-- <ion-row>
                     <div class=" mapImage ">
                         <img src="{{this.staticMapArray[i]}} " />
                     </div>
-                </ion-row>
-                <ion-row>
+                </ion-row> -->
+                <!-- <ion-row>
                     <ion-col col-9>
                         <label class="date ">{{ride.travelDate | date: 'MM/dd/yyyy'}}</label>
                         <label class="at ">at</label>
@@ -44,11 +70,11 @@
                         <label class="car ">{{ride.taxiName}}</label>
                     </ion-col>
                     <ion-col col-4></ion-col>
-                </ion-row>
+                </ion-row> -->
             </ion-item>
         </ion-list>
 
-        <ion-list *ngSwitchCase=" 'Upcommings' ">
+        <ion-list *ngSwitchCase=" 'Past' ">
             <ion-item>
                 <ion-row>
                     <div class="mapImage ">
@@ -57,17 +83,17 @@
                 </ion-row>
                 <ion-row>
                     <ion-col col-9>
-                        <label class="date ">25/08/2017</label>
-                        <label class="at ">at</label>
-                        <label class="time ">05.19</label>
+                        <label class="date ">{{rides.travelDate | date: 'MM/dd/yyyy'}}</label>
+                        <label class="at "></label>
+                        <label class="time ">{{rides.travelDate | date: 'HH:mm'}}</label>
                     </ion-col>
                     <ion-col col-3>
-                        <label class="rs ">Rs 225.07</label>
+                        <label class="rs "> {{rides.fareValue}}</label>
                     </ion-col>
                 </ion-row>
                 <ion-row>
                     <ion-col col-8>
-                        <label class="car ">Maruthi Swift Dezire 5</label>
+                        <label class="car ">{{user.model}}</label>
                     </ion-col>
                     <ion-col col-4>
 

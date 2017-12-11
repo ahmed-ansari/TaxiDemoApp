@@ -8,6 +8,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { HistoryPage } from '../history/history';
 import { WelcomeService } from '../welcome/welcome.service'
+import { VehicledetailsPage } from '../vehicledetails/vehicledetails';
 
 @IonicPage()
 @Component({ selector: 'page-password', templateUrl: 'password.html' })
@@ -20,7 +21,8 @@ export class PasswordPage {
   object: any;
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams,
-    private alertCtrl: AlertController, private nativeStorage: NativeStorage, private welcomeService: WelcomeService) {
+    private alertCtrl: AlertController, private nativeStorage: NativeStorage, private welcomeService: WelcomeService,
+    ) {
     this.email = navParams.get("email");
     // this.mobile = navParams.get("mobile");
     //console.log(navParams.get("email"))
@@ -43,7 +45,7 @@ export class PasswordPage {
   }
 
   logForm() {
-
+    const context = this;
     this.login.controls['email'].markAsTouched()
     this.login.controls['password'].markAsTouched()
     if (!this.login.invalid && this.login.status == "VALID") {
@@ -51,10 +53,14 @@ export class PasswordPage {
         if (!this.object.loggedIn && this.object.active) {
           this.nativeStorage.setItem("isLoggedIn", true).then(() => { },
             error => { });
-            this.nativeStorage.setItem("email", this.email).then(() => { },
+          this.nativeStorage.setItem("userData", context.object).then(() => { },
             error => { });
-            this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(this.email), true);
-          this.navCtrl.setRoot(HistoryPage);
+            if(this.object.model != null){
+              this.navCtrl.setRoot(HistoryPage);
+              this.welcomeService.updateDriverLoginStatus(this.welcomeService.encodeEmail(context.email), true);    
+            }else{
+              this.navCtrl.setRoot(VehicledetailsPage, {driver: this.object});
+            }
         } else {
           let alert = this.alertCtrl.create({
             title: 'Login',
