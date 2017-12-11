@@ -62,9 +62,15 @@ export class HistoryPage {
       console.log(keys);
       for (var key in keys) {
         console.log("Value:::", ridesData[keys[key]]);
-        this.ride = ridesData[keys[key]].model;
-        this.rides.push(this.ride);
-        console.log("Rides:::", this.ride);
+        let childKeys = Object.keys(ridesData[keys[key]]);
+        let childsData = ridesData[keys[key]];
+        console.log("childKeys:::", childKeys);
+        for(var child in childKeys){
+          console.log("child:::", child);
+          this.ride = childsData[childKeys[child]].model;
+          this.rides.push(this.ride);
+          console.log("Rides:::", this.ride);
+        }        
       }
       loading.dismiss();
     }).catch((er) => {

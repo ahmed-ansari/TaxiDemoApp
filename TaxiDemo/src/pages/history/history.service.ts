@@ -25,14 +25,14 @@ export class HistoryService{
             let rideModel = snap.rideModel;
 
             if(status){
-                  const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/');
+                  const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/ConfirmRideRequests/'+rideRequest.parent);
                   rideReqCancelRef.push({
                       "ride": "confirm",
                       "model": rideModel
                   });
                   rideReqRef.remove();
             }else{
-                const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/');
+                const rideReqCancelRef: firebase.database.Reference = firebase.database().ref('/CancelledRideRequests/'+rideRequest.parent);
                 rideReqCancelRef.push({
                     "ride": "cancel",
                     "model": rideModel
