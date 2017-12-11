@@ -366,7 +366,7 @@ export class DashboardPage implements OnInit {
       this.updateMobileNumber()
     } else {
       let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-        this.timeTillArrival, "", "", this.user.userId, Date.now());
+        this.timeTillArrival, "", "", this.user.userId, new Date());
       this.navCtrl.push(PaymentPage, { model: rideModel, from:"RideNow", selectedDate: new Date() });
     }
   }
