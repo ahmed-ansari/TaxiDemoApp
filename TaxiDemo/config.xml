@@ -101,4 +101,9 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.108631532738-f8h73eiidpu0tvh2ukfj0ivb5u4nigod" />
     </plugin>
     <plugin name="cordova-plugin-nativestorage" spec="^2.2.2" />
+    <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.1" />
+    <plugin name="cordova-plugin-datepicker" spec="^0.9.3" />
+    <plugin name="cordova-plugin-camera" spec="^3.0.0" />
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="^4.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.3.0" />
 </widget>
