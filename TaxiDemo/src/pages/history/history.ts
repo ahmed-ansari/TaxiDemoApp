@@ -24,10 +24,12 @@ export class HistoryPage {
   public ride: RideModel;
   public rides: RideModel[] = [];
   staticMapArray: string[] = [];
+  today: any;
 
   constructor(public navCtrl: NavController, private map: StaticMapAPI, private service: HistoryService,
     private nativeStorage: NativeStorage, private broadcaster: Broadcaster, private alertCtrl: AlertController,
     private loadingCtrl: LoadingController) {
+    this.today = new Date();
     this.Trips = "Upcoming";
     this.user = new UserModel()
     this.nativeStorage.getItem('userData')
@@ -39,7 +41,7 @@ export class HistoryPage {
         // this.user.displayName = jsonObj.displayName;
         // this.user.photoUrl = jsonObj.photoUrl;
         //this.locations =
-        this.broadcaster.broadcast('user', {"user": jsonObj});
+        this.broadcaster.broadcast('user', { "user": jsonObj });
         this.getRideHistory();
       },
       error => console.error(error)
@@ -52,7 +54,7 @@ export class HistoryPage {
     let loading = this.loadingCtrl.create({
       content: 'Please wait while loading rides...'
     });
-  
+
     loading.present();
     let promise = this.service.getConfirmedRideRequests();
     promise.then((snapshot) => {
@@ -65,12 +67,12 @@ export class HistoryPage {
         let childKeys = Object.keys(ridesData[keys[key]]);
         let childsData = ridesData[keys[key]];
         console.log("childKeys:::", childKeys);
-        for(var child in childKeys){
+        for (var child in childKeys) {
           console.log("child:::", child);
           this.ride = childsData[childKeys[child]].model;
           this.rides.push(this.ride);
           console.log("Rides:::", this.ride);
-        }        
+        }
       }
       loading.dismiss();
     }).catch((er) => {
@@ -85,7 +87,7 @@ export class HistoryPage {
 
     console.log("ride", this.ride)
     let mapImage = this.map.getStaticMapSnapFromAddress(this.ride.pickupAddress, this.ride.dropoffAddress);
-    console.log("Static Map",mapImage);
+    console.log("Static Map", mapImage);
     this.navCtrl.push(RidedetailPage, { params: this.ride, map: mapImage })
   }
 
