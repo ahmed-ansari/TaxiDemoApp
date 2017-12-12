@@ -20,6 +20,11 @@ export class WelcomeService {
     return personObjectRef.once('value');
   }
 
+  getAppUserDetails(userKey): any {
+    const personObjectRef: firebase.database.Reference = firebase.database().ref(`/Users/` + userKey);
+    return personObjectRef.once('value');
+  }
+
   validateUserWithuserId(userId): any {
     const personKeyRef: firebase.database.Reference = firebase.database().ref(`/UserRef/` + userId);
     return personKeyRef.once('value');

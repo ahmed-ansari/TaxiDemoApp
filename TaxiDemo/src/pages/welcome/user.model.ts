@@ -39,6 +39,16 @@ export class UserModel {
     // }
 }
 
+export class AppUser{
+    displayName: string;
+    email: string;
+    mobile: any;
+    photoUrl: string;
+    firstname: string;
+    lastname: string;
+    userId: any;
+}
+
 export class LocationModel {
     name: string;
     address: string;

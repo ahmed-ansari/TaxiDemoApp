@@ -46,9 +46,14 @@
         </ion-row>
         <ion-row>
             <ion-col col-8>
-                <label class="car ">{{ride.taxiName}}</label>
+                <label class="car ">{{user.displayName}}</label>
             </ion-col>
             <ion-col col-4></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-8>
+                <button ion-button icon-left ion-ios7-telephone>Call {{user.mobile}}</button>
+            </ion-col>
         </ion-row>
     </ion-item>
 </ion-content>
