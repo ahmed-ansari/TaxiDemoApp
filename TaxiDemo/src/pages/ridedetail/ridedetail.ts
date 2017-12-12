@@ -59,9 +59,10 @@ export class RidedetailPage {
     promise.then((snapShot) =>{
       console.log("Key Ref:::", snapShot.val());
       let userPomise = this.welcome.getAppUserDetails(snapShot.val());
-      promise.then((data) =>{
+      userPomise.then((data) =>{ 
         this.user = data.val();
-        console.log("Ride Details User",data.val());
+        console.log("Ride Details User",JSON.stringify(data.val()));
+        console.log("Ride Details User",data);
       }).catch((er) => {
         console.log(er);
       });
@@ -70,5 +71,9 @@ export class RidedetailPage {
       console.log(er);
     });
 
+  }
+
+  callUser(){
+    window.location.href = "tel://"+ this.user.mobile;
   }
 }
