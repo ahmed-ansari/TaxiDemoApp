@@ -24,7 +24,7 @@
 
     <div [ngSwitch]="Trips">
         <ion-list *ngSwitchCase="'Upcoming'">
-            <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
+            <div no-lines *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
                 <ion-card *ngIf="ride.travelDate >= today">
 
                     <ion-card-content>
@@ -43,11 +43,11 @@
                         </ion-row>
                     </ion-card-content>
                 </ion-card>
-            </ion-item>
+            </div>
         </ion-list>
 
         <ion-list *ngSwitchCase=" 'Past' ">
-            <ion-item *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
+            <div no-lines *ngFor="let ride of rides; let i = index" [attr.data-index]="i" (click)="goToRideDetail(i)">
                 <ion-card *ngIf="today > ride.travelDate">
 
                     <ion-card-content>
@@ -66,7 +66,7 @@
                         </ion-row>
                     </ion-card-content>
                 </ion-card>
-            </ion-item>
+            </div>
         </ion-list>
     </div>
 </ion-content>
