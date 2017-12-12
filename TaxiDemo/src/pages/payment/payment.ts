@@ -32,6 +32,7 @@ export class PaymentPage {
     loading: any;
     from: string;
     selectedDate: any;
+    responseGot: boolean = false;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, private pService: PaymentService,
         public alertCtrl: AlertController, private staticMap: StaticMapAPI, private welcomeService: WelcomeService, private loadingCtrl: LoadingController,
@@ -48,6 +49,8 @@ export class PaymentPage {
         this.staticMapUrl = this.staticMap.getStaticMapSnapFromAddress(this.pickupAddress, this.dropoffAddress);
         this.from = navParams.get("from");
         this.selectedDate = navParams.get("selectedDate");
+        this.rideModel.travelDate = new Date(this.selectedDate).getTime();
+        console.log("TravelDate::::", this.rideModel.travelDate);
 
         if (this.from === "RideNow")this.registerRideConfirmBroadcast();
     }
@@ -73,6 +76,7 @@ export class PaymentPage {
 
     confirmRide() {
         let context = this;
+        this.responseGot = false;
         if (this.from === "RideNow") {
             var navController = this.navCtrl;
             this.loading = this.loadingCtrl.create({
@@ -80,19 +84,22 @@ export class PaymentPage {
             });
             this.loading.present();
             setTimeout(() => {
-                this.loading.dismiss();
-                let alert = this.alertCtrl.create({
-                    title: 'Ride Request',
-                    subTitle: 'Driver is not responding or busy attending another ride, Please try again after some time..',
-                    buttons: [{
-                        text: 'Ok',
-                        role: 'cancel',
-                        handler: () => {
-                            context.loading.dismiss();
-                        }
-                    }]
-                });
-                alert.present();
+                if(!this.responseGot){
+                    this.loading.dismiss();
+                    let alert = this.alertCtrl.create({
+                        title: 'Ride Request',
+                        subTitle: 'Driver is not responding or busy attending another ride, Please try again after some time..',
+                        buttons: [{
+                            text: 'Ok',
+                            role: 'cancel',
+                            handler: () => {
+                                context.loading.dismiss();
+                            }
+                        }]
+                    });
+                    alert.present();
+                }
+                
               }, 30000);
             this.welcomeService.updateRideRequest(this.userId, this.rideModel);
         } else if (this.from === "RideLater") {
@@ -154,6 +161,7 @@ export class PaymentPage {
         const context = this;
         this.broadcaster.on<any>('cancel')
             .subscribe(user => {
+                this.responseGot = true;
                 let alert = this.alertCtrl.create({
                     title: 'Ride Request',
                     subTitle: 'SORRY WE ARE UNABLE TO ACCEPT YOUR RIDE at THIS TIME We sincerely regret the inconvenience caused.',
@@ -171,13 +179,14 @@ export class PaymentPage {
 
         this.broadcaster.on<any>('confirm')
             .subscribe(user => {
+                this.responseGot = true;
                 context.loading.dismiss();
                 context.makeConfirmedRidePayment();
             });
     }
 
     showRideConfirmation(date) {
-        //this.navCtrl.popToRoot();
+        this.navCtrl.pop();
         this.modalCtrl.create(RideconfirmPage, {
             "destination": this.dropoffAddress,
             "fare": this.fareValue,

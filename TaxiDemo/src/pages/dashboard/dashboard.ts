@@ -365,9 +365,11 @@ export class DashboardPage implements OnInit {
     if (typeof this.user.mobile === "undefined") {
       this.updateMobileNumber()
     } else {
+      let currentDate = new Date();
+      console.log("Current Date:::",currentDate);
       let rideModel = new RideModel(this.currentAddress, this.destinationAddress, this.fareValue, this.distance,
-        this.timeTillArrival, "", "", this.user.userId, new Date());
-      this.navCtrl.push(PaymentPage, { model: rideModel, from:"RideNow", selectedDate: new Date() });
+        this.timeTillArrival, "", "", this.user.userId, currentDate);
+      this.navCtrl.push(PaymentPage, { model: rideModel, from:"RideNow", selectedDate: currentDate });
     }
   }
 
