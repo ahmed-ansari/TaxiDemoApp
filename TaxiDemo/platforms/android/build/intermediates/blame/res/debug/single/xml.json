@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/xml/localnotification_provider_paths.xml",
+        "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/res/xml/localnotification_provider_paths.xml"
+    },
+    {
+        "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/res/xml/provider_paths.xml"
+    },
+    {
         "merged": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/res/merged/debug/xml/config.xml",
         "source": "/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/res/xml/config.xml"
     }

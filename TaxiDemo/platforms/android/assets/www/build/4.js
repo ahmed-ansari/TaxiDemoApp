@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 491:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MobileauthPageModule", function() { return MobileauthPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RidedetailPageModule", function() { return RidedetailPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mobileauth__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ridedetail__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MobileauthPageModule = (function () {
-    function MobileauthPageModule() {
+var RidedetailPageModule = (function () {
+    function RidedetailPageModule() {
     }
-    return MobileauthPageModule;
+    return RidedetailPageModule;
 }());
-MobileauthPageModule = __decorate([
+RidedetailPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__mobileauth__["a" /* MobileAuthPage */]
+            __WEBPACK_IMPORTED_MODULE_2__ridedetail__["a" /* RidedetailPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mobileauth__["a" /* MobileAuthPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ridedetail__["a" /* RidedetailPage */]),
         ],
     })
-], MobileauthPageModule);
+], RidedetailPageModule);
 
-//# sourceMappingURL=mobileauth.module.js.map
+//# sourceMappingURL=ridedetail.module.js.map
 
 /***/ })
 

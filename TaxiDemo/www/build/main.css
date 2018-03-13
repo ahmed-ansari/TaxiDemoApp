@@ -25695,10 +25695,408 @@ page-dashboard .maparea {
   width: 100%;
 }
 
+page-dashboard .bottom {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+page-dashboard .map-label {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+page-dashboard .fare-label {
+  font-style: italic;
+}
+
+page-dashboard .fare-col {
+  border-right: #333333 1px dashed;
+}
+
+page-dashboard .fare-value-label {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+page-dashboard .request-controls {
+  text-align: center;
+  background: #fff;
+}
+
+page-dashboard .text-center {
+  text-align: center;
+}
+
+page-dashboard .black-bg {
+  background: #000000;
+}
+
+page-dashboard .round-img {
+  border-radius: 50%;
+}
+
+page-dashboard .bottom-shadow {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+page-dashboard .gray {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+page-dashboard .gray-extra-font {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+page-dashboard .no-margin {
+  margin: 0 !important;
+  padding-right: 0 !important;
+}
+
+page-dashboard .black {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+page-dashboard .border-top {
+  border-top: 1px solid #e2e2e2 !important;
+  color: gray;
+}
+
+page-dashboard .map-button-text {
+  text-align: center;
+}
+
+page-edit-account .black-bg {
+  background: #000000;
+}
+
+page-edit-account .bottom-shadow {
+  border-bottom: 1px solid #e2e2e2;
+  -webkit-box-shadow: 0 3px 9px -6px black;
+  box-shadow: 0 3px 9px -6px black;
+}
+
+page-edit-account .text-input::-moz-placeholder {
+  color: red;
+}
+
+page-edit-account .text-input:-ms-input-placeholder {
+  color: red;
+}
+
+page-edit-account .text-input::-webkit-input-placeholder {
+  color: red;
+}
+
+page-edit-account .error {
+  color: tomato;
+  font-size: 1.2rem;
+}
+
+page-edit-account .round-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+}
+
+page-edit-account .vehicle-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+}
+
+page-edit-account .item-inner {
+  border: 0 !important;
+}
+
+page-edit-account .carButton {
+  font-size: 2em !important;
+}
+
+page-history .black-bg {
+  background: #000;
+}
+
+page-history .round-img {
+  border-radius: 50%;
+}
+
+page-history .bottom-shadow {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+page-history .gray {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+page-history .gray-extra-font {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+page-history .no-margin {
+  margin: 0 !important;
+  padding-right: 0 !important;
+}
+
+page-history .black {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+page-history .border-top {
+  border-top: 1px solid #e2e2e2 !important;
+  color: gray;
+}
+
+page-history .mapImage {
+  width: 600px;
+}
+
+page-history .segment {
+  background: #000000;
+}
+
+page-history .segment-md .segment-button.activated,
+page-history .segment-md .segment-button.segment-activated {
+  color: #fff;
+}
+
+page-history .segment-md .segment-button {
+  color: gray;
+}
+
+page-history .date {
+  padding: 0 5px 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-history .at {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-history .time {
+  padding: 0 0 0 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-history .rs {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-history .car {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+page-password .bar-button-default-md, page-password .bar-button-clear-md-default, page-password .bar-button-md-default {
+  color: #000000 !important;
+}
+
+page-password .error {
+  font-size: 12px;
+  color: tomato;
+  margin-bottom: 0;
+}
+
+page-payment .black-bg {
+  background: #000000;
+}
+
+page-payment .bottom-shadow {
+  border-bottom: 1px solid #e2e2e2;
+  -webkit-box-shadow: 0 3px 9px -6px black;
+  box-shadow: 0 3px 9px -6px black;
+}
+
+page-payment .bottom {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+page-payment .request-controls {
+  text-align: center;
+  background: #fff;
+}
+
+page-payment .text-input::-moz-placeholder {
+  color: red;
+}
+
+page-payment .text-input:-ms-input-placeholder {
+  color: red;
+}
+
+page-payment .text-input::-webkit-input-placeholder {
+  color: red;
+}
+
+page-payment .error {
+  color: tomato;
+  font-size: 1.2rem;
+}
+
+page-payment .round-img {
+  border-radius: 50%;
+}
+
+page-payment .item-inner {
+  border: 0 !important;
+}
+
+page-payment .payment-label {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+page-payment .payment-grid {
+  border: 1px solid #000;
+}
+
+page-payment .payment-cost {
+  color: blue;
+}
+
 page-register .error {
   font-size: 12px;
   color: tomato;
   margin-bottom: 0;
+}
+
+page-register .round-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+page-ridedetail .black {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+page-ridedetail .white {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+page-ridedetail .black-bg {
+  background: #000000;
+}
+
+page-ridedetail .border-top {
+  border-top: 1px solid #e2e2e2 !important;
+  color: gray;
+}
+
+page-ridedetail .mapImage {
+  width: 600px;
+}
+
+page-ridedetail .date {
+  padding: 0 5px 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-ridedetail .at {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-ridedetail .time {
+  padding: 0 0 0 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-ridedetail .rs {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+page-ridedetail .car {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+page-set-fare .black-bg {
+  background: #000000;
+}
+
+page-set-fare .label-color-black {
+  color: #000000;
+}
+
+page-set-fare .error {
+  color: tomato;
+}
+
+page-setting .black-bg {
+  background: #000000;
+}
+
+page-setting .round-img {
+  border-radius: 50%;
+}
+
+page-setting .bottom-shadow {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+page-setting .gray {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+page-setting .gray-extra-font {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+page-setting .no-margin {
+  margin: 0 !important;
+  padding-right: 0 !important;
+}
+
+page-setting .black {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+page-setting .border-top {
+  border-top: 1px solid #e2e2e2 !important;
+  color: gray;
+}
+
+page-vehicledetails .back-button,
+page-vehicledetails .toolbar-title {
+  color: #000000 !important;
+}
+
+page-vehicledetails .error {
+  font-size: 12px;
+  color: tomato;
+  margin-bottom: 0;
+}
+
+page-vehicledetails .round-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
 }
 
 page-welcome .big-field {
@@ -25721,7 +26119,10 @@ page-welcome .btn-text-left {
 }
 
 page-welcome .full-img {
-  width: 100vw;
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  margin-top: 30px;
 }
 
 page-welcome .big-field {
@@ -25744,4 +26145,10 @@ page-welcome .google-sign-in {
   color: #FFF;
   background-color: #dd4c39;
   border-color: #dc4430;
+}
+
+page-welcome .error {
+  font-size: 12px;
+  color: tomato;
+  margin-bottom: 0;
 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:1-40:12
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:2:98-124
 		INJECTED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml
@@ -33,64 +33,54 @@ ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/pl
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:3:23-48
 uses-permission#android.permission.INTERNET
 ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:4:5-67
-MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:18:5-66
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-crash:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.2/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:5:5-29:19
-MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-crash-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:28:5-34:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:customtabs:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.facebook.android:facebook-places:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:28:5-43:19
-MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:24:5-34:19
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-messaging:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.firebase:firebase-messaging-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-config:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.0/AndroidManifest.xml:18:5-19
-MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:29:5-46:19
-MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.firebase:firebase-common-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-config-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-maps-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-location:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.0/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-location-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:19:5-25:19
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-identity:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.0/AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.0/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-identity-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.0/AndroidManifest.xml:5:5-20
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:5:5-38:19
+MERGED from [com.google.firebase:firebase-crash:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-places:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.29.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:28:5-43:19
+MERGED from [com.google.firebase:firebase-core:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-config:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:29:5-46:19
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.2/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.2/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.2/AndroidManifest.xml:5:5-20
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:24:5-28:19
 	android:label
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:5:81-113
 	android:supportsRtl
@@ -139,19 +129,19 @@ ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/pl
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:13:20-67
 activity#com.facebook.FacebookActivity
 ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:14:9-186
-MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:29:9-32:66
 	android:label
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:14:103-138
 	android:configChanges
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:14:19-102
 	android:theme
-		ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:32:13-63
+		ADDED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:32:13-63
 	android:name
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:14:139-183
 service#com.google.android.gms.measurement.AppMeasurementService
 ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:15:9-140
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:27:7-137
 	android:enabled
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:15:18-40
 	android:exported
@@ -190,286 +180,365 @@ ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/pl
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:27:20-65
 meta-data#com.google.android.gms.version
 ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:28:9-122
-MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/AndroidManifest.xml:20:9-121
 	android:value
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:28:66-119
 	android:name
 		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:28:20-65
+provider#android.support.v4.content.FileProvider
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:9-31:20
+	android:authorities
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:19-66
+		INJECTED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml
+	android:grantUriPermissions
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:92-126
+	android:exported
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:67-91
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:29:127-181
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:13-116
+	android:resource
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:75-113
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:24-74
+provider#de.appplant.cordova.plugin.notification.util.AssetProvider
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:9-34:20
+	android:authorities
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:19-66
+		INJECTED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml
+	android:grantUriPermissions
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:92-126
+	android:exported
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:67-91
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:127-200
+receiver#de.appplant.cordova.plugin.localnotification.TriggerReceiver
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:9-122
+	android:exported
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:19-43
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:44-119
+receiver#de.appplant.cordova.plugin.localnotification.ClearReceiver
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:9-120
+	android:exported
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:19-43
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:44-117
+activity#de.appplant.cordova.plugin.localnotification.ClickReceiver
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:9-205
+	android:launchMode
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:44-79
+	android:exported
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:19-43
+	android:theme
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:154-202
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:80-153
 uses-sdk
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:5-74
-MERGED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-crash:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/AndroidManifest.xml:20:5-43
-MERGED from [com.google.firebase:firebase-crash-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:customtabs:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-places:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-messaging:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-messaging-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-config:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-config-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-maps-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-location:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.0/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-location-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/11.6.0/AndroidManifest.xml:3:3-41
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-identity:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.0/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.google.android.gms:play-services-basement-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-identity-license:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.0/AndroidManifest.xml:4:5-43
-MERGED from [org.apache.cordova:CordovaLib:6.3.0:debug] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.3.0/debug/AndroidManifest.xml:25:5-44
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:23:9-75
-	android:targetSdkVersion
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:42-71
-	android:minSdkVersion
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:30:15-41
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:5-79
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:19:5-78
-MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:19:5-78
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:31:22-76
-uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:5-68
-MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:21:5-67
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:32:22-65
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:5-81
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:33:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:5-79
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:34:22-76
-uses-feature#android.hardware.location.gps
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:5-66
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:35:19-63
-uses-feature#0x00020000
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:5-78
-MERGED from [com.google.android.gms:play-services-maps:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/AndroidManifest.xml:21:5-77
-	android:glEsVersion
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:19-51
-	android:required
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:36:52-75
-uses-feature#android.hardware.location
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:5-62
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:37:19-59
-uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:38:5-71
-	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:38:22-68
-uses-permission#android.permission.USE_CREDENTIALS
 ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:5-74
+MERGED from [com.google.firebase:firebase-crash:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.2/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-crash-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-places:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.firebase:firebase-core:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-core/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-config:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.2/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/11.6.2/AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.2/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity-license:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity-license/11.6.2/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-v4:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [org.apache.cordova:CordovaLib:6.3.0:debug] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.3.0/debug/AndroidManifest.xml:25:5-44
+	android:targetSdkVersion
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:42-71
+	android:minSdkVersion
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:15-41
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:40:5-79
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:39:22-71
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:40:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:41:5-68
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:41:22-65
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:42:5-81
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:42:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:43:5-79
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:43:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:44:5-66
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:44:19-63
+uses-feature#0x00020000
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:45:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:45:19-51
+	android:required
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:45:52-75
+uses-feature#android.hardware.location
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:46:5-62
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:46:19-59
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:47:5-71
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:47:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:48:5-74
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:48:22-71
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:49:5-81
+	android:name
+		ADDED from /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/AndroidManifest.xml:49:22-78
 uses-permission#com.sec.android.provider.badge.permission.READ
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:19:5-86
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:19:5-86
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:19:22-83
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:19:22-83
 uses-permission#com.sec.android.provider.badge.permission.WRITE
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:20:5-87
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:20:5-87
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:20:22-84
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:20:22-84
 uses-permission#com.htc.launcher.permission.READ_SETTINGS
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:23:5-81
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:23:22-78
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:23:22-78
 uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:24:5-83
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:24:5-83
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:24:22-80
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:24:22-80
 uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:27:5-88
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:27:5-88
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:27:22-85
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:28:22-89
 uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:30:5-84
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:31:5-84
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:30:22-81
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:31:22-81
 uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
-ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:33:5-83
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:34:5-83
 	android:name
-		ADDED from [me.leolin:ShortcutBadger:1.1.4] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:33:22-80
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.19] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/AndroidManifest.xml:50:22-86
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/AndroidManifest.xml:33:19-68
-meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:customtabs:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
-	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:27:9-31
-	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:26:9-47
+		ADDED from [com.facebook.android:facebook-common:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:33:19-68
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.28.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:4.29.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/AndroidManifest.xml:40:13-70
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:27:162-184
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:185-208
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:27:185-208
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:7-197
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:33:7-197
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:148-170
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:33:148-170
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:171-195
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:33:171-195
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:91-147
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:33:91-147
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/AndroidManifest.xml:33:16-90
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/AndroidManifest.xml:33:16-90
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:9-27:19
+ADDED from [com.google.firebase:firebase-messaging:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/AndroidManifest.xml:23:9-27:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:88-111
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/AndroidManifest.xml:23:88-111
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/AndroidManifest.xml:23:18-87
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/AndroidManifest.xml:23:18-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:23:5-81
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:23:22-79
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:23:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:5-109
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:25:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:72-107
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:25:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:25:17-71
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:25:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:27:5-78
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:27:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:27:22-76
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:27:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:9-36:20
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:31:9-36:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:85-108
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:31:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:109-169
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:31:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:31:19-84
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:31:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:32:13-35:29
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:32:13-35:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:33:17-80
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:33:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:33:25-78
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:33:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:34:17-60
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:34:17-60
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:34:27-58
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:34:27-58
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:9-44:19
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:40:9-44:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:83-106
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:40:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/AndroidManifest.xml:40:18-82
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/AndroidManifest.xml:40:18-82
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:6:9-194
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:6:144-168
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:6:169-192
 	android:name
-		ADDED from [com.google.firebase:firebase-common:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/AndroidManifest.xml:6:79-143
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:9-189
+ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:20:9-189
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:129-162
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:20:129-162
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:163-187
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:20:163-187
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:69-128
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:20:69-128
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:20:19-68
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:20:19-68
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:9-184
+ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:24:9-184
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:64-87
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:24:64-87
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:88-182
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:24:88-182
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/AndroidManifest.xml:24:18-63
+		ADDED from [com.google.android.gms:play-services-auth:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/AndroidManifest.xml:24:18-63
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.6.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/AndroidManifest.xml:19:19-85
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:26:13-58

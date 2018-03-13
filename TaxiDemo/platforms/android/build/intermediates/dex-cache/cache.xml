@@ -3,345 +3,165 @@
 
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/jars/classes.jar"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="dc83ab7a5ce1e0296cf18a52a6edbcfef815e6cf">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-share-4.28.0_90ebbbfef946bb7f53a34a864997ec4f9f40e777.jar" />
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/okio-1.13.0_25ed7be6a7feeea69c780188ca8852a639a90f2e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/27.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_4eb3db512b82f3a78cc8edfbe6687a834bb2312b.jar" />
+        sha1="d4f9ace23785adf79a174d569bde261f032e1190">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-27.0.1_03b202a37ca72567956fbe1b95a7b53c8d173e27.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="729a6a1975c19d7461378172c7932f5c57f1c3fe">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.6.0_fb29f91ab2e2a7ae31c3e26e20d956f3821a3608.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_bb961796bb079f30450ec1856b4205e69a1ea39a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.28.0_986e94c56c879b09ace874c37bf716534857a926.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.29.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
         sha1="2482bfd874e8b3927f4141105674ad392ff83698">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-messenger-4.28.0_6732275d05a7a1d26f19ef2257ca21b13ef8f9f6.jar" />
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-messenger-4.29.0_2e096d34e989397727266b979007fa20652ddaee.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/27.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="b346a5d3fc5d6d1d36c6262c8cc865b76df9f40c">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.4_4066add58ab2ac6ebf84a27e236711654bd1ce5e.jar" />
+        sha1="ac5e6ae168ef77f0b0b1e3245d7afd7d32f710c3">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-27.0.1_fcfe11e0f9b71bcf80ab25dd0edd832b48e1e869.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.0/jars/classes.jar"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.9.1/84b4b7d1c4a238e7899972b7446c250691e65f1f/okhttp-3.9.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="e9b8fd995f9c6c2caeb49827f0b52e0e8cc621e0">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.6.0_67e6fd372249815c4bdea4d763a30e91798516c0.jar" />
+        sha1="84b4b7d1c4a238e7899972b7446c250691e65f1f">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/okhttp-3.9.1_c12987a6a7bd8fa3329aeb8c444fc1a233ca8413.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.6.2_ff4ecae0150ebad5b7275d9bb47e950e965da70e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3810dd933166e9c76b2d192ee18d5699e9701bb4">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-11.6.2_d067dce64720a397fe50fceaed83241172c711d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.29.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
         sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-applinks-4.28.0_c0c2d8b45167d435d9ef66b0d4f57de35c19fdd4.jar" />
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-applinks-4.29.0_e359161ac166fca6bcec1289118b3fde6a97a905.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.0/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="863b37c463df79f340b5d83bbbfc63ad25612e01">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.6.0_346645328efc38bbe0df0bc656ef0a2e46d055fa.jar" />
+        sha1="20ea90cf871500086e68686dad7a039f2dffad8f">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.6.2_cf8ab0ae2fb131725b6d9530bf9a09262522fce1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bae8a994eb3dfb40b759aeb968d1015be6f01cb6">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-11.6.2_21687ed4ed9c73e827cdac5bcacddecdd613a56c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_06a335d6480b2bb3685cbdd41909583151757728.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4d7b1a23cecd2855bdfbd8266650d140e9e6977c">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.6.2_d24a13ee0e69e54ef753560b896f2c31e1b6864a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
         sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-login-4.28.0_d9e6ff3418f42e0a1047ef8200a46cb269e5c07a.jar" />
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-login-4.29.0_c3e96bec2dfd62436822b7662d0df36a2f18d84e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.3.0/debug/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="0ef4672e51e92921ff1db9373b8fa29d12376be3">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-6.3.0-debug_e8fcd9da28c252e7c1356cbb6e236878421bd74c.jar" />
+        sha1="0ab379ccbc45dadc6843cf258d9e741075758dd5">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-11.6.2_0bc8c43dc63fa8013f10cfdfe1a9e35df3284229.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/core-3.3.0_d1488daf48a9e19c2145329de90177375d7d5dc6.jar" />
+        sha1="bc66d9bb9ec31147439d764fb1ac880fa693dd6d">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-11.6.2_19150dc689aace79187f5a8b03425d00d5e88f13.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/27.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_7eba8d7454585ae549230c7c041aa8d473164608.jar" />
+        sha1="925879273e627f34059466359ba6789cf61889e2">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-27.0.1_59dc2ef71935de798b6ea869960cbe8a4ab82921.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_8fe390e831879577139bfed797e62a65e06f52fc.jar" />
+        sha1="c28d63152df83024b3a941178bc8f6a37e57d32e">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-11.6.2_d9ad795069f0ee6bdec3c44180945a1c8f3fa661.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/27.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_a61000a2eb70ea8aa1cdc0ad1e233a952f8249dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_062fba8f9798471df76b708850351f32300f4d7c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="9b8544d0c4d3a508ffc7da674ac79d5dc5d79395">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.6.0_375458d0790067f38768efd90b46cf8d6e58aabe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="d90cb9610620b7631c75f1953a4956810edd4bed">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-11.6.0_0f662478da77fedbae0516e479e9c68f28bcfb37.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="da443aff9cd3c2cd75b957e0547e1ca2c4f30308">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.6.0_4d3231d5cf2e777a6dc2ebc78df2e08b5b794aa0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="ab6e491b5d7bda2f47991a30f6bfe9a8b134ff8b">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-core-4.28.0_3d6d4e81375e8c5571082db00807c5906c3eb406.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="1cde19cbf9be88547ab4b7f03668eac5d91bd611">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.6.0_4a761a70679e6332bcfe5c0c69a6d691f6727b90.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_295b8a989f4d2eeff75a9e401700a977bf00de62.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-places-4.28.0_68cec3b320eb5805de5be056e6ea3c5ca63098b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_6527127a1983efd5228a1ab298de7e958ca27a9b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="42c5ee016c8815db37d662f18c497aee13150f9e">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-11.6.0_4fefa2736160040c89f359eb2164c999e6e0c5a7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_4c0caea5fdcfc6dd4f4375d01bb057aa1378da5f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="994e89a725c27e7f2c958b87f3e15494ddc3c20c">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-11.6.0_92665e8b3d81e1ebe27fdb46b74ecfbf244660d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="807751a24cf96566fd8675517c94d8463cf364db">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-customtabs-25.3.1_c142509a920167781eca17daf0f254e76f1af524.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="287f4dec8dc2d40a238b12562b437438499cd2fb">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-common-4.28.0_d2409f08a20b29c91fddb4e036084892a0e66c51.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="f63291c198bf572a4b24353ec91e8dc112f5e7f3">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-11.6.0_6e54146df69053595835b7a4ec1b43f28f4e5ed4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="48ab283a4cda3b78eda2c149b588cb0aa0c66cc9">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-11.6.0_007e14f32a62b6353cca069eebb2b38559123ac0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_44f329251437067e71b6809d09b0ac2355bfe7ce.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="d6399340139f67ce4faba06e97f256ef0d6817c0">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.6.0_bee670cc6f1363706fdc5d2013fe037eb5814e1b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="869a1d15fa9d8e8aa36587b042f553c1baea46bc">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.6.0_a25b2d99316d2127d985b0b359c809a5efee8cf1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="d6ff091e2c6df07894e5b921671404047d70d3f7">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-11.6.0_40651d1fe183de17299fdcd0f07d83a86ba80d4d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.6.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="735b4bd33fcf5cd72f368a01b566fc62908b386b">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-11.6.0_446f29927ce2025902ffdb643bff81f06255a576.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_77587564ae8d38c6f4fd5eedc0319149c3ffdc3c.jar" />
+        sha1="f8a80c9882b064f2943e10649a8d2b249f5bf176">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-27.0.1_ca0cefb057bd764be2f7255393c5d3f1f8bfe608.jar" />
     </item>
     <item
         is-multidex="false"
@@ -354,30 +174,255 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.3.1_9f5f25aa5c65a6b2200d7e102634bbf66292d430.jar" />
+        sha1="f95788f0e923006a2da51733d4cbd5c08aad299c">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-common-4.29.0_e5b39fbf69925de7fb666a8718abd4fd2447206f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/11.6.0/jars/classes.jar"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="269771e258a0d07bc8f5213f1f5ed77e8f42d72f">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-api-phone-11.6.0_9d8e3350a53eff6f7030ddbc07549fed4cab88ea.jar" />
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_638401055590a2dccf7cd91a2fd2a14673b3fe71.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/Srinivas/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.1/287742f1c6cea6d9126670e9f031890b0462362a/support-annotations-27.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_6ff4821d8845b9d79fd2b7e15668e9cb0ce52904.jar" />
+        sha1="287742f1c6cea6d9126670e9f031890b0462362a">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-27.0.1_eff5e43b271ec45350865d203072b190bdbc61f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.29.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="dc98b63d89490102b0a38423e24dce190354795b">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-core-4.29.0_613f8dac60992df3695d08983a773725ce9e2bcc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_4eb3db512b82f3a78cc8edfbe6687a834bb2312b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="59cbbfb2937ebed98c8bb8882b7112d16358014e">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-27.0.1_72d210baf79741d57741056ef10c1d0ce7b0ad53.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d928394035bd4f7d2ee9e1c63d45f9ec088e21a4">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-27.0.1_3c6b55ba68e8b07ec62f7f76d831560206cb63f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1cf18068c12546c68fa5f234ff20c6a28878dcae">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-11.6.2_fd650f107ee8c8da3287848dfad469adfe4415d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.3.0/debug/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0ef4672e51e92921ff1db9373b8fa29d12376be3">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-6.3.0-debug_e8fcd9da28c252e7c1356cbb6e236878421bd74c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="225f093d9a041f8206d812d3055a886a816ac365">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.6.2_860eba8d1418b293db0b0580960eee99c35b6722.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9f2474be2aa0f193c883c0302842404549c9bfe0">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-11.6.2_59e97e2ade9bdf8e836c7647d1bcf5cc91d62e17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/core-3.3.0_d1488daf48a9e19c2145329de90177375d7d5dc6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_8fe390e831879577139bfed797e62a65e06f52fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e9dc052d4d36b53c3a1bb2d5bf634fcac5d35037">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.6.2_8d94a4cf23962ab10cdce7c0ad1c33d27d9a9c06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cbbd26dd2f6d46181b41a5f6f5e34889442a811b">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-27.0.1_9b41fde4ecd1a011623b166e83455bdda662bc2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.19/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="696fe9ef08bac13982595ecfdd7a22a2c170a0cd">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.19_1e4f16982029ff751819ae317a762a92bc18206f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.29.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="07ca601b039863d2c018dc7f625e845084d6d18b">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-share-4.29.0_0b4a9309831131ebb7361a9ed2626f3d149bca45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b0ae7bfe4591746f6491a4a270ee56712062d1ca">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.6.2_b3094574f93c7694e651eee81e253b98c3447fa0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="69f7591c9ff9238ff226e264c0260bb9f1ce0029">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-27.0.1_15aa18e1d0f8a7bc0b10cbeee949ac6290d647cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="91dae39a5cc837ad2a829c0dc69c57ab8d69d22b">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-compat-27.0.1_2385181e73327a29fcaea314c1b17c0980c24729.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.29.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-places-4.29.0_83d219a8d556034d65ede0859b80ffbc17ace417.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="64adc9f1351d7d04b236dca2e7b980a486bdacb5">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-api-phone-11.6.2_27982c0ef304878e2884193a10ae90d3982e2307.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="108c3cdbdb89a05d388a170bd3549b1e43ad6d54">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.6.2_eb830a0bfcd4958a7621cc388a7bee0ad027bb63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7ca71e38c643e51083ab3a07f3a056bfb066caec">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-customtabs-27.0.1_0040a180af1af03242e032f29ec888a36fba659b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.29.0_9846e6059114f4bff5363e75eafc0b108c5dde58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_257f0e88963bc9d9ca1d05014272e47a15554dc9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a0b869be21f2e39e9b337bec395d9a7e111da21e">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.6.2_b62b1e7b03a9eb7eb7d0a1394862b9770d640837.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/27.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f10fed27d6d0b4aae675f17b33c639b4d5a0ed93">
+        <dex dex="/Users/Srinivas/Desktop/Aditya/Sample/Angular/TaxiDemoApp/TaxiDemo/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-27.0.1_22e660f14876c4e42e62f7fea42711006e3f6249.jar" />
     </item>
 
 </items>

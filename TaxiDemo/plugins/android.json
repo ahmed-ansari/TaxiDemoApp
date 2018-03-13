@@ -42,10 +42,34 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-datepicker": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
     "com.googlemaps.ios": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }

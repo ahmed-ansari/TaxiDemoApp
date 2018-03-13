@@ -250,6 +250,136 @@ module.exports = [
       "cordova.plugins.Keyboard"
     ],
     "runs": true
+  },
+  {
+    "id": "cordova-plugin-camera.Camera",
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "Camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverOptions",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverOptions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.camera",
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "navigator.camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverHandle",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverHandle"
+    ]
+  },
+  {
+    "id": "cordova-plugin-datepicker.DatePicker",
+    "file": "plugins/cordova-plugin-datepicker/www/android/DatePicker.js",
+    "pluginId": "cordova-plugin-datepicker",
+    "clobbers": [
+      "datePicker"
+    ]
+  },
+  {
+    "id": "cordova-plugin-badge.Badge",
+    "file": "plugins/cordova-plugin-badge/www/badge.js",
+    "pluginId": "cordova-plugin-badge",
+    "clobbers": [
+      "cordova.plugins.notification.badge"
+    ]
+  },
+  {
+    "id": "cordova-plugin-local-notification.LocalNotification",
+    "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
+    "pluginId": "cordova-plugin-local-notification",
+    "clobbers": [
+      "cordova.plugins.notification.local"
+    ]
+  },
+  {
+    "id": "cordova-plugin-local-notification.LocalNotification.Core",
+    "file": "plugins/cordova-plugin-local-notification/www/local-notification-core.js",
+    "pluginId": "cordova-plugin-local-notification",
+    "clobbers": [
+      "cordova.plugins.notification.local.core",
+      "plugin.notification.local.core"
+    ]
+  },
+  {
+    "id": "cordova-plugin-local-notification.LocalNotification.Util",
+    "file": "plugins/cordova-plugin-local-notification/www/local-notification-util.js",
+    "pluginId": "cordova-plugin-local-notification",
+    "merges": [
+      "cordova.plugins.notification.local.core",
+      "plugin.notification.local.core"
+    ]
+  },
+  {
+    "id": "cordova-plugin-actionsheet.ActionSheet",
+    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+    "pluginId": "cordova-plugin-actionsheet",
+    "clobbers": [
+      "window.plugins.actionsheet"
+    ]
+  },
+  {
+    "id": "cordova-plugin-dialogs.notification",
+    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
+    ]
+  },
+  {
+    "id": "cordova-plugin-dialogs.notification_android",
+    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
+    ]
+  },
+  {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "clobbers": [
+      "launchnavigator"
+    ]
+  },
+  {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "clobbers": [
+      "localforage"
+    ]
+  },
+  {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/android/launchnavigator.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "merges": [
+      "launchnavigator"
+    ]
+  },
+  {
+    "id": "cordova-plugin-statusbar.statusbar",
+    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+    "pluginId": "cordova-plugin-statusbar",
+    "clobbers": [
+      "window.StatusBar"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -266,7 +396,15 @@ module.exports.metadata =
   "cordova-plugin-nativestorage": "2.2.2",
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
-  "ionic-plugin-keyboard": "2.2.1"
+  "ionic-plugin-keyboard": "2.2.1",
+  "cordova-plugin-camera": "3.0.0",
+  "cordova-plugin-datepicker": "0.9.3",
+  "cordova-plugin-badge": "0.8.5",
+  "cordova-plugin-local-notification": "0.9.0-beta.1",
+  "cordova-plugin-actionsheet": "2.3.3",
+  "cordova-plugin-dialogs": "1.3.4",
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "4.1.0",
+  "cordova-plugin-statusbar": "2.3.0"
 };
 // BOTTOM OF METADATA
 });
